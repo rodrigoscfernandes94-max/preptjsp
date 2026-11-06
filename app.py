@@ -3,7 +3,7 @@ from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
-# Base de dados em memória persistente na execução / SQLite opcional (aqui geramos as 1000+ questões VUNESP)
+# Base de dados com as matérias e temas exatos
 materiasList = [
     "Direito Processual Civil", 
     "Direito Processual Penal", 
@@ -11,16 +11,16 @@ materiasList = [
     "Estatuto dos Funcionários Públicos (Lei 10.261/68)", 
     "Normas da Corregedoria Geral da Justiça", 
     "Língua Portuguesa"
-];
+]
 
 temasPorMateria = {
     "Direito Processual Civil": ["Atos Processuais", "Citações e Intimações", "Prazos Processuais", "Competência", "Cumprimento de Sentença", "Tutela Provisória"],
     "Direito Processual Penal": ["Jurisdição e Competência", "Prisão em Flagrante", "Provas", "Atos Processuais no CPP", "Prisão Preventiva"],
     "Direito Penal": ["Crimes contra a Administração Pública", "Peculato", "Concussão e Corrupção", "Prevaricação", "Abuso de Autoridade"],
-    "Estatuto dos Funcionários Públicos (Lei 10.261/68": ["Proibições e Deveres", "Responsabilidade Civil, Penal e Administrativa", "Regime Disciplinar e Penalidades", "Provimento e Vacância"],
+    "Estatuto dos Funcionários Públicos (Lei 10.261/68)": ["Proibições e Deveres", "Responsabilidade Civil, Penal e Administrativa", "Regime Disciplinar e Penalidades", "Provimento e Vacância"],
     "Normas da Corregedoria Geral da Justiça": ["Atribuições do Oficial de Justiça", "Mandados e Diligências", "Livros e Registros da Serventia", "Cump. de Mandados Urgentes"],
     "Língua Portuguesa": ["Compreensão e Interpretação de Textos", "Concordância Verbal e Nominal", "Regência e Emprego da Crase", "Pontuação e Sintaxe", "Significação de Palavras"]
-};
+}
 
 def generate_database():
     db = []
