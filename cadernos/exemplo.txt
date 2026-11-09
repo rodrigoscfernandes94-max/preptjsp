@@ -1,1 +1,1921 @@
+Assinale a alternativa em que a regência do verbo obedecer está empregada em estrita conformidade com a norma-padrão da língua portuguesa:
+(A) O oficial de justiça precavido obedeceu rigorosamente os prazos processuais estabelecidos no mandado.
+(B) O servidor público deve obediência às normas estatutárias, obedecendo-as com rigor no cotidiano da vara.
+(C) A diligência urgente exigia que o oficial obedecesse ao despacho judicial sem questionamentos.
+(D) O réu devidamente citado obedeceu a ordem de comparecimento expedida pelo juiz titular.
+(E) Quem desrespeitar ou não obedecer o mandado de prisão incorrerá em crime de desobediência.
+Gabarito Comentado: A alternativa C está correta porque o verbo obedecer é transitivo indireto (exige a preposição "a": obedecer ao despacho judicial). As demais erraram por usá-lo como transitivo direto ou omitir a crase necessária.
+Questão 22 de 30 (Língua Portuguesa - Padrão VUNESP)
+Assinale a alternativa que preenche correta e respectivamente as lacunas da frase abaixo: "Visando ___ celeridade processual, o juiz determinou ___ expedição de novos mandados, compelindo ___ partes a cumprirem os prazos."
+(A) à / à / as
+(B) a / à / às
+(C) à / a / as
+(D) a / a / às
+(E) à / à / às
+Gabarito Comentado: A alternativa A é a correta:
+Visar (no sentido de almejar) rege "a" + artigo "a" da celeridade = à;
+Determinar rege preposição + artigo de expedição = à;
+Compelir é transitivo direto, exigindo apenas o artigo feminino plural = as.
+Questão 23 de 30 (Direito Penal - Padrão VUNESP)
+Assinale a alternativa correta acerca dos crimes contra a Administração Pública cometidos por funcionário público:
+(A) O crime de peculato-furto ocorre quando o funcionário subtrai ou concorre para que seja subtraído bem público, valendo-se da facilidade que o cargo lhe proporciona, mesmo sem ter a posse direta dele em razão da função.
+(B) O crime de concussão exige que o funcionário público receba a vantagem indevida antes de iniciar o ato de ofício.
+(C) A corrupção passiva consuma-se unicamente com o efetivo recebimento da vantagem indevida prometida, sendo inadmissível a modalidade tentada.
+(D) O peculato culposo exige dolo antecedente à posse do bem público para sua configuração típica.
+(E) O funcionário público que concorre para a prática de crime de prevaricação responde pelo mesmo delito, ainda que não possua a qualidade exigida pelo tipo penal.
+Gabarito Comentado: A alternativa E está correta com base na teoria geral do concurso de pessoas (art. 29 do Código Penal): as circunstâncias e as condições de caráter pessoal (como ser funcionário público, no caso dos crimes próprios contra a administração) comunicam-se ao coautor ou partícipe, desde que este tenha ciência delas.
+Questão 24 de 30 (Direito Penal - Padrão VUNESP)
+Determinado indivíduo, com vontade livre e consciente, destrói e inutiliza documentos públicos guardados em repartição policial, os quais faziam prova em inquérito policial em andamento. Nos termos do Código Penal, a conduta praticada configura o crime de:
+(A) Supressão de documento.
+(B) Dano qualificado contra o patrimônio público.
+(C) Favultamento de provas.
+(D) Inutilização de edital ou de documento.
+(E) Subtração de documento público.
+Gabarito Comentado: A alternativa E está correta. Nos termos do artigo 337 do Código Penal, o crime de subtração ou inutilização de livro ou documento consiste em subtrair ou inutilizar documento confiado à custódia de funcionário em razão de ofício.
+Questão 25 de 30 (Direito Processual Penal - Padrão VUNESP)
+De acordo com o Código de Processo Penal, a prisão preventiva poderá ser decretada pelo juiz, a requerimento do Ministério Público, do assistente da acusação, ou do querelante, ou por representação da autoridade policial. Sobre os requisitos e fundamentos da prisão preventiva, é correto afirmar que:
+(A) A decisão que decretar a prisão preventiva deve ser motivada e fundamentada em receio de perigo abstrato decorrente da gravidade genérica do delito.
+(B) A prisão preventiva poderá ser imposta como cumprimento antecipado de pena nos crimes punidos com reclusão em regime fechado.
+(C) A existência de indícios suficientes de autoria e a prova da materialidade do delito (fumus commissi delicti) são requisitos essenciais para a decretação da medida.
+(D) O juiz poderá decretar a prisão preventiva de ofício durante a fase de investigação policial, independentemente de representação da autoridade policial.
+(E) A conversão da prisão em flagrante em preventiva pressupõe obrigatoriamente a realização prévia de audiência de custódia com a presença física obrigatória do promotor de justiça.
+Gabarito Comentado: A alternativa C está correta e traz os requisitos indispensáveis (fumus commissi delicti): a prova da materialidade e os indícios suficientes de autoria, previstos no art. 312 do Código de Processo Penal.
+Questão 26 de 30 (Direito Processual Civil - Padrão VUNESP)
+Nos termos do Código de Processo Civil, a atuação do oficial de justiça na prática de atos de comunicação e de execução envolve regras específicas de cumprimento de mandados. Assinale a alternativa correta:
+(A) O oficial de justiça poderá abater portas e janelas de domicílio residencial, independentemente de autorização judicial, caso haja resistência passiva do executado.
+(B) O cumprimento do mandado por oficial de justiça deve ser certificado detalhadamente, descrevendo todas as ocorrências e circunstâncias da diligência, gozando tal certidão de fé pública.
+(C) O mandado de citação e intimação perde a validade após o transcurso de 30 dias da sua expedição, caso não seja cumprido.
+(D) É facultado ao oficial de justiça recusar o cumprimento de mandado urgente caso este recaia em final de semana.
+(E) A citação por oficial de justiça em órgãos públicos federais e estaduais depende de prévia e expressa autorização do chefe da repartição.
+Gabarito Comentado: A alternativa B está correta. A certidão lavrada pelo oficial de justiça possui fé pública, gozando de presunção juris tantum (relativa) de veracidade quanto aos fatos por ele testemunhados.
+Questão 27 de 30 (Direito Processual Civil - Padrão VUNESP)
+Assinale a alternativa correta a respeito da tutela provisória no Código de Processo Civil:
+(A) A tutela de urgência de natureza cautelar pode ser concedida em caráter antecedente ou incidental.
+(B) A concessão de tutela de urgência exige a comprovação da estabilização dos efeitos da decisão, que ocorre após 2 anos do trânsito em julgado.
+(C) A tutela da evidência depende da demonstração concomitante de perigo de dano ou risco ao resultado útil do processo.
+(D) O juiz poderá conceder a tutela de urgência liminarmente sem a oitiva da parte contrária apenas nos processos de competência originária dos tribunais superiores.
+(E) A tutela antecipada concedida em caráter antecedente torna-se definitiva e extingue o processo se a parte contrária não interpor agravo de instrumento no prazo de 15 dias.
+Gabarito Comentado: A alternativa A está correta (art. 294 do CPC). A tutela de urgência pode ser requerida em caráter antecedente ou incidental. A tutela da evidência (alternativa C) dispensa o perigo de dano.
+Questão 28 de 30 (Direito Constitucional - Padrão VUNESP)
+Conforme a Constituição Federal de 1988, analise os seguintes institutos e princípios fundamentais: I. O Brasil rege-se nas suas relações internacionais pelos princípios da independência nacional, prevalência dos direitos humanos, autodeterminação dos povos e não-intervenção. II. A soberania, a cidadania, a dignidade da pessoa humana, os valores sociais do trabalho e da livre iniciativa e o pluralismo político constituem os fundamentos da República Federativa do Brasil. III. É assegurado o direito de resposta, proporcional ao agravo, além da indenização por dano material, moral ou à imagem, sendo vedado o anonimato. IV. A criação de associações e, na forma da lei, a de cooperativas dependem de autorização prévia do Estado para o seu funcionamento.
+Estão corretas apenas as afirmativas:
+(A) I, II e III.
+(B) I, III e IV.
+(C) II, III e IV.
+(D) I, II e IV.
+(E) I e II apenas.
+Gabarito Comentado: A alternativa A está correta. A afirmativa IV está errada porque a criação de associações e cooperativas ocorre independentemente de autorização (art. 5º, XVIII, da CF).
+Questão 29 de 30 (Direito Administrativo - Padrão VUNESP)
+Assinale a alternativa correta a respeito dos poderes administrativos e do uso do poder de polícia:
+(A) O poder hierárquico confere à Administração a prerrogativa de aplicar sanções disciplinares a particulares que mantenham contrato administrativo com o órgão público.
+(B) O poder disciplinar destina-se a apurar e punir infrações praticadas por servidores públicos ou por pessoas sujeitas à disciplina interna da Administração.
+(C) O poder regulamentar é indelegável e pode ser exercido por meio de leis ordinárias aprovadas pelo Poder Executivo.
+(D) O poder de polícia consubstancia-se na faculdade de a Administração Pública anular seus próprios atos ilegais, mediante autotutela.
+(E) A discricionariedade administrativa afasta por completo a vinculação aos princípios constitucionais da administração pública, como a moralidade e a impessoalidade.
+Gabarito Comentado: A alternativa B está correta. O poder disciplinar apura e pune infrações de agentes públicos ou de quem esteja sujeito à disciplina interna da Administração.
+Questão 30 de 30 (Direito Civil - Padrão VUNESP)
+Assinale a alternativa correta a respeito da posse e de sua classificação no Código Civil brasileiro:
+(A) Considera-se possuidor todo aquele que tem de fato o exercício, pleno ou não, de algum dos poderes inerentes à propriedade.
+(B) A posse direta, de quem tem a coisa em seu poder, temporariamente, em virtude de direito pessoal, anula a posse indireta de quem a concedeu.
+(C) A posse de boa-fé perde essa característica desde o momento em que haja citação válida em ação possessória, independentemente de o possuidor ter ciência dos vícios do negócio jurídico.
+(D) O possuidor turbado, ou esbulhado, não poderá manter-se ou restituir-se por força própria, devendo aguardar ordem judicial prévia.
+(E) A posse adquire-se desde o momento em que se manifesta a vontade de possuir, sendo indispensável a apreensão física da coisa.
+Gabarito Comentado: A alternativa A está correta e traz a regra exata do artigo 1.196 do Código Civil.
+Gabarito Comentado: A alternativa A está correta. Com a reforma da Lei de Improbidade Administrativa promovida pela Lei nº 14.230/2021, a tipificação dos atos de improbidade administrativa passou a exigir exclusivamente a modalidade dolosa (dolo específico de cometer a ilegalidade visando ao resultado ilícito), tendo sido extinta a modalidade culposa.
+Por que a alternativa D (que você escolheu) está errada? O herdeiro e o sucessor daquele que causar dano ao erário ou que se enriquecer ilicitamente respondem sim pelas obrigações decorrentes da improbidade, até o limite do valor da herança ou do patrimônio transferido (art. 8º da Lei nº 8.429/1992).
+Consolidação Completa do Simulado (Questões 1 a 20)
+Conforme solicitado, segue abaixo o bloco completo de todas as 20 questões do simulado de hoje, estruturado com enunciados, alternativas e gabaritos comentados, pronto para você copiar e colar diretamente no seu documento de estudos.
+1. (Língua Portuguesa - Padrão VUNESP)
+Assinale a alternativa em que a crase foi empregada em estrita conformidade com a norma-padrão da língua portuguesa:
+(A) O oficial de justiça encaminhou o mandado cumprido à juízo competente para apreciação.
+(B) A diligência foi realizada às pressas, garantindo a celeridade que o ato processual exigia.
+(C) O servidor dedicou-se à cumprir todas as determinações contidas na portaria da vara.
+(D) O mandado de citação foi entregue à uma testemunha arrolada pelo autor da ação.
+(E) Visando à novos resultados na comarca, a equipe aprimorou a rotina de atos de comunicação.
+Gabarito Comentado: A alternativa B está correta. "Às pressas" é locução adverbial feminina indicativa de modo, exigindo crase. Incorretas: (A) antes de masculino (a juízo); (C) antes de verbo (a cumprir); (D) antes de artigo indefinido (a uma); (E) "novos" é masculino plural (a novos).
+2. (Língua Portuguesa - Padrão VUNESP)
+Assinale a alternativa correta quanto à concordância verbal e nominal:
+(A) Faltou, na comarca, recursos financeiros e humanos para o atendimento pleno das diligências urgentes.
+(B) Devem haver muitos mandados pendentes de cumprimento na secretaria da vara nesta semana.
+(C) Fazem anos que a comarca aguarda a digitalização completa de todos os processos judiciais.
+(D) Tratavam-se de questões complexas relativas à execução de títulos extrajudiciais.
+(E) Devem existir ótimas oportunidades de lotação para os oficiais de justiça recém-empossados.
+Gabarito Comentado: A alternativa E está correta. O verbo "existir" é pessoal e concorda com o sujeito (ótimas oportunidades no plural). Incorretas: (A) o verbo concorda com o sujeito plural (faltaram); (B) "haver" no sentido de existir é impessoal (deve haver); (C) "fazer" indicando tempo é impessoal (faz anos); (D) o verbo tratar-se é VTI e fica no singular (tratava-se).
+3. (Direito Penal - Padrão VUNESP)
+Assinale a alternativa correta a respeito dos crimes contra a Administração Pública:
+(A) O crime de corrupção passiva exige, para a sua consumação, que o funcionário público efetivamente pratique o ato de ofício violando dever funcional.
+(B) O crime de concussão consuma-se no momento em que o funcionário público efetivamente recebe a vantagem indevida exigida.
+(C) A prevaricação é crime próprio que pode ser praticado tanto por funcionário público quanto por particular, desde que haja concurso de pessoas.
+(D) O peculato-apropriação consuma-se no momento em que o funcionário público, tendo a posse do bem em razão do cargo, inverte a posse e passa a agir como se dono fosse (animus rem sibi habendi).
+(E) O crime de facilitação de contrabando ou descaminho exige dolo específico de obtenção de vantagem econômica direta para o agente público.
+Gabarito Comentado: A alternativa D está correta. O peculato-apropriação consuma-se quando o agente, que já detém legitimamente a posse do bem, inverte o ânimo e passa a comportar-se como dono. Incorretas: (A) e (B) Corrupção passiva e concussão são crimes formais que se consumam com a mera solicitação/recebimento/exigência, independentemente do resultado ou ato de ofício; (C) prevaricação é crime próprio exclusivo de funcionário público; (E) não exige dolo específico de lucro próprio.
+4. (Direito Penal - Padrão VUNESP)
+Determinado particular, com o fim de impedir a investigação de crime de lavagem de dinheiro, destrói e oculta livros contábeis e registros eletrônicos que serviriam de prova no inquérito policial. Nos termos do Código Penal, a conduta praticada configura o crime de:
+(A) Fraude processual.
+(B) Favorecimento pessoal.
+(C) Favorecimento real.
+(D) Coação no curso do processo.
+(E) Oposição à execução de ato legal.
+Gabarito Comentado: A alternativa A está correta. O crime de fraude processual (art. 347 do CP) consiste em inovar artificiosamente na pendência de inquérito policial o estado de lugar, coisa ou documento, com o fim de introduzir em erro o juiz ou perito.
+5. (Direito Processual Penal - Padrão VUNESP)
+De acordo com o Código de Processo Penal, sobre a audiência de custódia e os desdobramentos da prisão em flagrante, é correto afirmar que:
+(A) A realização da audiência de custódia é facultativa nos casos em que o preso manifestar expressamente o desejo de não comparecer perante a autoridade judicial.
+(B) O juiz, ao verificar a ilegalidade da prisão em flagrante na audiência de custódia, deverá relaxá-la imediatamente, expedindo alvará de soltura.
+(C) A conversão da prisão em flagrante em prisão preventiva pode ocorrer de ofício pelo magistrado durante a realização da audiência de custódia, mesmo sem provocação do Ministério Público.
+(D) A concessão de liberdade provisória, com ou sem fiança, é vedada caso o preso seja reincidente em crimes dolosos.
+(E) O auto de prisão em flagrante deverá ser assinado por duas testemunhas que tenham presenciado o fato delituoso, sob pena de nulidade absoluta da prisão.
+Gabarito Comentado: A alternativa B está correta (art. 310, I, do CPP). Incorretas: (A) a apresentação do preso é obrigatória; (C) o juiz não pode decretar preventiva de ofício; (D) a reincidência não veda absolutamente a liberdade provisória; (E) as testemunhas do auto de prisão em flagrante são instrumentárias (da apresentação), e não necessariamente oculares do crime.
+6. (Direito Processual Civil - Padrão VUNESP)
+No tocante aos atos processuais e à prática de atos de comunicação processual pelo oficial de justiça, assinale a alternativa correta:
+(A) A citação por oficial de justiça far-se-á em qualquer dia, inclusive nos domingos e feriados, independentemente de autorização judicial, desde que entre as 6h e as 20h.
+(B) O oficial de justiça poderá realizar a citação de qualquer pessoa, em qualquer lugar onde se encontre, inclusive em templos religiosos durante a realização de cultos, sem restrições.
+(C) Constatando o oficial de justiça que o citando se oculta para não receber o mandado, deverá certificar o ocorrido e intimar qualquer vizinho para testemunhar a citação por hora certa no dia útil seguinte.
+(D) O cumprimento de mandados urgentes pode ser realizado em dias e horários fora do período legal, mediante autorização expressa ou tácita da lei.
+(E) A citação postal é a regra geral no CPC, sendo vedada a utilização de oficial de justiça nas comarcas onde o sistema eletrônico esteja plenamente implantado.
+Gabarito Comentado: A alternativa D está correta (art. 212, § 2º, do CPC). Incorretas: (A) atos urgentes dispensam horário comum; (B) templos e cultos possuem resguardos protetivos; (C) o procedimento de hora certa exige intimação de familiar ou vizinho conforme regras específicas do art. 252; (E) a citação por oficial de justiça possui previsões próprias no CPC.
+7. (Direito Processual Civil - Padrão VUNESP)
+Assinale a alternativa correta a respeito do cumprimento de sentença e dos atos de expropriação:
+(A) O executado será intimado para pagar o débito no prazo de 15 dias; caso não o faça, o montante da condenação será acrescido de multa de 10% e de honorários advocatícios de 10%.
+(B) A penhora de bens imóveis independe de registro, bastando a lavratura do termo em cartório para produzir efeitos perante terceiros.
+(C) O oficial de justiça, ao realizar a penhora, deverá proceder à avaliação dos bens penhorados, sendo desnecessária a nomeação de perito em qualquer hipótese.
+(D) É vedada a penhora de salário, vencimentos ou subsídios em nenhuma circunstância, por possuírem caráter alimentar absoluto.
+(E) A adjudicação de bens penhorados pelo credor é subsidiária e só pode ocorrer após três leilões infrutíferos.
+Gabarito Comentado: A alternativa A está correta e reproduz o art. 523 do CPC. Incorretas: (B) a penhora de imóvel exige registro para eficácia erga omnes; (C) a avaliação pode exigir perito se o bem o demandar; (D) salários admitem penhora relativa (alimentos ou mitigação jurisprudencial); (E) a adjudicação pode ocorrer antes dos leilões.
+8. (Direito Constitucional - Padrão VUNESP)
+Conforme a Constituição Federal de 1988, analise os direitos e garantias fundamentais e assinale a alternativa correta:
+(A) A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.
+(B) É livre a expressão da atividade intelectual, artística, científica e de comunicação, dependendo de prévia licença e censura do Estado em comícios públicos.
+(C) A lei não poderá estabelecer restrições à publicidade de atos, mesmo em casos de defesa da intimidade ou interesse social.
+(D) O sigilo da correspondência e das comunicações telegráficas, de dados e das comunicações telefônicas é inviolável, sendo admitida a interceptação telefônica para fins civis, mediante ordem de qualquer autoridade policial.
+(E) É livre a locomoção no território nacional em tempo de paz, podendo qualquer pessoa, nos termos da lei, entrar, permanecer ou deixar seus bens no país.
+Gabarito Comentado: A alternativa A está correta (art. 5º, XI, da CF). Incorretas: (B) a censura é vedada; (C) há restrições legítimas de intimidade; (D) interceptação é exclusiva por juiz para fins criminais; (E) o direito garante entrar, permanecer ou deixar o país.
+9. (Direito Administrativo - Padrão VUNESP)
+Assinale a alternativa correta a respeito dos atos administrativos e de seus atributos:
+(A) A autoexecutoriedade está presente em todos os atos administrativos, permitindo que a Administração execute suas decisões por força própria, independentemente de previsão em lei ou urgência.
+(B) A presunção de legitimidade (ou de veracidade) é um atributo presente em todos os atos administrativos, admitindo prova em contrário (presunção juris tantum).
+(C) A imperatividade significa que os atos administrativos podem ser alterados ou desfeitos unilateralmente pela Administração a qualquer momento, sem direito de defesa do administrado.
+(D) A tipicidade é o atributo pelo qual o ato administrativo deve corresponder a figuras típicas estabelecidas em lei, sendo lícita a criação de atos inominados pela vontade livre da autoridade.
+(E) A retroatividade é atributo essencial de todo ato administrativo discricionário, alcançando fatos passados para resguardar o interesse público.
+Gabarito Comentado: A alternativa B está correta. A presunção de legitimidade é universal e relativa (juris tantum). Incorretas: (A) autoexecutoriedade não é universal; (C) imperatividade é a imposição de obrigações; (D) tipicidade veda atos inominados restritivos sem lei; (E) irretroatividade é a regra.
+10. (Direito Civil - Padrão VUNESP)
+A respeito da capacidade civil, dos bens e dos fatos jurídicos, assinale a alternativa correta segundo o Código Civil brasileiro:
+(A) Os menores entre dezesseis e dezoito anos são absolutamente incapazes para o exercício dos atos da vida civil.
+(B) A existência da pessoa natural termina com a morte real, sendo vedada a declaração de morte presumida sem decretação prévia de ausência.
+(C) Consideram-se bens públicos de uso especial os edifícios ou terrenos destinados a serviço ou estabelecimento da administração federal, estadual, territorial ou municipal.
+(D) O erro de direito, quando implicar recusa à aplicação da lei, constitui motivo idôneo para anular o negócio jurídico celebrado entre particulares.
+(E) A menoridade cessa aos vinte e um anos completos, idade em que a pessoa fica habilitada à prática de todos os atos da vida civil.
+Gabarito Comentado: A alternativa C está correta (art. 99, II, do CC). Incorretas: (A) menores entre 16 e 18 anos são relativamente incapazes; (B) há morte presumida sem ausência em casos específicos (ex: campanha militar, perigo de vida); (D) erro de direito em regra não escusa o cumprimento da lei para anular negócios; (E) a menoridade cessa aos 18 anos.
+11. (Direito Processual Penal - Padrão VUNESP)
+No que tange às provas no processo penal, assinale a alternativa correta segundo o Código de Processo Penal:
+(A) O juiz poderá fundamentar sua decisão exclusivamente nos elementos informativos colhidos durante a investigação policial, desde que confirmados por depoimentos prestados em sigilo na fase judicial.
+(B) São inadmissíveis, devendo ser desentranhadas do processo, as provas ilícitas, assim entendidas as obtidas em violação a normas constitucionais ou legais, ressalvadas as hipóteses de boa-fé do agente policial.
+(C) A confissão será divisível e retratável, sem prejuízo do livre convencimento do juiz, que a apreciará em conjunto com as demais provas produzidas.
+(D) O testemunho de ascendentes, descendentes, irmãos e afins em linha reta do indiciado ou acusado possui valor probatório pleno e isenção absoluta de qualquer restrição legal.
+(E) A prova da alegação incumbirá a quem a fizer, sendo expressamente vedada a produção de provas de ofício pelo juiz no curso da instrução criminal.
+Gabarito Comentado: A alternativa C está correta (art. 200 do CPP). Incorretas: (A) veda-se condenação exclusiva em elementos inquisitoriais (art. 155); (B) boa-fé policial não convalida violação constitucional direta; (D) parentes possuem direito de escusa; (E) juiz pode produzir prova subsidiária de ofício.
+12. (Direito Processual Civil - Padrão VUNESP)
+A respeito da competência interna e internacional, bem como da modificação de competência no Código de Processo Civil, assinale a alternativa correta:
+(A) A incompetência absoluta pode ser alegada em qualquer tempo e grau de jurisdição, devendo o juiz declará-la de ofício.
+(B) A eleição de foro (cláusula de eleição de foro) produces efeitos imediatos e restringe a competência em qualquer tipo de relação jurídica, mesmo nas de consumo.
+(C) A incompetência relativa deve ser arguida necessariamente por meio de contestação, sob pena de prorrogação e consequente preclusão para o réu.
+(D) Modifica-se a competência absoluta em razão da matéria ou da hierarquia se houver conexão ou continência entre ações propostas em juízos distintos.
+(E) É vedada a prorrogação de competência territorial em qualquer hipótese, mesmo quando o réu não opuser exceção de incompetência no prazo legal.
+Gabarito Comentado: A alternativa A está correta. Incompetência absoluta é matéria de ordem pública. Incorretas: (B) relações de consumo protegem o foro do consumidor; (C) prorrogação decorre da inércia, mas a alternativa A é a definição clássica incontestável da absoluta; (D) conexão não altera competência absoluta; (E) omissão prorroga a competência territorial.
+13. (Direito Constitucional - Padrão VUNESP)
+Conforme a Constituição Federal de 1988, no que tange à Organização do Estado e à Administração Pública, assinale a alternativa correta:
+(A) A criação, a incorporação, a fusão e o desmembramento de Municípios far-se-ão por lei federal, dependendo de consulta prévia, mediante plebiscito, às populações dos Municípios envolvidos.
+(B) A investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, de acordo com a natureza e a complexidade do cargo ou emprego, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.
+(C) É garantido ao servidor público civil o direito à livre associação sindical, sendo expressamente permitido o direito de greve, que será exercido nos termos e nos limites definidos em lei ordinária específica.
+(D) Os vencimentos dos cargos do Poder Legislativo e do Poder Judiciário poderão ser superiores aos pagos pelo Poder Executivo, desde que haja autorização prévia na lei de diretrizes orçamentárias.
+(E) A proibição de acumulação remunerada de cargos públicos abrange autarquias, fundações, empresas públicas, mas exclui as sociedades de economia mista e suas subsidiárias.
+Gabarito Comentado: A alternativa B está correta (art. 37, II, da CF). Incorretas: (A) criação de municípios exige lei estadual; (C) o direito de greve depende de lei específica não regulamentada integralmente; (D) teto remuneratório é único e vinculante; (E) a vedação de acumulação abrange também sociedades de economia mista.
+14. (Direito Administrativo - Padrão VUNESP)
+A respeito dos agentes públicos e do regime constitucional aplicável a eles, assinale a alternativa correta:
+(A) A estabilidade do servidor público federal ocorre após o decurso de dois anos de efetivo exercício, condicionados à aprovação em avaliação especial de desempenho.
+(B) Apenas o servidor público estável só perderá o cargo em virtude de sentença judicial transitada em julgado ou mediante processo administrativo em que lhe seja assegurada ampla defesa.
+(C) A improbidade administrativa importa a cassação de direitos políticos, a perda da função pública, a indisponibilidade de bens e o ressarcimento ao erário, sem prejuízo da ação penal cabível, aplicadas de forma cumulativa obrigatória pelo juiz em todas as hipóteses.
+(D) O regime previdenciário dos servidores titulares de cargos efetivos da União, dos Estados, do Distrito Federal e dos Municípios é de caráter contributivo e solidário, sendo vedada a instituição de regime de previdência complementar.
+(E) É livre a acumulação de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas, sem necessidade de comprovação de compatibilidade de horários.
+Gabarito Comentado: A alternativa B está correta (art. 41, § 1º, II, da CF). Incorretas: (A) o prazo é de três anos; (C) sanções de improbidade não são aplicadas de forma cumulativa cega e irrestrita em todas as hipóteses; (D) previdência complementar é permitida; (E) exige-se compatibilidade de horários.
+15. (Direito Civil - Padrão VUNESP)
+A respeito da prescrição e da decadência no Código Civil brasileiro, assinale a alternativa correta:
+(A) Os prazos de prescrição podem ser alterados por acordo expresso entre as partes contratantes.
+(B) A decadência legal pode ser estabelecida por convenção entre as partes ou por disposição de lei.
+(C) A prescrição pode ser alegada em qualquer grau de jurisdição, pela parte a quem aproveita.
+(D) O ajuizamento de ação proposta por juiz absolutamente incompetente não interrompe a prescrição.
+(E) A suspensão ou a interrupção da prescrição em favor de um dos credores solidários aproveita a todos os demais.
+Gabarito Comentado: A alternativa C está correta (art. 193 do CC). Incorretas: (A) prazos prescricionais são legais e indisponíveis por vontade das partes; (B) decadência legal decorre exclusivamente de lei; (D) despacho inaugural de juiz mesmo incompetente interrompe a prescrição (súmula/CPC).
+16. (Direito Processual Civil - Padrão VUNESP)
+A respeito da citação e da intimação no Código de Processo Civil, assinale a alternativa correta:
+(A) A citação por meio eletrônico deve ser confirmada no prazo de até 3 dias úteis, contados do recebimento da citação, sob pena de multa de até 5% do valor da causa por ato atentatório à dignidade da justiça.
+(B) O comparecimento espontâneo do réu ou do executado supre a falta ou a nulidade da citação, fluindo a partir da data do comparecimento o prazo para apresentação de defesa.
+(C) Os atos processuais devem ser realizados em dias úteis, das 6 horas às 20 horas, sendo expressamente vedada a prática de qualquer ato processual por meio eletrônico fora desse horário.
+(D) A citação de pessoa jurídica de direito público será realizada sempre por edital, após esgotadas todas as tentativas de localização pessoal de seus representantes legais.
+(E) A intimação do Ministério Público deverá ser feita pessoalmente, não sendo admitida a intimação por meio eletrônico em nenhuma hipótese.
+Gabarito Comentado: A alternativa B está correta (art. 239, § 1º, do CPC). Incorretas: (C) atos eletrônicos podem ser protocolados até as 24h do último dia; (D) PJ de direito público é citada na pessoa do representante judicial; (E) MP é intimado eletronicamente em sistemas integrados.
+17. (Direito Penal - Padrão VUNESP)
+Assinale a alternativa correta a respeito dos crimes contra a fé pública previstos no Código Penal:
+(A) O crime de falsificação de moeda consuma-se apenas quando a moeda falsa é colocada em circulação no comércio.
+(B) Incorre na mesma pena de quem falsifica moeda o indivíduo que, a recebendo de boa-fé, como verdadeira, a traz à circulação depois de conhecer a falsidade.
+(C) O crime de uso de documento falso é considerado subsidiário e absorve autonomamente o crime de falsificação de documento quando praticado pelo mesmo agente.
+(D) O funcionário público que insere declaração falsa em documento público com o fim de alterar verdade sobre fato juridicamente relevante comete o crime de falsidade ideológica (art. 299 do CP).
+(E) O petrecho para falsificação de moeda constitui crime autônomo punido apenas se a moeda falsa chegar a ser efetivamente fabricada.
+Gabarito Comentado: A alternativa B está correta (art. 289, § 2º, do CP - moeda falsa privilegiada). Incorretas: (A) o crime consuma-se com a fabricação/contrafacção; (C) se o falsificador usa o próprio falso, o uso é absorvido pelo crime-fim (súmula 17 do STJ); (E) petrecho é crime de perigo formal autônomo.
+18. (Direito Processual Penal - Padrão VUNESP)
+A respeito da prisão preventiva, das medidas cautelares diversas da prisão e da liberdade provisória, assinale a alternativa correta:
+(A) A prisão preventiva poderá ser decretada em qualquer fase da investigação policial ou do processo penal, de ofício pelo juiz, independentemente de representação da autoridade policial ou requerimento do Ministério Público.
+(B) A decisão que decretar, substituir ou revogar a prisão preventiva deverá ser sempre motivada e fundamentada, sob pena de nulidade.
+(C) É cabível a decretação de prisão preventiva em crimes punidos com pena privativa de liberdade máxima não superior a 4 (quatro) anos, em qualquer hipótese, mesmo sendo o réu primário e de bons antecedentes.
+(D) As medidas cautelares diversas da prisão aplicam-se isoladamente ou de forma cumulativa, sendo vedada a imposição de monitoração eletrônica em conjunto com qualquer outra medida.
+(E) O juiz poderá manter a prisão preventiva mesmo quando verificar a ocorrência de causa que exclua o crime ou isente o réu de pena, desde que haja grande clamor público.
+Gabarito Comentado: A alternativa B está correta (art. 315 do CPP). Incorretas: (A) juiz não pode decretar preventiva de ofício; (C) crimes até 4 anos em regra não comportam preventiva para primários; (D) monitoração admite cumulação; (E) causas excludentes exigem revogação da prisão.
+19. (Direito Administrativo - Padrão VUNESP)
+Assinale a alternativa correta a respeito dos poderes administrativos (hierárquico, disciplinar, regulamentar e de polícia):
+(A) O poder disciplinar é a faculdade que a Administração Pública tem de punir internamente apenas os particulares que mantêm contratos administrativos com o Estado.
+(B) O poder hierárquico permite à Administração fiscalizar, coordenar, controlar e avocar atribuições, sendo vedada a delegação de competência em qualquer hipótese.
+(C) O poder de polícia discricionário permite à autoridade pública atuar com liberdade de escolha quanto à conveniência e à oportunidade da medida, respeitados os limites legais.
+(D) O poder regulamentar (ou normativo) é exercido exclusivamente pelo Poder Judiciário por meio da edição de súmulas vinculantes.
+(E) A autoexecutoriedade e a coercibilidade são atributos presentes em todos os atos praticados no exercício do poder disciplinar, dispensando controle judicial.
+Gabarito Comentado: A alternativa C está correta. O poder de polícia discricionário confere margem de conveniência e oportunidade. Incorretas: (A) poder disciplinar atinge agentes públicos e contratados com vínculo específico; (B) delegação de competência é permitida; (D) poder regulamentar é executivo; (E) atos administrativos sempre se sujeitam ao controle judicial.
+20. (Legislação Especial - Padrão VUNESP)
+A respeito da Lei de Improbidade Administrativa (Lei nº 8.429/1992 e suas alterações posteriores, incluindo a Lei nº 14.230/2021), assinale a alternativa correta:
+(A) Consideram-se atos de improbidade administrativa apenas aqueles cometidos com dolo, restando extinta a modalidade culposa de improbidade.
+(B) A responsabilidade civil e administrativa por ato de improbidade exige a comprovação de prejuízo efetivo ao erário em todas as hipóteses, independentemente de espécie de ato praticado.
+(C) As ações de improbidade administrativa possuem natureza penal, exigindo legitimidade privativa do Ministério Público para a propositura de qualquer medida cautelar ou principal.
+(D) O sucessor ou o herdeiro daquele que causar dano ao erário não respondem em nenhuma hipótese pelas obrigações decorrentes da improbidade do de cujus.
+(E) A perda da função pública e a suspensão dos direitos políticos aplicam-se de forma automática independentemente do trânsito em julgado da sentença condenatória.
+Gabarito Comentado: A alternativa A está correta. A reforma de 2021 extinguiu a modalidade culposa, exigindo dolo. Incorretas: (B) enriquecimento ilícito dispensa prejuízo material efetivo; (C) ações de improbidade são de natureza civil; (D) herdeiros respondem até o limite do patrimônio transferido; (E) sanções exigem trânsito em julgado para cumprimento definitivo.
+Leia o texto a seguir para responder às questões de 01 a 03:
+
+"A atividade judiciária exige precisão no cumprimento dos mandados, pois cada ato do Oficial de Justiça reflete diretamente na efetividade da prestação jurisdicional. A atuação em campo requer discernimento e equilíbrio para que a lei seja cumprida sem abusos, garantindo-se os direitos fundamentais do cidadão."
+
+1. Com base no texto, assinale a alternativa que apresenta uma inferência correta:
+a) O Oficial de Justiça possui poder discricionário para decidir se deve ou não cumprir o mandado.
+b) A celeridade processual depende exclusivamente da atuação do Oficial de Justiça em campo.
+c) O cumprimento adequado das ordens judiciais impacta a qualidade e a eficácia da Justiça.
+d) Os direitos fundamentais impedem a realização de penhoras ou arrestos em domicílio.
+e) A atividade do Oficial de Justiça prescinde de fundamentação legal ou equilíbrio em sua execução.
+
+GABARITO: C
+COMENTÁRIO: O texto afirma expressamente que "cada ato do Oficial de Justiça reflete diretamente na efetividade da prestação jurisdicional". Daí infere-se corretamente que o cumprimento adequado das ordens judiciais impacta diretamente a eficácia da Justiça.
+
+2. No trecho "A atuação em campo requer discernimento e equilíbrio para que a lei seja cumprida sem abusos...", a locução "para que" introduz uma oração subordinada com sentido de:
+a) Concessão.
+b) Causa.
+c) Finalidade.
+d) Proporção.
+e) Consequência.
+
+GABARITO: C
+COMENTÁRIO: A locução conjuntiva "para que" possui valor semântico de finalidade (indica o objetivo com o qual a lei deve ser cumprida).
+
+3. Assinale a alternativa em que a palavra destacada é sinônima de "DISCERNIMENTO", conforme empregada no texto:
+a) Precipitação.
+b) Lucidez.
+c) Negligência.
+d) Hesitação.
+e) Indiferença.
+
+GABARITO: B
+COMENTÁRIO: Discernimento refere-se à capacidade de julgar com clareza, bom senso, critério e lucidez.
+
+4. Assinale a alternativa correta quanto à concordância verbal, de acordo com a norma-padrão da língua portuguesa:
+a) Faria anos que não se realizavam concursos com tantas vagas na região.
+b) Deve haver muitos candidatos inscritos para a Circunscrição de Itapecerica da Serra.
+c) Aconteceram, durante a sessão de julgamento, bastante imprevistos.
+d) Haviam mais de trinta provas para serem corrigidas na lista geral daquele município.
+e) Tratam-se de mandados urgentes que precisam de cumprimento imediato.
+
+GABARITO: B
+COMENTÁRIO: O verbo "haver" no sentido de existir é impessoal e transmite sua impessoalidade ao verbo auxiliar (deve haver). As demais alternativas estão incorretas: a) Faria anos (correto: Fazia anos); c) bastante imprevistos (correto: bastantes imprevistos); d) Haviam mais (correto: Havia mais); e) Tratam-se de mandados (correto: Trata-se de mandados - VTI com partícula "se" exige verbo no singular).
+
+5. Assinale a alternativa em que a regência e o uso da crase estão em conformidade com a norma-padrão:
+a) O Oficial de Justiça dirigiu-se à uma residência no centro da comarca.
+b) Ele obedeceu à determinação judicial e entregou o mandado à pessoa indicada.
+c) O servidor prestou informações à cerca do cumprimento da diligência.
+d) A equipe compareceu à partir das oito horas da manhã no local combinado.
+e) Referiu-se à todos os advogados presentes na audiência de conciliação.
+
+GABARITO: B
+COMENTÁRIO: "Obedeceu" exige preposição "a" (obedecer a algo/alguém) + artigo "a" de determinação = "à determinação"; "entregou" exige preposição "a" + artigo "a" de pessoa = "à pessoa". Erros das demais: a) "à uma" (não há crase antes de artigo indefinido); c) "à cerca" (correto: "acerca de"); d) "à partir" (não há crase antes de verbo); e) "à todos" (não há crase antes de palavra masculina/pronome indefinido).
+
+6. Assinale a alternativa correta no que tange à colocação pronominal:
+a) Jamais cumprir-se-á uma ordem sem o devido amparo legal.
+b) Não me falaram sobre o horário da diligência no fórum.
+c) Me enviaram os autos digitais para conferência ontem à tarde.
+d) Quando chamou-me, prontamente atendi ao chamado do Juiz.
+e) O advogado retirou-se, tornando a manifestar-se logo em seguida.
+
+GABARITO: B
+COMENTÁRIO: O advérbio de negação "Não" é palavra atrativa, exigindo obrigatoriamente a próclise ("Não me falaram"). Erros das demais: a) "Jamais" atrai próclise (Jamais se cumprirá); c) Não se inicia frase com pronome oblíquo átono; d) "Quando" é conjunção subordinativa atrativa (Quando me chamou).
+
+7. Em relação à pontuação, assinale a opção empregada em conformidade com as normas gramaticais:
+a) O Oficial de Justiça, cumpriu o mandado de busca e apreensão na manhã de ontem.
+b) Embora estivesse chovendo muito, o servidor dirigiu-se até a comarca vizinha.
+c) Os documentos foram entregues, ao juiz da causa principal.
+d) Santos, Campinas e Osasco oferecem, excelentes oportunidades no concurso.
+e) Quando o réu foi intimado; declarou que não tinha advogado.
+
+GABARITO: B
+COMENTÁRIO: A oração subordinada adverbial concessiva "Embora estivesse chovendo muito" está anteposta à oração principal, exigindo o uso da vírgula. Nas opções A, C e D houve separação indevida de sujeito e verbo ou de verbo e complemento.
+
+8. Identifique a alternativa em que a palavra em destaque está empregada em seu sentido FIGURADO (conotativo):
+a) A porta do fórum foi aberta exatamente no horário regulamentar.
+b) A tempestade derrubou várias árvores na avenida principal da cidade.
+c) O juiz usou de mão de ferro para manter a ordem na audiência.
+d) O réu assinou a certidão apresentada pelo Oficial de Justiça.
+e) As cópias do processo foram juntadas aos autos eletrônicos.
+
+GABARITO: C
+COMENTÁRIO: A expressão "mão de ferro" é usada metaforicamente para significar rigor ou autoritarismo, caracterizando o sentido conotativo/figurado.
+
+9. Assinale a alternativa cuja frase apresenta incorreção de grafia ou acentuação:
+a) A paralisação dos serviços judiciários causou atraso na expedição das certidões.
+b) O Oficial de Justiça agiu com extrema sensatez durante a penhora.
+c) É necessário analisar o porquê de tantas dúvidas no edital.
+d) O servidor não pôde comparecer ontem, mas hoje ele pode trabalhar normalmente.
+e) O réu formulou uma queixa sem fundamentação plausivel para o caso.
+
+GABARITO: E
+COMENTÁRIO: A palavra "plausível" é paroxítona terminada em "l" e deve ser obrigatoriamente acentuada graficamente.
+
+10. Assinale a alternativa na qual a troca do termo sublinhado altera o sentido original do texto de forma incorreta:
+"O réu contestou a ação, POR CONSEGUINTE o juiz marcou a audiência de instrução."
+a) portanto
+b) logo
+c) assim
+d) todavia
+e) por isso
+
+GABARITO: D
+COMENTÁRIO: "Por conseguinte" é uma conjunção conclusiva. "Todavia" é uma conjunção adversativa (indica oposição), o que altera totalmente o sentido da frase.
+
+11. Aponte a alternativa na qual a palavra sublinhada é um ADJETIVO:
+a) O servidor caminhou RAPIDAMENTE até o balcão.
+b) Eles mantiveram um comportamento BASTANTE adequado.
+c) Apresentou um relatório DETALHADO sobre a diligência efetuada.
+d) Mencionou QUE os prazos haviam sido cumpridos.
+e) Chegou CEDO para acompanhar a abertura do fórum.
+
+GABARITO: C
+COMENTÁRIO: "Detalhado" qualifica o substantivo "relatório", exercendo a função de adjetivo. As demais: a) advérbio; b) advérbio de intensidade; d) conjunção; e) advérbio de tempo.
+
+12. Assinale a alternativa em que a flexão de plural do substantivo composto está CORRETA:
+a) Os decretos-leis foram analisados pelo magistrado.
+b) Ocorreram vários abaixo-assinados na porta do palácio.
+c) Os guardas-civis realizaram a segurança do prédio.
+d) Os salários-família foram pagos na data correta.
+e) Todas as alternativas anteriores estão corretas.
+
+GABARITO: E
+COMENTÁRIO: Todas estão corretas. Decretos-leis (substantivo+substantivo variam ambos ou só o primeiro); Abaixo-assinados (advérbio invariável + adjetivo varia); Guardas-civis (substantivo+adjetivo variam ambos); Salários-família (segundo substantivo especifica o primeiro, variando ambos ou apenas o primeiro).
+
+13. Na oração "A certidão FOI LAVRADA pelo Oficial de Justiça", a voz verbal empregada é:
+a) Ativa.
+b) Passiva analítica.
+c) Passiva sintética.
+d) Reflexiva.
+e) Reflexiva recíproca.
+
+GABARITO: B
+COMENTÁRIO: A estrutura Verbo Auxiliar (foi) + Particípio (lavrada) + Agente da Passiva (pelo Oficial de Justiça) caracteriza a Voz Passiva Analítica.
+
+14. Assinale a alternativa em que o pronome relativo foi empregado CORRETAMENTE:
+a) O processo cujo o número foi citado já foi arquivado.
+b) A cidade onde nasci possui duas comarcas instaladas.
+c) Este é o documento onde consta a assinatura do réu.
+d) O juiz de cujo sou fã proferiu excelente decisão.
+e) A testemunha que se refere o advogado não compareceu.
+
+GABARITO: B
+COMENTÁRIO: "Onde" deve ser utilizado estritamente para indicar lugar físico ("A cidade onde nasci"). Erros: a) "cujo o" (não se usa artigo após cujo); c) documento não é lugar (usar "no qual"); d) "de quem sou fã"; e) "a quem se refere" (quem se refere, refere-se A).
+
+15. Indique a alternativa em que a divisão silábica da palavra está CORRETA:
+a) sub-li-nhar
+b) ob-ste-mó
+c) ad-vo-ga-do
+d) tran-sa-tlân-ti-co
+e) ex-ces-si-vo
+
+GABARITO: C
+COMENTÁRIO: A divisão silábica correta de "advogado" é ad-vo-ga-do (o "d" mudo fica na sílaba anterior). Erros: a) su-bli-nhar; b) abs-te-mó; d) tran-sat-lân-ti-co; e) ex-ces-si-vo (essa estaria correta também se o "s" estivesse separado do "c", mas a forma padrão impecável é ad-vo-ga-do).
+
+
+--------------------------------------------------------------------------------
+BLOCO II: CONHECIMENTOS ESPECÍFICOS (40 Questões)
+--------------------------------------------------------------------------------
+
+-- DIREITO PENAL --
+
+16. Considera-se praticado o crime no momento da ação ou da omissão, ainda que outro seja o momento do resultado. O Código Penal adotou expressamente a teoria da:
+a) Ubiquidade para o tempo do crime.
+b) Atividade para o tempo do crime.
+c) Resultado para o tempo do crime.
+d) Atividade para o lugar do crime.
+e) Equidade para a territorialidade.
+
+GABARITO: B
+COMENTÁRIO: Art. 4º do CP: "Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado" (Teoria da Atividade).
+
+17. Nos termos do artigo 150 do Código Penal (Violação de domicilio), compreende-se na expressão "casa":
+a) Hospedaria ou qualquer outra habitação coletiva, enquanto aberta ao público.
+b) Taverna, boate ou ambiente comercial aberto ao público em geral.
+c) Qualquer compartimento habitado ou aposento ocupado de habitação coletiva.
+d) Dependência de uso estritamente público sem restrição de acesso.
+e) Praça pública e vias de circulação comum.
+
+GABARITO: C
+COMENTÁRIO: Art. 150, § 4º, I, do CP: Compreende-se na expressão "casa" qualquer compartimento habitado ou aposento ocupado de habitação coletiva.
+
+18. O funcionário público que exige, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, comete o crime de:
+a) Corrupção passiva.
+b) Peculato.
+c) Concussão.
+d) Prevaricação.
+e) Condescendência criminosa.
+
+GABARITO: C
+COMENTÁRIO: O verbo "EXIGIR" caracteriza o crime de Concussão (art. 316 do CP). Se o verbo fosse "solicitar ou receber", seria Corrupção Passiva (art. 317).
+
+19. Apor ou atribuir a si ou a terceiro falsa identidade para obter vantagem em proveito próprio ou alheio, ou para causar dano a outrem, configura crime de:
+a) Falsidade ideológica.
+b) Falso reconhecimento de firma.
+c) Falsa identidade.
+d) Uso de documento falso.
+e) Fraude processual.
+
+GABARITO: C
+COMENTÁRIO: Art. 307 do CP: "Atribuir-se ou atribuir a terceiro falsa identidade para obter vantagem, em proveito próprio ou alheio, ou para causar dano a outrem".
+
+20. Retardar ou deixar de praticar, indevidamente, ato de ofício, ou praticá-lo contra disposição expressa de lei, para satisfazer interesse ou sentimento pessoal, configura o crime de:
+a) Corrupção passiva.
+b) Prevaricação.
+c) Peculato mediante erro de outrem.
+d) Advocacia administrativa.
+e) Condescendência criminosa.
+
+GABARITO: B
+COMENTÁRIO: Art. 319 do CP: É a definição exata de Prevaricação ("para satisfazer interesse ou sentimento pessoal").
+
+21. O crime de desobediência (art. 330 do CP) consiste em desobedecer a ordem legal de funcionário público. Em relação ao Oficial de Justiça no cumprimento de mandado, a recusa injustificada do intimado em assinar o mandado:
+a) Configura crime de desacato.
+b) Configura crime de desobediência automaticamente.
+c) Não configura crime de desobediência por si só, devendo o Oficial certificar o ocorrido.
+d) Configura crime de resistência qualificada.
+e) Gera prisão em flagrante obrigatória decretada pelo próprio Oficial.
+
+GABARITO: C
+COMENTÁRIO: A recusa em assinar a cópia do mandado (fé de ofício) não constitui crime de desobediência, cabendo ao Oficial de Justiça certificar que o réu tomou conhecimento, mas se recusou a assinar (art. 250 do CPC / Normas da Corregedoria).
+
+-- DIREITO PROCESSUAL PENAL --
+
+22. A ação penal pública será promovida por denúncia do Ministério Público, mas dependerá de representação do ofendido quando a lei assim o exigir. O prazo decadencial para o ofendido exercer o direito de representação é de:
+a) 30 dias contados do fato.
+b) 3 meses contados da descoberta da autoria.
+c) 6 meses contados do dia em que vir a saber quem é o autor do crime.
+d) 1 ano a contar da data em que o fato ocorreu.
+e) 5 anos a contar da data da instauração do inquérito.
+
+GABARITO: C
+COMENTÁRIO: Art. 38 do CPP: O ofendido decairá do direito de queixa ou de representação se não o exercer dentro do prazo de 6 (seis) meses, contado do dia em que vir a saber quem é o autor do crime.
+
+23. A busca domiciliar sem consentimento do morador será realizada durante o dia, salvo em caso de flagrante delito ou desastre. Para fins de cumprimento de mandado de busca e apreensão expedido pelo juiz, a diligência deve ocorrer:
+a) A qualquer hora do dia ou da noite, pois há mandado judicial.
+b) Apenas durante o dia, devendo os executores mostrar e ler o mandado ao morador antes de penetrar na casa.
+c) Exclusivamente no horário compreendido entre 12h e 18h.
+d) Independentemente de intimá-lo a abrir a porta.
+e) Sem a presença de testemunhas para resguardar a intimidade do investigado.
+
+GABARITO: B
+COMENTÁRIO: Art. 245 do CPP: As buscas domiciliares serão executadas de dia, salvo se o morador consentir que se realizem à noite, e, antes de penetrarem na casa, os executores mostrarão e lerão o mandado ao morador, ou a quem o represente, intimando-o, em seguida, a abrir a porta.
+
+24. Entende-se em flagrante delito quem (art. 302 do CPP), EXCETO:
+a) Está cometendo a infração penal.
+b) Acaba de cometê-la.
+c) É perseguido, logo após, pela autoridade, pelo ofendido ou por qualquer pessoa, em situação que faça presumir ser autor da infração.
+d) É encontrado, logo depois, com instrumentos, armas, objetos ou papéis que façam presumir ser ele autor da infração.
+e) É denunciado por vizinhos três semanas após o fato sem qualquer perseguição continuada.
+
+GABARITO: E
+COMENTÁRIO: Três semanas após o fato, sem perseguição ininterrupta, não subsiste qualquer modalidade de prisão em flagrante (próprio, improprio ou presumido).
+
+25. A citação do réu preso será feita:
+a) Por edital com prazo de 15 dias.
+b) Pessoalmente, no estabelecimento em que estiver recolhido.
+c) Na pessoa do diretor do presídio, dispensada a ida ao preso.
+d) Por carta precatória direcionada à sua família.
+e) Por correio com aviso de recebimento.
+
+GABARITO: B
+COMENTÁRIO: Art. 360 do CPP: O réu preso será citado pessoalmente.
+
+26. O mandado de citação no processo penal conterá, de acordo com o art. 352 do CPP, os seguintes requisitos, EXCETO:
+a) O nome do juiz.
+b) O nome do citando ou as suas senas e sinais característicos.
+c) A residência do citando, se for conhecida.
+d) A indicação do valor da causa e das custas processuais recolhidas pelo Querelante.
+e) A subscrição do escrivão e a assinatura do juiz.
+
+GABARITO: D
+COMENTÁRIO: O valor da causa não é requisito do mandado de citação penal (art. 352 do CPP).
+
+-- DIREITO PROCESSUAL CIVIL --
+
+27. Ressalvadas as disposições em contrário dos juizados especiais, na contagem de prazo em dias, estabelecido por lei ou pelo juiz, computar-se-ão:
+a) Todos os dias corridos, incluindo sábados, domingos e feriados.
+b) Somente os dias úteis.
+c) Dias corridos, suspendendo-se apenas nos feriados nacionais.
+d) Dias úteis, contando-se em dobro se a parte for pessoa física.
+e) Apenas os dias em que houver audiência marcada na comarca.
+
+GABARITO: B
+COMENTÁRIO: Art. 219 do CPC: Na contagem de prazo em dias, estabelecido por lei ou pelo juiz, computar-se-ão somente os dias úteis.
+
+28. As citações e as intimações podem ser realizadas em domingos e feriados, ou fora do horário regulamentar (entre 6 e 20 horas):
+a) Apenas se houver autorização prévia expressa do Corregedor Geral.
+b) Independentemente de autorização judicial, observado o disposto no art. 5º, XI, da Constituição Federal.
+c) Sendo vedada qualquer diligência nesses períodos sob pena de nulidade absoluta.
+d) Desde que haja pagamento antecipado de taxa de urgência em dobro.
+e) Somente se o citando concordar por escrito com a diligência.
+
+GABARITO: B
+COMENTÁRIO: Art. 212, § 2º, do CPC: A citação e a intimação poderão ser realizadas em domingos e feriados, ou fora do horário estabelecido no caput (das 6h às 20h), independentemente de autorização judicial, observado o disposto no art. 5º, inciso XI, da CF.
+
+29. São deveres do Oficial de Justiça (art. 154 do CPC), EXCETO:
+a) Fazer citações, penhoras, arrestos e demais diligências ordenadas pelo juiz.
+b) Executar as ordens do juiz a que estiver subordinado.
+c) Elaborar a sentença em caso de revelia do réu.
+d) Certificar em mandado o ocorrido, com menção do lugar, do dia e da hora.
+e) Devolver o mandado após o cumprimento dentro do prazo legal.
+
+GABARITO: C
+COMENTÁRIO: Elaborar sentença é função exclusiva e indelegável do Magistrado (juiz).
+
+30. A citação será feita pessoalmente ao réu, ao seu representante legal ou ao seu procurador legalmente autorizado. Se o réu for incerto ou desconhecido, a citação far-se-á por:
+a) Correio com AR simples.
+b) Edital.
+c) Hora certa realizada em 2 tentativas.
+d) Carta precatória com prazo de 30 dias.
+e) Oficial de Justiça com arrombamento imediato.
+
+GABARITO: B
+COMENTÁRIO: Art. 256, I, do CPC: A citação por edital será feita quando desconhecido ou incerto o citando.
+
+31. Quando, por 2 (duas) vezes, o Oficial de Justiça houver procurado o citando em seu domicílio ou residência sem o encontrar, havendo suspeita de ocultação, ele:
+a) Devolverá o mandado para que o juiz determine a citação por edital.
+b) Intimará qualquer pessoa da família ou vizinho de que, no dia útil imediato, voltará a fim de efetuar a citação, na hora que designar (citação por hora certa).
+c) Realizará a penhora dos bens do devedor imediatamente.
+d) Requererá o arrombamento do imóvel ao Delegado de Polícia local.
+e) Aguardará o prazo de 90 dias para tentar uma nova diligência.
+
+GABARITO: B
+COMENTÁRIO: Art. 252 do CPC: Trata do procedimento da Citação por Hora Certa após 2 tentativas frustradas e suspeita motivada de ocultação.
+
+32. Incumbe ao Oficial de Justiça, na execução para cobrança de dívida fundada em título executivo extrajudicial, ao não encontrar o executado para citá-lo:
+a) Extinguir o processo sem julgamento do mérito.
+b) Arrestar-lhe-á tantos bens quantos bastem para garantir a execução.
+c) Vender os bens em leilão no dia seguinte.
+d) Devolver o mandado em branco para o exequente.
+e) Nomear um leiloeiro público imediatamente.
+
+GABARITO: B
+COMENTÁRIO: Art. 830 do CPC: Se o Oficial de Justiça não encontrar o executado, arrestar-lhe-á tantos bens quantos bastem para garantir a execução (Arresto executivo ou prépenhora).
+
+33. São impenhoráveis, nos termos do art. 833 do CPC, EXCETO:
+a) Os móveis, pertences e utilidades domésticas que guarnecem a residência do executado, salvo os de elevado valor ou os que ultrapassem as necessidades comuns.
+b) Os vencimentos, os subsídios, os soldos e os salários destinados ao sustento do devedor e de sua família (com as ressalvas legais).
+c) O único imóvel residencial próprio do casal ou da entidade familiar (Lei 8.009/90).
+d) Veículo de luxo de uso estritamente particular sem qualquer relação com a profissão do devedor.
+e) Os livros, as máquinas, as ferramentas e os instrumentos necessários ou úteis ao exercício da profissão do executado.
+
+GABARITO: D
+COMENTÁRIO: Veículos de passeio/luxo não enquadrados como instrumento de trabalho são penhoráveis normalmente.
+
+-- DIREITO CONSTITUCIONAL --
+
+34. A República Federativa do Brasil tem como fundamentos (art. 1º da CF/88), EXCETO:
+a) A soberania.
+b) A cidadania.
+c) A dignidade da pessoa humana.
+d) A prevalência dos direitos humanos nas relações internacionais.
+e) O pluralismo político.
+
+GABARITO: D
+COMENTÁRIO: A prevalência dos direitos humanos é um Princípio que rege as RELAÇÕES INTERNACIONAIS do Brasil (art. 4º, II, da CF), não um Fundamento da República (art. 1º - SO-CI-DI-VA-PLU).
+
+35. A casa é asilo inviolável do indivíduo, ninguém nela podendo penetrar sem consentimento do morador, salvo:
+a) Em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.
+b) A qualquer hora do dia ou da noite por determinação do Oficial de Justiça.
+c) Apenas durante a noite, se houver autorização do delegado de polícia.
+d) Apenas durante o dia em qualquer situação, mesmo que haja incêndio.
+e) Mediante simples requisição verbal da autoridade administrativa.
+
+GABARITO: A
+Comentário: Art. 5º, XI, da CF: Regra clássica de inviolabilidade do domicílio.
+
+36. São cargos privativos de brasileiro nato (art. 12, § 3º, da CF), EXCETO:
+a) Presidente e Vice-Presidente da República.
+b) Presidente da Câmara dos Deputados.
+c) Presidente do Senado Federal.
+d) Oficial de Justiça do Tribunal de Justiça.
+e) Ministro do Supremo Tribunal Federal.
+
+GABARITO: D
+COMENTÁRIO: O cargo de Oficial de Justiça exige nível superior e aprovação em concurso, mas NÃO é reservado exclusivamente a brasileiros natos (pode ser ocupado por brasileiro naturalizado).
+
+37. A administração pública direta e indireta de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios obedecerá aos princípios de (art. 37, caput, da CF):
+a) Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (LIMPE).
+b) Celeridade, Razoabilidade, Economia, Moralidade e Sigilo.
+c) Hierarquia, Disciplina, Eficiência, Transparência e Subordinação.
+d) Legalidade, Severidade, Impessoalidade, Antiguidade e Publicidade.
+e) Soberania, Autonomia, Moralidade, Eficiência e Publicidade.
+
+GABARITO: A
+COMENTÁRIO: É o famoso macete LIMPE constante no art. 37, caput, da Carta Magna.
+
+-- DIREITO ADMINISTRATIVO --
+
+38. De acordo com a Lei Estadual nº 10.261/1968 (Estatuto dos Servidores de SP), o funcionário suspenso perderá:
+a) Apenas 10% dos vencimentos durante o período.
+b) Todas as vantagens e direitos decorrentes do exercício do cargo durante o período da suspensão.
+c) Apenas o direito ao auxílio-transporte.
+d) Apenas a contagem do tempo para aposentadoria.
+e) O cargo definitivamente, sendo exonerado de ofício.
+
+GABARITO: B
+COMENTÁRIO: Art. 254, § 2º, da Lei 10.261/68: O funcionário suspenso perderá todas as vantagens e direitos decorrentes do exercício do cargo.
+
+39. Nos termos da Lei Federal nº 8.429/1992 (Lei de Improbidade Administrativa), constitui ato de improbidade administrativa que importa ENRIQUECIMENTO ILÍCITO (art. 9º):
+a) Revelar segredo do qual tenha ciência em razão do cargo.
+b) Receber dinheiro, bem móvel ou imóvel, ou qualquer outra vantagem econômica direta ou indireta, a título de comissão, percentagem, gratificação ou presente de quem tenha interesse na decisão.
+c) Negar publicidade aos atos oficiais.
+d) Frustrar a licitude de processo licitatório sem auferir vantagem pessoal.
+e) Deixar de prestar contas quando esteja obrigado a fazê-lo.
+
+GABARITO: B
+COMENTÁRIO: A auferição de vantagem patrimonial indevida direta ou indireta caracteriza enrichment ilícito (art. 9º). Revelar segredo ou negar publicidade violam princípios da administração (art. 11).
+
+40. As penas disciplinares previstas no Estatuto dos Funcionários Públicos Civis de SP prescrevem em:
+a) 1 ano para repreensão e 2 anos para demissão.
+b) 5 anos para todas as infrações indistintamente.
+c) 2 anos para falta sujeita às penas de repreensão, multa ou suspensão; e 5 anos para infrações sujeitas à pena de demissão.
+d) 10 anos a contar da data do nascimento do servidor.
+e) Não prescrevem em hipótese alguma.
+
+GABARITO: C
+COMENTÁRIO: Art. 261 da Lei Estadual nº 10.261/68: A falta sujeita às penas de repreensão, multa ou suspensão prescreve em 2 anos; a sujeita à pena de demissão prescreve em 5 anos.
+
+-- DIREITO CIVIL --
+
+41. A menoridade cessa aos 18 anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil. A emancipação pode ocorrer pelas seguintes formas (art. 5º do Código Civil), EXCETO:
+a) Pela concessão dos pais, ou de um deles na falta do outro, mediante instrumento público, independentemente de homologação judicial, se o menor tiver 16 anos completos.
+b) Pelo casamento.
+c) Pelo exercício de emprego público efetivo.
+d) Pela colação de grau em curso de ensino superior.
+e) Pela simples conclusão do ensino médio aos 15 anos de idade.
+
+GABARITO: E
+COMENTÁRIO: A conclusão do ensino médio aos 15 anos não gera emancipação. As hipóteses do art. 5º do CC exigem 16 anos completos para emancipação voluntária ou os marcos específicos das demais alíneas.
+
+42. Consideram-se bens imóveis por determinação legal (art. 80 do Código Civil):
+a) Os direitos reais sobre imóveis e as ações que os asseguram.
+b) As energias que tenham valor econômico.
+c) Os materiais provisoriamente separados de um prédio para nele se reempregarem.
+d) Os veículos automotores e embarcações.
+e) Os animais destinados à exploração agrícola.
+
+GABARITO: A
+COMENTÁRIO: Art. 80, I, do CC: Consideram-se imóveis para os efeitos legais os direitos reais sobre imóveis e as ações que os asseguram.
+
+43. O penhor agrícola, o penhor mercantil e o penhor de títulos de crédito constituem direitos reais de garantia. O penhor constitui-se mediante:
+a) Apenas contrato verbal sem registro.
+b) A transferência efetiva da posse de uma coisa móvel, suscetível de alienação, realizada pelo devedor ou por terceiro ao credor.
+c) A gravação da matrícula do imóvel no Registro de Imóveis.
+d) O pagamento da primeira parcela do financiamento.
+e) A decisão do Oficial de Justiça sem autorização do juiz.
+
+GABARITO: B
+COMENTÁRIO: Art. 1.431 do Código Civil: Constitui-se o penhor pela transferência efetiva da posse de uma coisa móvel ao credor.
+
+-- LEGISLAÇÃO ESPECIAL E NORMAS DA CORREGEDORIA --
+
+44. De acordo com a Resolução CNJ nº 354/2020, o cumprimento de citações e intimações pelos Oficiais de Justiça por meio eletrônico (como WhatsApp ou e-mail):
+a) É terminantemente proibido em qualquer estado do Brasil.
+b) É admitido, devendo o Oficial de Justiça certificar o meio utilizado, o dia e o horário, comprovando a entrega da mensagem ao destinatário.
+c) Exige a presença física de duas testemunhas ao lado do Oficial no momento do envio do texto.
+d) Aplica-se apenas aos processos criminais de réus presos.
+e) Dispensa qualquer certidão nos autos.
+
+GABARITO: B
+COMENTÁRIO: A Resolução CNJ nº 354/2020 regulamentou a utilização de meios eletrônicos para a realização de atos processuais por Oficiais de Justiça, exigindo certidão detalhada da validação da comunicação.
+
+45. Conforme o Tomo I das Normas Judiciais da Corregedoria Geral da Justiça de SP, os mandados serão cumpridos pelos Oficiais de Justiça no prazo de:
+a) 24 horas em qualquer situação.
+b) 20 (vinte) dias, ressalvadas as urgências e prazos menores fixados pelo juiz ou por lei.
+c) 60 dias corridos.
+d) 6 meses.
+e) 5 dias úteis sem possibilidade de prorrogação.
+
+GABARITO: B
+COMENTÁRIO: Conforme as Normas da Corregedoria de SP (NSCGJ), o prazo geral para cumprimento e devolução do mandado pelo Oficial de Justiça é de 20 dias.
+
+46. Segundo as NSCGJ, ao cumprir o mandado de citação, se o réu recusar-se a assinar a fé de ofício ou a receber a contrafé, o Oficial de Justiça deverá:
+a) Conduzir o réu à delegacia de polícia imediatamente.
+b) Deixar de citar e devolver o mandado para o juiz extinguir o processo.
+c) Certificar o fato no mandado, declarando que entregou ou leu a contrafé ao citando, considerando-se feita a citação.
+d) Rasgar o mandado e pedir auxílio de força policial.
+e) Aplicar multa administrativa ao réu no valor de um salário mínimo.
+
+GABARITO: C
+COMENTÁRIO: Diante da recusa do réu, o Oficial de Justiça atesta o ocorrido com fé pública em sua certidão, operando-se formalmente a citação.
+
+47. Na cobrança da Dívida Ativa da Fazenda Pública (Lei nº 6.830/1980 - LEF), o executado será citado para pagar a dívida com os juros e mora ou garantir a execução no prazo de:
+a) 24 horas.
+b) 5 (cinco) dias.
+c) 15 dias.
+d) 30 dias.
+e) 60 dias.
+
+GABARITO: B
+COMENTÁRIO: Art. 8º da Lei nº 6.830/80 (LEF): O executado será citado para, no prazo de 5 (cinco) dias, pagar a dívida com os juros e multa de mora e encargos indicados na certidão, ou garantir a execução.
+
+48. Nos termos das Normas da Corregedoria (NSCGJ), a carga dos mandados ao Oficial de Justiça será registrada em sistema informatizado oficial. Quando o Oficial de Justiça se afastar do cargo por férias ou licença, ele deverá:
+a) Levar os mandados não cumpridos para casa para cumpri-los no retorno.
+b) Devolver no cartório todos os mandados em seu poder antes do início do afastamento, devidamente cumpridos ou com as respectivas certidões explicativas.
+c) Entregar os mandados diretamente para outro Oficial vizinho sem registrar no sistema.
+d) Queimar os mandados antigos.
+e) Pedir ao advogado da causa que cumpra as diligências.
+
+GABARITO: B
+COMENTÁRIO: É dever regulamentar do Oficial devolver ao cartório os mandados em seu poder devidamente certifcados antes do gozo de férias ou licenças.
+
+49. De acordo com as NSCGJ, nas comarcas onde houver Seção ou Central de Mandados, a distribuição dos mandados entre os Oficiais de Justiça far-se-á:
+a) Por escolha livre do Oficial de Justiça mais antigo.
+b) Por sorteio manual semanal realizado pelos advogados.
+c) Mediante sistema informatizado, garantindo-se a equidade na distribuição por setores ou zoneamento.
+d) Apenas por ordem alfabética do nome da vítima.
+e) Exclusivamente a critério do diretor de secretaria.
+
+GABARITO: C
+COMENTÁRIO: A distribuição dos mandados na Central de Mandados observa o sistema automatizado e o zoneamento territorial para racionalizar os deslocamentos.
+
+50. Segundo o Regulamento das Normas da Corregedoria, é VEDADO ao Oficial de Justiça:
+a) Cumprir mandados fora do horário de expediente forense em dias úteis.
+b) Prestar assessoria jurídica ou intermediar venda de bens penhorados em processos nos quais atue ou tenha atuado.
+c) Utilizar veículo próprio para a realização das diligências.
+d) Certificar que o réu se ocultava para não ser citado.
+e) Solicitar apoio policial para cumprimento de ordem judicial de reintegração de posse.
+
+GABARITO: B
+COMENTÁRIO: É conduta expressamente vedada ao Oficial atuar como intermediário, corretor ou prestar assessoria em relação a bens submetidos a constrição judicial na comarca.
+
+51. Em relação às custas devidas para os atos dos Oficiais de Justiça (Diligências de Oficial de Justiça), regidas pela Lei Estadual nº 11.608/2003, é correto afirmar que:
+a) O Oficial de Justiça pode cobrar o valor da condução diretamente em dinheiro em mãos do réu na hora do ato.
+b) O recolhimento do valor da condução deve ser comprovado nos autos mediante guia oficial previa antes da expedição do mandado (salvo beneficiários da justiça gratuita).
+c) Não há cobrança de condução em nenhuma hipótese no estado de SP.
+d) O valor arrecadado é depositado na conta pessoal do Oficial de Justiça imediatamente.
+e) Os beneficiários da Justiça Gratuita devem pagar 50% do valor da condução.
+
+GABARITO: B
+COMENTÁRIO: O valor do ressarcimento de despesas de condução dos Oficiais de Justiça é recolhido antecipadamente pela parte interessada por meio de guia própria do TJSP.
+
+52. De acordo com o art. 274 do Código de Processo Penal, às intimações aplicam-se as disposições relativas à citação no que couber. A intimação das testemunhas presas será feita:
+a) Mediante requisição à autoridade sob cuja custódia estiverem.
+b) Por edital pregado na porta do fórum.
+c) Por telefone sem necessidade de confirmação.
+d) Dispensada a intimação, devendo a parte trazê-la por conta própria.
+e) Por carta simples registrada sem AR.
+
+GABARITO: A
+COMENTÁRIO: A testemunha presa deve ser requisitada ao diretor do estabelecimento prisional para comparecimento ao ato processual.
+
+53. Conforme o CPC (art. 845), a penhora de imóveis realizada por Oficial de Justiça será descrita em auto, no qual constará:
+a) Apenas o nome do juiz.
+b) A caracterização do imóvel, com as suas divisas, confrontações e número da matrícula no Registro de Imóveis, e a nomeação do depositário.
+c) O valor estimado pelo vizinho do imóvel.
+d) A indicação de que o bem pertence ao Estado.
+e) A promessa de venda imediata pelo devedor.
+
+GABARITO: B
+COMENTÁRIO: Art. 838 e 845 do CPC: O auto de penhora conterá a avaliação e a descrição minuciosa do bem penhorado com os dados da respectiva matrícula imobiliária.
+
+54. Quando o mandado for cumprido por meio de arrombamento (imissão na posse/busca e apreensão), o Oficial de Justiça deverá:
+a) Arrombar a porta sozinho sem testemunhas e sem apoio policial.
+b) Estar acompanhado de força policial (se necessário) e de 2 (duas) testemunhas, lavrando auto circunstanciado do ato.
+c) Vender os móveis encontrados dentro da casa na calçada.
+d) Aguardar a presença do juiz da causa no local do arrombamento.
+e) Cobrar uma taxa extra do autor da ação no valor de 2 salários mínimos em dinheiro.
+
+GABARITO: B
+COMENTÁRIO: As diligências que exigem auxílio de força pública e arrombamento demandam a presença de duas testemunhas e a lavratura de auto minucioso firmado por todos.
+
+55. Segundo as Normas da Corregedoria de SP, ocorrendo motivo de força maior que impeça o cumprimento do mandado no prazo regulamentar, o Oficial de Justiça deverá:
+a) Jogar o mandado fora e solicitar a expedição de outro.
+b) Requerer a prorrogação do prazo ao juiz ou à Corregedoria, justificando detalhadamente o motivo do atraso.
+c) Devolver o mandado informando que não cumprirá mais diligências naquela rua.
+d) Pagará uma multa diária do próprio bolso.
+e) Aguardar a homologação do concurso sem prestar informações.
+
+GABARITO: B
+COMENTÁRIO: Havendo justificativa plausível e motivo de força maior, o Oficial de Justiça deve postular motivadamente a prorrogação do prazo para cumprimento do mandado.
+
+
+--------------------------------------------------------------------------------
+BLOCO III: CONHECIMENTOS GERAIS (15 Questões)
+--------------------------------------------------------------------------------
+
+-- ATUALIDADES E ESTATUTO DA PESSOA COM DEFICIÊNCIA --
+
+56. Nos termos da Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência), a avaliação da deficiência, quando necessária, será biopsicossocial, realizada por equipe multiprofissional e interdisciplinar e considerará:
+a) Apenas os exames laboratoriais apresentados pelo indivíduo.
+b) Os impedimentos nas funções e nas estruturas do corpo; os fatores socioambientais, psicológicos e pessoais; a limitação no desempenho de atividades e a restrição de participação.
+c) Unicamente a renda familiar per capita do indivíduo.
+d) A opinião do empregador ou do diretor do setor.
+e) A idade do indivíduo, sendo vedada a avaliação em menores de 18 anos.
+
+GABARITO: B
+COMENTÁRIO: Art. 2º, § 1º, da Lei 13.146/2015: Define com exatidão os elementos que compõem a avaliação biopsicossocial.
+
+57. De acordo com o Estatuto da Pessoa com Deficiência, incumbe ao poder público assegurar, criar, desenvolver, implementar, incentivar, acompanhar e avaliar o sistema educacional inclusivo em todos os níveis e modalidades. É VEDADA às instituições privadas de ensino de qualquer nível:
+a) A oferta de profissionais de apoio escolar.
+b) A cobrança de valores adicionais de qualquer natureza em suas mensalidades, anuidade e matrículas no cumprimento das exigências de acessibilidade e inclusão.
+c) A matrícula de estudantes autistas em salas de aula regulares.
+d) A adaptação de provas e material didático.
+e) A elaboração de plano de atendimento educacional especializado.
+
+GABARITO: B
+COMENTÁRIO: Art. 28, § 1º, da Lei 13.146/2015: É expressamente proibida a cobrança de taxa extra ou valores adicionais nas mensalidades de alunos com deficiência em escolas privadas.
+
+58. O ato de praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência constitui crime punível com pena de:
+a) Multa de 1 salário mínimo apenas.
+b) Reclusão, de 1 a 3 anos, e multa.
+c) Advertência verbal proferida pelo juiz.
+d) Prisão simples de 5 dias.
+e) Prestação de serviços comunitários por 2 semanas.
+
+GABARITO: B
+COMENTÁRIO: Art. 88 da Lei nº 13.146/2015: Praticar, induzir ou incitar discriminação de pessoa em razão de sua deficiência sujeita o infror à pena de reclusão, de 1 a 3 anos, e multa.
+
+-- MATEMÁTICA E RACIOCÍNIO LÓGICO --
+
+59. Um Oficial de Justiça precisa percorrer 180 km para cumprir uma série de mandados em 3 cidades vizinhas. Pela manhã, ele percorreu 2/5 do trajeto total. À tarde, percorreu 1/3 do trajeto TOTAL. Quantos quilômetros ainda faltam para ele concluir o trajeto?
+a) 48 km
+b) 52 km
+c) 60 km
+d) 72 km
+e) 84 km
+
+GABARITO: A
+COMENTÁRIO: 
+- Manhã: (2/5) * 180 = 72 km
+- Tarde: (1/3) * 180 = 60 km
+- Total percorrido: 72 + 60 = 132 km
+- Faltam: 180 - 132 = 48 km.
+
+60. Em um cartório, 4 escreventes analisam 120 processos em 6 dias de trabalho. Mantendo o mesmo ritmo de trabalho, quantos escreventes seriam necessários para analisar 200 processos em 5 dias?
+a) 6 escreventes
+b) 7 escreventes
+c) 8 escreventes
+d) 9 escreventes
+e) 10 escreventes
+
+GABARITO: C
+COMENTÁRIO: Regra de três composta:
+Escreventes | Processos | Dias
+4           | 120       | 6
+X           | 200       | 5
+Montando a relação: X/4 = (200/120) * (6/5)
+X/4 = (5/3) * (6/5) = 30/15 = 2 -> X = 4 * 2 = 8 escreventes.
+
+61. O valor de um imóvel avaliado por um Oficial de Justiça teve um aumento de 20% no primeiro ano e, no ano seguinte, sofreu um desconto de 10% sobre o novo valor. Em relação ao valor inicial, o imóvel teve um variação percentual final de:
+a) Aumento de 10%
+b) Aumento de 8%
+c) Aumento de 12%
+d) Desconto de 2%
+e) Manteve-se inalterado (0%)
+
+GABARITO: B
+COMENTÁRIO: 
+Valor inicial = 100.
+Após aumento de 20% = 120.
+Desconto de 10% sobre 120 = 120 - 12 = 108.
+Variação final em relação a 100 = Aumento de 8%.
+
+62. Considere a seguinte afirmação: "Se o Oficial de Justiça encontra o réu, então a citação é realizada." A Negação Lógica dessa proposição é:
+a) Se o Oficial de Justiça não encontra o réu, então a citação não é realizada.
+b) O Oficial de Justiça encontra o réu e a citação não é realizada.
+c) Se a citação é realizada, então o Oficial de Justiça encontrou o réu.
+d) O Oficial de Justiça não encontra o réu e a citação é realizada.
+e) A citação não é realizada se e somente se o réu sumiu.
+
+GABARITO: B
+COMENTÁRIO: A negação de uma condicional "Se P, então Q" é dada pela regra do "MANÉ" (Mantém a primeira E Nega a segunda): P e não Q. Logo: "O Oficial encontra o réu E a citação NÃO é realizada".
+
+63. Considere a sequência lógica de números: 3, 7, 15, 31, 63, X. O valor do número X é:
+a) 95
+b) 124
+c) 127
+d) 128
+e) 255
+
+GABARITO: C
+COMENTÁRIO: Padrão da sequência: Dobra o número anterior e soma 1.
+3*2 + 1 = 7
+7*2 + 1 = 15
+15*2 + 1 = 31
+31*2 + 1 = 63
+63*2 + 1 = 127.
+
+64. Em um grupo de 50 servidores do TJSP, sabe-se que 30 falam inglês, 20 falam espanhol e 10 não falam nenhum desses dois idiomas. Quantos servidores falam AMBOS os idiomas (inglês e espanhol)?
+a) 5
+b) 10
+c) 15
+d) 20
+e) 25
+
+GABARITO: B
+COMENTÁRIO: 
+Total = 50.
+Nenhum = 10 -> Servidores que falam ao menos uma língua = 50 - 10 = 40.
+Pelo Princípio da Inclusão-Exclusão:
+Inglês + Espanhol - Ambos = 40
+30 + 20 - X = 40
+50 - X = 40 -> X = 10 servidores.
+
+65. Se é verdade que "Todo Oficial de Justiça é servidor público" e "Alguns servidores públicos são advogados", pode-se concluir com absoluta certeza lógica que:
+a) Todo advogado é Oficial de Justiça.
+b) Nenhum Oficial de Justiça é advogado.
+c) Alguns Oficiais de Justiça podem ser advogados (há intersecção possível), mas não se pode afirmar com certeza que todo Oficial é advogado.
+d) Todo servidor público é Oficial de Justiça.
+e) Nenhum servidor público é Oficial de Justiça.
+
+GABARITO: C
+COMENTÁRIO: Análise de diagramas lógicos. O conjunto dos Oficiais está contido nos Servidores. O conjunto dos Advogados cruza com os Servidores, podendo ou não cruzar com os Oficiais. Logo, a dedução segura é a possibilidade jurídica/lógica expressa na C.
+
+-- INFORMÁTICA --
+
+66. No sistema operacional Microsoft Windows 10/11, o atalho de teclado utilizado para alternar rapidamente entre as janelas de aplicativos abertos é:
+a) Ctrl + C
+b) Alt + Tab
+c) Windows + L
+d) Ctrl + Shift + Esc
+e) Alt + F4
+
+GABARITO: B
+COMENTÁRIO: Alt + Tab alterna entre as janelas/aplicativos abertos. Windows+L bloqueia a tela; Alt+F4 fecha o aplicativo.
+
+67. No Microsoft Word do pacote Microsoft 365, a funcionalidade "Controle de Alterações" (encontrada na guia Revisão) serve para:
+a) Corrigir automaticamente os erros de digitação sem aviso.
+b) Destacar, registrar e acompanhar todas as modificações (inserções, deleções e formatações) feitas no documento por diferentes usuários.
+c) Traduzir o texto para o latim de forma automática.
+d) Bloquear a impressão do arquivo permanentemente.
+e) Inserir uma tabela de números aleatórios nas margens.
+
+GABARITO: B
+COMENTÁRIO: O recurso Controle de Alterações registra e marca visualmente todas as edições efetuadas no texto para posterior aprovação ou rejeição.
+
+68. No Microsoft Excel, a fórmula `=SOMA(A1:A5)` realiza:
+a) A soma apenas dos valores das células A1 e A5.
+b) A média aritmética das células de A1 a A5.
+c) A soma de todos os valores contidos no intervalo da célula A1 até a célula A5 inclusive.
+d) A multiplicação de A1 por A5.
+e) A contagem de quantas células têm texto no intervalo.
+
+GABARITO: C
+COMENTÁRIO: Os dois pontos `:` representam o operador de intervalo "ATÉ" no Excel. Portanto, soma de A1 ATÉ A5.
+
+69. No Microsoft Teams, ferramenta de comunicação e trabalho em equipe do TJSP, o recurso utilizado para armazenar e compartilhar arquivos da equipe em nuvem integra-se diretamente com o:
+a) MS Paint
+b) SharePoint / OneDrive
+c) Windows Media Player
+d) MS Publisher
+e) Notepad++
+
+GABARITO: B
+COMENTÁRIO: O Microsoft Teams utiliza a infraestrutura do SharePoint e do OneDrive for Business para gestão, armazenamento e edição colaborativa de arquivos.
+
+70. No uso de Correio Eletrônico (como o Outlook), ao enviar uma mensagem colocando um destinatário no campo "Cco" (Cópia Oculta / Bcc):
+a) Todos os outros destinatários verão o e-mail desse usuário.
+b) O destinatário em Cco receberá uma cópia da mensagem sem que os demais destinatários (campos Para e Cc) saibam de sua inclusão.
+c) O e-mail será destruído automaticamente após 5 minutos.
+d) A mensagem será enviada sem anexo.
+e) O e-mail voltará como erro de entrega obrigatoriamente.
+
+GABARITO: B
+COMENTÁRIO: O campo Cco (Cópia Oculta) oculta o endereço de e-mail do destinatário ali inserido para todos os demais receptores da mensagem.
+
+Leia o texto a seguir para responder às questões de 01 a 03.
+
+"A fé pública conferida aos atos do Oficial de Justiça não é um privilégio pessoal, mas um atributo funcional indispensável à segurança jurídica. Ao certificar o cumprimento de uma diligência ou a recusa de um citando, o servidor atua como os olhos do magistrado no mundo exterior. Por essa razão, a falsidade ou a negligência no relato dos fatos mina a própria confiança da sociedade na prestação jurisdicional."
+Questão 01
+Com base no texto, infere-se corretamente que:
+
+a) A fé pública é uma prerrogativa de foro outorgada à pessoa do servidor.
+b) A veracidade das certidões do Oficial de Justiça é essencial para a credibilidade do Poder Judiciário.
+c) O magistrado deve acompanhar presencialmente todas as diligências em campo.
+d) A recusa do réu em assinar o mandado invalida a fé pública da certidão.
+e) A negligência no cumprimento do mandado é atitude tolerada em casos de sobrecarga de trabalho.
+
+GABARITO: B
+Comentário: O texto afirma que a falsidade ou negligência mina a confiança da sociedade na Justiça, logo a veracidade é essencial.
+
+
+Questão 02
+No trecho "Por essa razão, a falsidade ou a negligência no relato dos fatos...", a expressão destacada estabelece relação de:
+
+a) Concessão.
+b) Oposição.
+c) Conclusão / Causa e Efeito.
+d) Condição.
+e) Comparação.
+
+GABARITO: C
+Comentário: "Por essa razão" conecta uma causa a uma consequência/conclusão.
+
+
+Questão 03
+Assinale a alternativa em que a palavra sublinhada é sinônima de "INDISPENSÁVEL", conforme usada no texto:
+
+a) Supérflua.
+b) Prescindível.
+c) Essencial.
+d) Aleatória.
+e) Acessória.
+
+GABARITO: C
+Comentário: Indispensável significa essencial, fundamental.
+
+
+Questão 04
+Assinale a alternativa correta quanto à regência verbal, conforme a norma-padrão:
+
+a) O Oficial de Justiça assistiu o réu durante todo o depoimento no fórum.
+b) O servidor visava ao cumprimento célere de todas as ordens judiciais.
+c) O advogado preferia mais requerer a penhora do que a citação.
+d) Ele simpatizou-se de imediato com o novo colega da Central de Mandados.
+e) O juiz obedeceu o dispositivo legal sem fazer restrições.
+
+GABARITO: B
+Comentário: "Visar" no sentido de almejar exige preposição "a" ("visava ao cumprimento").
+
+
+Questão 05
+Assinale a alternativa em que o sinal indicativo de crase está empregado CORRETAMENTE:
+
+a) O Oficial dirigiu-se à comarca vizinha para realizar a citação.
+b) Ele entregou a cópia do processo à ele diretamente.
+c) A diligência foi realizada à uma hora da tarde de domingo.
+d) O servidor prestou depoimento à partir do meio-dia.
+e) O mandado referia-se à duas pessoas distintas.
+
+GABARITO: A
+Comentário: "Dirigiu-se" pede preposição "a" + artigo feminino "a" de "comarca" = "à comarca".
+
+
+Questão 06
+Assinale a alternativa em que a concordância nominal atende à norma-padrão:
+
+a) Seguem anexo as certidões de cumprimento dos mandados.
+b) A Oficial de Justiça mesmo assinou o relatório final.
+c) É necessário paciência durante as diligências difíceis.
+d) As fotos das penhoras inclusas no processo estão bastante claras.
+e) As candidatas ficaram meias apreensivas antes da prova.
+
+GABARITO: D
+Comentário: "Inclusas" concorda com "fotos" (as fotos inclusas).
+
+
+Questão 07
+Assinale a alternativa em que a colocação pronominal está de acordo com a norma-padrão:
+
+a) Jamais esquecerei-me do compromisso assumido perante o Juízo.
+b) Em se tratando de mandado urgente, o Oficial deve agir sem demora.
+c) Me deram todas as informações necessárias na secretaria.
+d) O réu recusou-se a assinar, retirando-se e não manifestando-se mais.
+e) Caso encontre-o, farei a intimação imediatamente.
+
+GABARITO: B
+Comentário: "Em se tratando" é estrutura fixa com próclise obrigatória.
+
+
+Questão 08
+Aponte a alternativa cuja frase apresenta pontuação CORRETA:
+
+a) O Oficial de Justiça, que é servidor público concursado, cumpriu a ordem judicial.
+b) Embora estivesse muito frio o servidor, saiu para cumprir o mandado.
+c) O Juiz expediu a ordem, e o réu, contestou no prazo legal.
+d) São Paulo, Campinas, e Santos, são comarcas do interior.
+e) Quando o réu viu o oficial; correu para os fundos.
+
+GABARITO: A
+Comentário: Oração explicativa entre vírgulas corretamente pontuada.
+
+
+Questão 09
+Assinale a opção em que todas as palavras estão grafadas CORRETAMENTE:
+
+a) Paralizar, sensatez, exceção.
+b) Paralisar, sensatez, exceção.
+c) Paralisar, sensateis, essceção.
+d) Paralizar, sensatez, esceção.
+e) Paralisar, sensates, exceção.
+
+GABARITO: B
+Comentário: Grafia correta: paralisar (com s), sensatez (com z) e exceção (com xc e ç).
+
+
+Questão 10
+Identifique a frase em que a figura de linguagem presente é uma METÁFORA:
+
+a) O devedor chorou rios de lágrimas durante a penhora.
+b) O Oficial de Justiça é o braço forte da lei na execução dos julgados.
+c) Ouvi os sussurros do vento no corredor do tribunal.
+d) Ele leu Machado de Assis durante o plantão.
+e) O réu não é muito fã de cumprir obrigações.
+
+GABARITO: B
+Comentário: "É o braço forte da lei" é uma comparação implícita (metáfora).
+
+
+Questão 11
+Assinale a alternativa em que o verbo sublinhado está no PRETÉRITO MAIS-QUE-PERFEITO do indicativo:
+
+a) O Oficial cumprira a diligência antes de o sol nascer.
+b) O réu cumpria a pena em regime aberto.
+c) Quando o juiz chegar, o mandado será expedido.
+d) Se ele cumprisse a ordem, o processo seria arquivado.
+e) O servidor cumprirá todas as metas estabelecidas.
+
+GABARITO: A
+Comentário: "Cumprira" é pretérito mais-que-perfeito simples.
+
+
+Questão 12
+Assinale a alternativa com a correta classificação morfológica da palavra destacada em "O Oficial agiu MUITO calmamente":
+
+a) Adjetivo.
+b) Advérbio de intensidade.
+c) Pronome indefinido.
+d) Substantivo comum.
+e) Preposição essencial.
+
+GABARITO: B
+Comentário: "Muito" modifica o advérbio "calmamente", funcionando como advérbio de intensidade.
+
+
+Questão 13
+Aponte a frase que apresenta linguagem DENOTATIVA (sentido real):
+
+a) O processo arrastou-se a passos de tartaruga durante anos.
+b) A certidão do Oficial sepultou as alegações do devedor.
+c) O réu reside na Rua das Flores, número 100.
+d) O advogado engoliu em seco ao ouvir a decisão do juiz.
+e) A justiça tarda, mas não falha na comarca.
+
+GABARITO: C
+Comentário: Frase puramente literal e objetiva.
+
+
+Questão 14
+Assinale a alternativa em que a palavra é formada pelo processo de PARASSÍNTESE:
+
+a) Infelizmente.
+b) Ajoelhar.
+c) Desleal.
+d) Guarda-roupa.
+e) Passatempo.
+
+GABARITO: B
+Comentário: Ajoelhar (a + joelho + ar) exige prefixo e sufixo simultâneos.
+
+
+Questão 15
+Assinale a alternativa correta quanto à regência do verbo "OBEDECER":
+
+a) O devedor deve obedecer o mandado de reintegração.
+b) O devedor deve obedecer ao mandado de reintegração.
+c) O devedor deve obedecer pelo mandado de reintegração.
+d) O devedor deve obedecer com o mandado de reintegração.
+e) O devedor deve obedecer sob o mandado de reintegração.
+
+GABARITO: B
+Comentário: Obedecer é transitivo indireto e exige preposição "a".
+
+
+BLOCO II: CONHECIMENTOS ESPECÍFICOS E LEGISLAÇÃO
+Questão 16
+No CPC, a citação por meio de Oficial de Justiça deve ser realizada mediante apresentação do mandado. Se o citando for cego, o Oficial de Justiça deverá:
+
+a) Entregar o mandado ao acompanhante e dispensar leitura.
+b) Ler o mandado ao citando, declarando isso na certidão, e colher sua assinatura ou a rogo de duas testemunhas.
+c) Devolver o mandado para citação exclusiva por edital.
+d) Recusar-se a cumprir o ato até nomeação de curador.
+e) Exigir que o advogado do autor esteja presente no ato.
+
+GABARITO: B
+Comentário: Procedimento específico para citação de pessoa com deficiência visual.
+
+
+Questão 17
+Em relação à citação do réu em local de difícil acesso ou perigoso, o Oficial de Justiça deverá:
+
+a) Devolver o mandado como inegociável sem realizar qualquer certidão.
+b) Solicitar apoio policial ou autorização do juízo para cumprimento seguro com auxílio de força pública.
+c) Enviar o mandado pelo correio com aviso de recebimento simples.
+d) Publicar edital imediatamente no fórum local.
+e) Delegar a citação ao porteiro do fórum.
+
+GABARITO: B
+Comentário: Dever de certificação e possibilidade de requisição de auxílio de força pública.
+
+
+Questão 18
+No Processo Penal (CPP), a citação do acusado que estiver em local incerto e não sabido far-se-á por:
+
+a) Carta precatória com prazo de 30 dias.
+b) Edital, com prazo de 15 dias.
+c) Hora certa na residência dos pais.
+d) Mensagem de texto não oficial.
+e) Notificação ao Ministério Público.
+
+GABARITO: B
+Comentário: Art. 361 do CPP (Citação por edital no CPP tem prazo de 15 dias).
+
+
+Questão 19
+Se o réu citado pessoalmente no Processo Penal recusar-se a assinar a certidão do mandado, o Oficial de Justiça:
+
+a) Considerará a citação nula e devolverá o feito ao juiz.
+b) Certificará o fato na certidão, considerando-se a citação perfeita e acabada.
+c) Solicitará a prisão preventiva do acusado no ato.
+d) Remeterá o mandado à OAB para indicação de defensor.
+e) Intimará a vítima para assinar no lugar do réu.
+
+GABARITO: B
+Comentário: Art. 357, § único do CPP.
+
+
+Questão 20
+Na penhora de bens imóveis, a constrição será realizada mediante:
+
+a) Apenas apreensão física das chaves do imóvel.
+b) Lavratura do auto ou termo de penhora, com posterior registro no Cartório de Imóveis.
+c) Leilão imediato realizado na porta da residência.
+d) Prisão do proprietário em caso de inadimplemento.
+e) Notificação da prefeitura municipal para desapropriação.
+
+GABARITO: B
+Comentário: Art. 844 do CPC (Averbação da penhora no registro imobiliário).
+
+
+Questão 21
+No cumprimento de mandado de despejo por falta de pagamento, caso o locatário não desocupe voluntariamente o imóvel no prazo assinalado pelo juiz, o Oficial de Justiça:
+
+a) Procederá ao despejo forçado, podendo arrombar as portas e remover os móveis para depositário público se necessário.
+b) Cancelará o mandado e arquivará o processo.
+c) Concederá novo prazo de 60 dias ao locatário por iniciativa própria.
+d) Venderá os móveis do inquilino para pagar o aluguel no ato.
+e) Cobrará taxa de despejo em dinheiro no local.
+
+GABARITO: A
+Comentário: Execução de despejo forçado na Lei de Locações / CPC.
+
+
+Questão 22
+No arresto cautelar cível, quando o devedor não possui domicílio certo ou se ausenta para frustrar a execução, a medida visa a:
+
+a) Punir criminalmente o devedor fujão.
+b) Assegurar bens suficientes para futura penhora e garantia da dívida.
+c) Transferir a propriedade dos bens imediatamente ao credor.
+d) Expropriar os bens em favor do Estado de São Paulo.
+e) Substituir a citação pessoal por carta registrada.
+
+GABARITO: B
+Comentário: Natureza acautelatória do arresto.
+
+
+Questão 23
+Conforme o CPC, são impenhoráveis os seguintes bens, EXCETO:
+
+a) O bem de família legalmente constituído (único imóvel residencial).
+b) Os móveis e pertences utilitários que guarnecem a residência do executado, ressalvados os de elevado valor ou que ultrapassem as necessidades comuns.
+c) Os vencimentos, subsídios e soldos destinados ao sustento do devedor e sua família (ressalvada penhora para prestação alimentícia).
+d) Veículo de alto luxo de uso pessoal não vinculado ao trabalho.
+e) Os instrumentos, máquinas e livros necessários ao exercício da profissão.
+
+GABARITO: D
+Comentário: Veículo de luxo que não seja instrumento de trabalho é penhorável.
+
+
+Questão 24
+A citação realizada em domingo ou feriado é válida no Processo Civil?
+
+a) Não, é nula de pleno direito sob qualquer circunstância.
+b) Sim, pois as citações e penhoras independem de autorização judicial para realização nesses dias, ressalvada a inviolabilidade do domicílio.
+c) Apenas se o réu pagar taxa de plantão judicial.
+d) Somente se for acompanhada por 3 delegados de polícia.
+e) Apenas no período da madrugada.
+
+GABARITO: B
+Comentário: Art. 212, § 2º do CPC.
+
+
+Questão 25
+Se o Oficial de Justiça no exercício de suas atribuições receber resistência injustificada à execução de busca e apreensão de menor, ele deve:
+
+a) Empregar violência física desproporcional sem comunicação.
+b) Certificar minuciosamente o ocorrido e solicitar o auxílio de força policial ao juízo competente.
+c) Abandonar o mandado e declarar a criança emancipada.
+d) Prender os pais em flagrante no presídio estadual.
+e) Cobrar honorários extras para tentar novamente.
+
+GABARITO: B
+Comentário: Adoção de cautela e requisição de força pública.
+
+
+Questão 26
+O auto de avaliação feito pelo Oficial de Justiça deve indicar expressamente:
+
+a) O valor estimado de mercado dos bens penhorados e o estado de conservação em que se encontram.
+b) Apenas a cor e o tamanho do bem, sem mencionar valores.
+c) O valor histórico de compra com nota fiscal obrigatoriamente.
+d) O valor atribuído pela OAB local.
+e) A assinatura do Prefeito do município.
+
+GABARITO: A
+Comentário: Art. 870 e 871 do CPC.
+
+
+Questão 27
+Na citação por hora certa, caso o vizinho intimado pelo Oficial de Justiça se recuse a dizer seu nome ou a assinar o comprovante de intimação, o Oficial deverá:
+
+a) Desistir da citação por hora certa e retornar ao cartório.
+b) Declarar a recusa na certidão, descrever as características físicas do vizinho e prosseguir com o ato.
+c) Conduzir o vizinho à delegacia por crime de desacato.
+d) Pagar ao vizinho uma recompensa em dinheiro.
+e) Cancelar o processo sumariamente.
+
+GABARITO: B
+Comentário: Fé pública do Oficial para certificar recusas de terceiros.
+
+
+Questão 28
+As citações e intimações no âmbito dos Juizados Especiais Cíveis (Lei nº 9.099/95) orientam-se pelos princípios da:
+
+a) Formalidade estrita e morosidade burocrática.
+b) Celeridade, simplicidade, informalidade e economia processual.
+c) Escrita obrigatória e prazos em quádruplo para o réu.
+d) Sigilo absoluto de todos os atos e decisões.
+e) Produção exclusiva de provas periciais complexas.
+
+GABARITO: B
+Comentário: Art. 2º da Lei nº 9.099/95.
+
+
+Questão 29
+O devedor citado para pagar quantia certa em execução de título extrajudicial tem o prazo de quantos dias para efetuar o pagamento sem penhora?
+
+a) 24 horas.
+b) 3 (três) dias.
+c) 15 dias.
+d) 30 dias.
+e) 5 dias.
+
+GABARITO: B
+Comentário: Art. 829 do CPC (Prazo de 3 dias para pagamento voluntário na execução).
+
+
+Questão 30
+No cumprimento do mandado de penhora de faturamento de empresa, o Oficial de Justiça atuará nomeando:
+
+a) Um administrador-depositário, que submeterá à aprovação do juiz o plano de administração.
+b) O menor aprendiz da empresa como responsável financeiro.
+c) O advogado do autor para gerenciar o caixa diariamente.
+d) O porteiro do prédio comercial.
+e) O auditor fiscal da Receita Federal.
+
+GABARITO: A
+Comentário: Art. 866, § 2º do CPC.
+
+
+Questão 31
+Conforme as NSCGJ do TJSP, os mandados distribuídos aos Oficiais de Justiça devem ser cumpridos e devolvidos ao cartório em até:
+
+a) 10 dias.
+b) 15 dias.
+c) 30 dias.
+d) 60 dias.
+e) 90 dias.
+
+GABARITO: C
+Comentário: Prazo regulamentar de 30 dias das Normas da Corregedoria.
+
+
+Questão 32
+Nas comarcas do Estado de São Paulo, o Oficial de Justiça deve manter atualizado seu cadastro perante a Central de Mandados, informando obrigatoriamente:
+
+a) Seu número de telefone, e-mail funcional e endereço do setor de trabalho.
+b) Sua filiação partidária e religião.
+c) A lista de todos os seus bens pessoais.
+d) O nome de seus animais de estimação.
+e) O extrato de sua conta bancária particular.
+
+GABARITO: A
+Comentário: Dever de atualização cadastral e comunicabilidade funcional.
+
+
+Questão 33
+De acordo com o Regulamento da Corregedoria Geral do TJSP, quando dois Oficiais de Justiça forem designados para o cumprimento simultâneo de mandado (ex: busca e apreensão com arrombamento), a certidão de cumprimento deverá ser assinada por:
+
+a) Apenas pelo Oficial mais antigo na carreira.
+b) Ambos os Oficiais de Justiça que participaram da diligência.
+c) Pelo juiz corregedor exclusivamente.
+d) Pelo escrivão diretor de secretaria.
+e) Pela testemunha mais jovem do local.
+
+GABARITO: B
+Comentário: Coautoria do ato exige assinatura de ambos os servidores atuantes.
+
+
+Questão 34
+As custas referentes ao ressarcimento das despesas de condução dos Oficiais de Justiça no Estado de São Paulo são fixadas e atualizadas por:
+
+a) Tabela emitida pela Ordem dos Advogados do Brasil.
+b) Provimento da Corregedoria Geral da Justiça / Presidência do TJSP.
+c) Acordo verbal firmado entre o Oficial e o advogado.
+d) Decreto do Prefeito de cada cidade.
+e) Decisão individual de cada delegado de polícia.
+
+GABARITO: B
+Comentário: Provimento do TJSP e Tabela de Condução Unificada.
+
+
+Questão 35
+Segundo as Normas da Corregedoria do TJSP, é PROIBIDO ao Oficial de Justiça:
+
+a) Utilizar aplicativo de mensagens oficial do TJSP para intimar partes autorizadas pelo juízo.
+b) Reter mandados em seu poder sem justificativa após o vencimento do prazo de cumprimento.
+c) Certificar que não encontrou o réu após 3 diligências em horários variados.
+d) Devolver o mandado cumprido antes do prazo de 30 dias.
+e) Solicitar transporte oficial do fórum em diligências da Justiça Gratuita.
+
+GABARITO: B
+Comentário: Retenção indevida de mandado configura infração disciplinar.
+
+
+Questão 36
+O Oficial de Justiça que necessitar se ausentar da comarca por motivo de licença-médica repentina deverá:
+
+a) Deixar os mandados guardados na sua gaveta sem avisar ninguém.
+b) Comunicar imediatamente a Seção de Mandados/Cartório e devolver os mandados não cumpridos para redistribuição.
+c) Entregar os mandados para seus familiares cumprirem.
+d) Queimar os papéis dos mandados em andamento.
+e) Pedir para o réu assinar as certidões em branco.
+
+GABARITO: B
+Comentário: Normas da Corregedoria - Devolução imediata para redistribuição urgente.
+
+
+Questão 37
+O comprovante de recolhimento da taxa de condução do Oficial de Justiça deve ser juntado ao processo:
+
+a) Após o encerramento definitivo do processo em grau de recurso.
+b) Previamente à expedição do mandado judicial pelo cartório (salvo Justiça Gratuita).
+c) Somente se o réu for vencedor na ação.
+d) Apenas no momento da aposentadoria do Oficial.
+e) Na data do leilão público.
+
+GABARITO: B
+Comentário: Exigência de prévio recolhimento das despesas de condução.
+
+
+Questão 38
+De acordo com as NSCGJ, a certidão do Oficial de Justiça que informar o não cumprimento do mandado por endereço insuficiente ou não localizado deve detalhar:
+
+a) As ruas percorridas, os números verificados e as informações prestadas por vizinhos ou moradores locais.
+b) Apenas a frase "endereço não encontrado" sem qualquer detalhe.
+c) O preço da gasolina no dia da diligência.
+d) A opinião do Oficial sobre a conduta moral do autor.
+e) Cópia do mapa impresso do satélite sem texto.
+
+GABARITO: A
+Comentário: Exigência de certidão minuciosa e detalhada.
+
+
+Questão 39
+O Oficial de Justiça responderá administrativa, civil e criminalmente quando:
+
+a) Cumprir o mandado rigorosamente dentro do prazo e das normas formais.
+b) Atestar falsamente fato que sabia ser inverídico em certidão de citação.
+c) Solicitar auxílio de força policial em reintegração de posse violenta.
+d) Intimar o réu no seu local de trabalho em dia útil.
+e) Devolver o mandado com certidão negativa após buscas completas.
+
+GABARITO: B
+Comentário: Responsabilidade tripla por falsidade ideológica/infração funcional.
+
+
+Questão 40
+As cotas de ressarcimento por diligências gratuitas realizadas pelos Oficiais de Justiça do TJSP são pagas mensalmente com recursos provenientes do:
+
+a) Fundo Especial de Despesas do Tribunal de Justiça (FEDTJ).
+b) Fundo Penitenciário Nacional.
+c) Orçamento do Ministério da Justiça.
+d) Imposto de Renda Retido na Fonte do devedor.
+e) Sindicato dos Advogados do Brasil.
+
+GABARITO: A
+Comentário: Gestão do FEDTJ do TJSP.
+
+
+Questão 41
+Segundo o art. 37, caput, da Constituição Federal, a Administração Pública direta e indireta de qualquer dos Poderes da União, dos Estados, do DF e dos Municípios obedecerá aos princípios de:
+
+a) Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência (LIMPE).
+b) Lealdade, Interesse, Lucro, Pontualidade e Exclusividade.
+c) Liberdade, Igualdade, Fraternidade, Severidade e Praticidade.
+d) Legalidade, Informação, Moderação, Prisão e Economia.
+e) Liderança, Isenção, Motivação, Probidade e Efetividade.
+
+GABARITO: A
+Comentário: Art. 37, caput da CF/88 (Mnemônico LIMPE).
+
+
+Questão 42
+A garantia constitucional que impede a prisão civil por dívida, ressalvada a do devedor de obrigação alimentícia e a do depositário infiel (Súmula Vinculante 25 proíbe esta última), está inscrita no art. 5º da CF. Hoje no Brasil, a única prisão civil por dívida admitida é a do:
+
+a) Inadimplente de cheque sem fundo.
+b) Devedor de pensão alimentícia.
+c) Devedor de aluguel residencial.
+d) Inadimplente de imposto de renda.
+e) Devedor de multa de trânsito.
+
+GABARITO: B
+Comentário: Art. 5º, LXVII da CF/88 c/c Súmula Vinculante 25 do STF.
+
+
+Questão 43
+O servidor público estatutário do Estado de São Paulo adquire estabilidade no cargo após quantos anos de efetivo exercício, mediante avaliação especial de desempenho?
+
+a) 1 ano.
+b) 2 anos.
+c) 3 (três) anos.
+d) 5 anos.
+e) 10 anos.
+
+GABARITO: C
+Comentário: Art. 41 da CF/88 (Estabilidade após 3 anos).
+
+
+Questão 44
+O crime funcional de PECULATO-DESVIO (art. 312, caput, segunda parte do Código Penal) ocorre quando o funcionário público:
+
+a) Apropria-se de valor de que tem a posse em razão do cargo.
+b) Desvia dinheiro ou bem móvel público ou particular, em proveito próprio ou alheio, valendo-se da facilidade que lhe proporciona a qualidade de funcionário.
+c) Exige vantagem indevida para cumprir o mandado.
+d) Deixa de praticar ato de ofício por preguiça.
+e) Revela segredo do fórum aos jornais.
+
+GABARITO: B
+Comentário: Art. 312, 2ª parte do Código Penal.
+
+
+Questão 45
+O crime de USURPAÇÃO DE FUNÇÃO PÚBLICA (art. 328 do Código Penal) é praticado quando:
+
+a) O funcionário público exerce suas funções com excesso de zelo.
+b) O particular toma para si e exerce indevidamente as funções de um cargo público sem ter sido nomeado.
+c) O servidor público entra de férias sem autorização.
+d) O juiz transfere o processo para outra comarca.
+e) O oficial de justiça utiliza viatura oficial.
+
+GABARITO: B
+Comentário: Art. 328 do Código Penal (Crime praticado por particular contra a administração).
+
+
+Questão 46
+Exigir tributo ou contribuição social que sabe ou deveria saber indevido, ou, quando devido, empregar na cobrança meio vexatório ou gravoso que a lei não autoriza, configura o crime de:
+
+a) Excesso de exação (art. 316, § 1º do Código Penal).
+b) Prevaricação simples.
+c) Peculato culposo.
+d) Desobediência civil.
+e) Corrupção ativa de testemunha.
+
+GABARITO: A
+Comentário: Art. 316, § 1º do Código Penal.
+
+
+Questão 47
+O funcionário público que solicita dinheiro a uma das partes sob a promessa de cumprir o mandado "mais rápido" comete o crime de:
+
+a) Corrupção passiva (art. 317 do Código Penal).
+b) Prevaricação culposa.
+c) Peculato mediante erro de outrem.
+d) Desconformidade administrativa.
+e) Extorsão indireta.
+
+GABARITO: A
+Comentário: Solicitar vantagem indevida = Corrupção passiva.
+
+
+Questão 48
+O ato de dar às verbas ou rendas públicas aplicação diversa da estabelecida em lei configura o crime de:
+
+a) Emprego irregular de verbas ou rendas públicas (art. 315 do Código Penal).
+b) Concussão qualificada.
+c) Falsidade material de atestado.
+d) Prevaricação imprópria.
+e) Corrupção ativa.
+
+GABARITO: A
+Comentário: Art. 315 do Código Penal.
+
+
+Questão 49
+De acordo com a Lei Estadual nº 10.261/68 (Estatuto dos Servidores de SP), a pena disciplinar de SUSPENSÃO será aplicada em caso de:
+
+a) Falta grave ou reincidência em faltas punidas com repreensão, não podendo exceder de 90 dias.
+b) Condenação por homicídio doloso em sentença definitiva.
+c) Ausência de 1 minuto no horário de almoço.
+d) Aposentadoria compulsória aos 75 anos.
+e) Posse em novo cargo inacumulável.
+
+GABARITO: A
+Comentário: Art. 254 da Lei Estadual nº 10.261/68.
+
+
+Questão 50
+Segundo o Estatuto dos Servidores de São Paulo, a prescrição da falta disciplinar punível com demissão ocorre em:
+
+a) 1 ano.
+b) 2 anos.
+c) 5 (cinco) anos, contados da data em que a falta foi praticada.
+d) 10 anos.
+e) Não prescreve jamais.
+
+GABARITO: C
+Comentário: Art. 261, I da Lei Estadual nº 10.261/68.
+
+
+Questão 51
+No regime jurídico constitucional dos servidores públicos, é VEDADA a acumulação remunerada de cargos públicos, EXCETO, quando houver compatibilidade de horários:
+
+a) A de dois cargos de professor; a de um cargo de professor com outro técnico ou científico; e a de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.
+b) A de Oficial de Justiça com o cargo de Delegado de Polícia.
+c) A de qualquer cargo público com o de Prefeito Municipal simultaneamente.
+d) A de 3 cargos de auditor fiscal.
+e) A de motorista oficial com juiz de direito.
+
+GABARITO: A
+Comentário: Art. 37, XVI da CF/88.
+
+
+Questão 52
+Constitui ato de improbidade administrativa que atenta contra os princípios da administração pública (Lei nº 8.429/92 reformada pela Lei nº 14.230/21):
+
+a) Revelar segredo do cargo do qual tem ciência em razão das funções com dolo e intenção de lesar.
+b) Cometer erro formal escusável na redação de certidão por cansaço.
+c) Atrasar o cumprimento do mandado por motivo de chuva forte.
+d) Impugnar edital de concurso público tempestivamente.
+e) Aposentar-se por tempo de contribuição regular.
+
+GABARITO: A
+Comentário: Exigência de dolo específico na Lei de Improbidade Administrativa.
+
+
+Questão 53
+O funcionário público que facilita ou deixa de observar o dever de vedar o acesso de terceiro não autorizado a informações sigilosas do processo em segredo de justiça comete o crime de:
+
+a) Violação de sigilo funcional (art. 325 do Código Penal).
+b) Concussão simples.
+c) Peculato por erro de terceiro.
+d) Usurpação de título.
+e) Falso testemunho.
+
+GABARITO: A
+Comentário: Art. 325 do Código Penal.
+
+
+Questão 54
+A conduta do particular que oferece dinheiro ao Oficial de Justiça para que este não realize a penhora de seus bens configura o crime de:
+
+a) Corrupção ativa (art. 333 do Código Penal).
+b) Prevaricação passiva.
+c) Desobediência qualificada.
+d) Tráfico de influência em juízo.
+e) Chantagear servidor público.
+
+GABARITO: A
+Comentário: Art. 333 do CP (Oferecer ou prometer vantagem indevida a funcionário).
+
+
+Questão 55
+O desacato praticado contra Oficial de Justiça durante o cumprimento de mandado em via pública sujeita o infrator a:
+
+a) Prisão em flagrante pelo crime do art. 331 do Código Penal (Desacato).
+b) Multa administrativa de trânsito cobrada pelo Detran.
+c) Perda do direito de recorrer em qualquer processo.
+d) Expulsão do país em 24 horas.
+e) Advertência verbal sem registro policial.
+
+GABARITO: A
+Comentário: Crime de desacato contra funcionário público no exercício da função.
+
+
+BLOCO III: RACIOCÍNIO LÓGICO
+Questão 56
+Considere a proposição composta: "O Oficial de Justiça cumpre a diligência e o réu assina a citação." A negação lógica dessa proposição é:
+
+a) O Oficial de Justiça não cumpre a diligência ou o réu não assina a citação.
+b) O Oficial de Justiça não cumpre a diligência e o réu não assina a citação.
+c) Se o Oficial de Justiça não cumpre a diligência, então o réu não assina.
+d) O Oficial de Justiça cumpre a diligência e o réu não assina.
+e) O réu assina a citação se, e somente se, o Oficial cumpre a diligência.
+
+GABARITO: A
+Comentário: Leis de De Morgan: ~(P e Q) = ~P ou ~Q.
+
+
+Questão 57
+A equivalência lógica da condicional "Se o mandado é urgente, então o Oficial faz o plantão" é dada por:
+
+a) O mandado não é urgente ou o Oficial faz o plantão.
+b) Se o Oficial faz o plantão, então o mandado é urgente.
+c) O mandado é urgente e o Oficial não faz o plantão.
+d) O Oficial não faz o plantão e o mandado é urgente.
+e) Se o mandado não é urgente, então o Oficial não faz o plantão.
+
+GABARITO: A
+Comentário: Regra do ~P ou Q para equivalência da condicional.
+
+
+Questão 58
+Em um setor da Central de Mandados há 5 Oficiais de Justiça masculinos e 4 Oficiais de Justiça femininas. Quantas comissões de 3 Oficiais podem ser formadas contendo exatamente 2 homens e 1 mulher?
+
+a) 30 comissões.
+b) 40 comissões.
+c) 60 comissões.
+d) 80 comissões.
+e) 120 comissões.
+
+GABARITO: B
+Comentário: C(5,2) * C(4,1) = 10 * 4 = 40.
+
+
+Questão 59
+Observe a sequência numérica: 2, 5, 11, 23, 47, Y. O valor do termo Y é:
+
+a) 91
+b) 94
+c) 95
+d) 96
+e) 99
+
+GABARITO: C
+Comentário: Padrão: anterior * 2 + 1 -> 47 * 2 + 1 = 95.
+
+
+Questão 60
+Em uma comarca, 80% dos mandados são cíveis e 20% são criminais. Sabe-se que 10% dos mandados cíveis são urgentes e 30% dos mandados criminais são urgentes. Escolhendo ao acaso um mandado dessa comarca, qual a probabilidade de ele ser urgente?
+
+a) 12%
+b) 14%
+c) 16%
+d) 18%
+e) 20%
+
+GABARITO: B
+Comentário: (0.80 * 0.10) + (0.20 * 0.30) = 0.08 + 0.06 = 0.14 = 14%.
+
+
+Questão 61
+Se a afirmação "Nenhum devedor é pontual" é FALSA, conclui-se que a afirmação verdadeira é:
+
+a) Todos os devedores são pontuais.
+b) Pelo menos um devedor é pontual.
+c) A maioria dos devedores é pontual.
+d) Nenhum pontual é devedor.
+e) Todos os pontuais são devedores.
+
+GABARITO: B
+Comentário: A negação de "Nenhum é" é "Pelo menos um é" (Algum é).
+
+
+Questão 62
+A proposição bicondicional P <-> Q é VERDADEIRA quando:
+
+a) P e Q possuem o mesmo valor lógico (ambas V ou ambas F).
+b) P é verdadeira e Q é falsa.
+c) P é falsa e Q é verdadeira.
+d) P é verdadeira e Q é neutra.
+e) Apenas quando ambas são falsas.
+
+GABARITO: A
+Comentário: Tabela-verdade do <->.
+
+
+Questão 63
+Cinco oficiais de justiça (A, B, C, D e E) vão alinhar-se em fila indiana no balcão. De quantas maneiras diferentes essa fila pode ser organizada sabendo que A e B devem ficar sempre juntos?
+
+a) 24
+b) 48
+c) 72
+d) 120
+e) 240
+
+GABARITO: B
+Comentário: Trata (A,B) como bloco único: 4! * 2! = 24 * 2 = 48.
+
+
+Questão 64
+Se o dia 1º de certo mês cai em uma terça-feira, o dia 25 desse mesmo mês cairá em uma:
+
+a) Quinta-feira.
+b) Sexta-feira.
+c) Sábado.
+d) Domingo.
+e) Segunda-feira.
+
+GABARITO: B
+Comentário: 25 - 1 = 24 dias. 24 mod 7 = 3 dias de resto. Terça + 3 dias = Sexta-feira.
+
+
+Questão 65
+A negação lógica da condicional "Se o Oficial estuda, ele passa no concurso" é:
+
+a) O Oficial estuda e ele não passa no concurso.
+b) Se o Oficial não estuda, ele não passa no concurso.
+c) O Oficial não estuda ou passa no concurso.
+d) Se o Oficial passa no concurso, ele estuda.
+e) O Oficial não estuda e passa no concurso.
+
+GABARITO: A
+Comentário: Negação de P -> Q é P e ~Q.
+
+
+BLOCO IV: INFORMÁTICA
+Questão 66
+No Microsoft Word do pacote Microsoft 365, o atalho de teclado padronizado para SALVAR o documento ativo rapidamente é:
+
+a) Ctrl + S (ou Ctrl + B no Word em português)
+b) Ctrl + P
+c) Ctrl + Z
+d) Alt + F4
+e) Ctrl + V
+
+GABARITO: A
+Comentário: Atalho padronizado de salvamento.
+
+
+Questão 67
+No Microsoft Excel, a fórmula =MÉDIA(B1:B4) com os valores B1=10, B2=20, B3=30 e B4=40 resulta em:
+
+a) 20
+b) 25
+c) 30
+d) 100
+e) 10
+
+GABARITO: B
+Comentário: (10+20+30+40)/4 = 100/4 = 25.
+
+
+Questão 68
+No Windows 11, para fechar a janela do aplicativo que está em primeiro plano na tela, utiliza-se a combinação de teclas:
+
+a) Alt + F4
+b) Ctrl + C
+c) Windows + Tab
+d) Shift + Del
+e) Ctrl + Alt + Del
+
+GABARITO: A
+Comentário: Alt + F4 fecha a janela/aplicativo ativo.
+
+
+Questão 69
+No uso do navegador Google Chrome / Microsoft Edge, o recurso "Guia Anônima" ou "Janela InPrivate" serve para:
+
+a) Tornar o usuário totalmente invisível para a Polícia Federal e provedor de internet.
+b) Impedir que o histórico de navegação, cookies e dados de formulários fiquem salvos localmente no computador após fechar a janela.
+c) Aumentar a velocidade do processador do computador em 50%.
+d) Bloquear a cobrança de contas de energia elétrica.
+e) Apagar todos os arquivos do disco rígido automaticamente.
+
+GABARITO: B
+Comentário: A navegação privada/anônima não salva histórico nem cookies localmente.
+
+
+Questão 70
+No Microsoft Outlook / Correio Eletrônico, ao receber um e-mail com múltiplos destinatários e utilizar o botão "Responder a Todos":
+
+a) A resposta será enviada apenas para o remetente original.
+b) A resposta será enviada para o remetente e para todos os demais destinatários originais dos campos "Para" e "Cc".
+c) A mensagem será apagada da caixa de entrada imediatamente.
+d) O e-mail será publicado no site do TJSP.
+e) A resposta será encaminhada para o Cco sem conhecimento do autor.
+
+GABARITO: B
+Comentário: Funcionalidade padrão do "Responder a Todos" nos clientes de e-mail.
 
