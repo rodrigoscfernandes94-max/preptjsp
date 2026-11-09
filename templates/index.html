@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TJSP - Oficial de Justiça | VUNESP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600 text-white font-bold px-3 py-1.5 rounded-lg text-lg shadow-md shadow-blue-900/30">TJSP</div>
+                <div>
+                    <h1 class="text-base font-bold text-slate-100">Oficial de Justiça • VUNESP</h1>
+                    <p class="text-xs text-slate-400">Banco de Dados em Nuvem & Repetição Espaçada</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-4 bg-slate-950/60 px-4 py-2 rounded-xl border border-slate-800/80">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xl">🔥</span>
+                    <div>
+                        <div class="text-xs text-slate-400 font-medium">Ofensiva</div>
+                        <div id="streak-count" class="text-sm font-bold text-orange-400">0 dias</div>
+                    </div>
+                </div>
+                <div class="h-6 w-px bg-slate-800"></div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Meta Diária</div>
+                    <div id="meta-count" class="text-sm font-bold text-blue-400">0/20</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="max-w-7xl mx-auto px-4 flex space-x-1 border-t border-slate-800/60 overflow-x-auto">
+            <button onclick="switchTab('study')" id="tab-study" class="tab-btn px-4 py-3 text-sm font-medium border-b-2 border-blue-500 text-blue-400 whitespace-nowrap">Estudar Hoje (20)</button>
+            <button onclick="switchTab('errors')" id="tab-errors" class="tab-btn px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap">Caderno de Erros (<span id="error-tab-count">0</span>)</button>
+            <button onclick="switchTab('bank')" id="tab-bank" class="tab-btn px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap">Banco Completo (1000+)</button>
+            <button onclick="switchTab('stats')" id="tab-stats" class="tab-btn px-4 py-3 text-sm font-medium border-b-2 border-transparent text-slate-400 hover:text-slate-200 whitespace-nowrap">Estatísticas</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl w-full mx-auto p-4 sm:p-6">
+        
+        <!-- Tab: Estudar Hoje -->
+        <div id="section-study" class="space-y-6">
+            <div id="study-container" class="bg-slate-900 border border-slate-800 rounded-2xl p-5 sm:p-8 shadow-xl">
+                <div class="text-center py-12 text-slate-400">Carregando banco de dados do servidor...</div>
+            </div>
+        </div>
+
+        <!-- Tab: Caderno de Erros -->
+        <div id="section-errors" class="hidden space-y-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                <h2 class="text-lg font-bold text-slate-100 mb-2">Caderno de Erros (Revisão de 5 Dias)</h2>
+                <p class="text-sm text-slate-400 mb-6">Questões erradas voltam aqui após 5 dias. Ao acertar, retornam para o fluxo de repetição espaçada de 10 dias.</p>
+                <div id="errors-container" class="space-y-4"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Banco Completo -->
+        <div id="section-bank" class="hidden space-y-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-100">Banco de Dados Geral</h2>
+                        <p class="text-sm text-slate-400">Mais de 1.000 questões cobrindo todo o edital VUNESP.</p>
+                    </div>
+                    <input type="text" id="bank-search" oninput="filterBank()" placeholder="Pesquisar questão..." class="bg-slate-950 border border-slate-800 rounded-xl px-4 py-2 text-sm text-slate-200 focus:outline-none focus:border-blue-500 w-full sm:w-64">
+                </div>
+                <div id="bank-list" class="space-y-3 max-h-[600px] overflow-y-auto pr-2"></div>
+            </div>
+        </div>
+
+        <!-- Tab: Estatísticas -->
+        <div id="section-stats" class="hidden space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-xs text-slate-400 font-medium mb-1">Total Respondidas</div>
+                    <div id="stat-total" class="text-2xl font-bold text-slate-100">0</div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-xs text-slate-400 font-medium mb-1">Taxa de Acerto</div>
+                    <div id="stat-accuracy" class="text-2xl font-bold text-emerald-400">0%</div>
+                </div>
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5">
+                    <div class="text-xs text-slate-400 font-medium mb-1">Erros Pendentes</div>
+                    <div id="stat-errors-count" class="text-2xl font-bold text-rose-400">0</div>
+                </div>
+            </div>
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+                <h3 class="text-base font-bold text-slate-100 mb-4">Progresso por Matéria</h3>
+                <div id="materias-progress" class="space-y-4"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-400 mt-auto">
+        Desenvolvido pelo Rodrigo Sá • Oficial de Justiça TJSP (VUNESP)
+    </footer>
+
+    <script>
+        let database = [];
+        let appState = JSON.parse(localStorage.getItem('tjsp_state')) || {
+            streak: 1,
+            lastLoginDate: new Date().toDateString(),
+            todayCompleted: 0,
+            todayQuestions: [],
+            currentIndex: 0,
+            history: {},
+            cadernoErros: []
+        };
+
+        async function initApp() {
+            try {
+                let res = await fetch('/api/questoes');
+                database = await res.json();
+                checkStreak();
+                updateHeaderUI();
+                renderStudyQuestion();
+            } catch (e) {
+                console.error("Erro ao carregar questões", e);
+            }
+        }
+
+        function checkStreak() {
+            let today = new Date().toDateString();
+            if (appState.lastLoginDate !== today) {
+                let last = new Date(appState.lastLoginDate);
+                let now = new Date(today);
+                let diffDays = Math.ceil(Math.abs(now - last) / (1000 * 60 * 60 * 24));
+                if (diffDays === 1) appState.streak += 1;
+                else if (diffDays > 1) appState.streak = 1;
+                appState.lastLoginDate = today;
+                appState.todayCompleted = 0;
+                initTodayQuestions();
+                saveState();
+            }
+            if (appState.todayQuestions.length === 0) {
+                initTodayQuestions();
+            }
+        }
+
+        function initTodayQuestions() {
+            let uncompleted = database.filter(q => !appState.history[q.id] || new Date().getTime() >= appState.history[q.id].proximaRevisao);
+            if (uncompleted.length < 20) uncompleted = [...database];
+            uncompleted.sort(() => Math.random() - 0.5);
+            appState.todayQuestions = uncompleted.slice(0, 20).map(q => q.id);
+            appState.currentIndex = 0;
+        }
+
+        function saveState() {
+            localStorage.setItem('tjsp_state', JSON.stringify(appState));
+            updateHeaderUI();
+        }
+
+        function updateHeaderUI() {
+            document.getElementById('streak-count').innerText = appState.streak + ' dias';
+            document.getElementById('meta-count').innerText = `${Math.min(appState.todayCompleted, 20)}/20`;
+            document.getElementById('error-tab-count').innerText = appState.cadernoErros.length;
+            document.getElementById('stat-errors-count').innerText = appState.cadernoErros.length;
+        }
+
+        function switchTab(tab) {
+            document.querySelectorAll('[id^="section-"]').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.tab-btn').forEach(el => {
+                el.classList.remove('border-blue-500', 'text-blue-400');
+                el.classList.add('border-transparent', 'text-slate-400');
+            });
+            document.getElementById('section-' + tab).classList.remove('hidden');
+            let btn = document.getElementById('tab-' + tab);
+            btn.classList.remove('border-transparent', 'text-slate-400');
+            btn.classList.add('border-blue-500', 'text-blue-400');
+
+            if (tab === 'errors') renderErrorsTab();
+            if (tab === 'bank') renderBankTab();
+            if (tab === 'stats') renderStatsTab();
+        }
+
+        function renderStudyQuestion() {
+            const container = document.getElementById('study-container');
+            if (appState.todayCompleted >= 20 || appState.currentIndex >= appState.todayQuestions.length) {
+                container.innerHTML = `
+                    <div class="text-center py-12 space-y-4">
+                        <div class="text-5xl">🎉</div>
+                        <h2 class="text-2xl font-bold text-slate-100">Meta Diária Concluída!</h2>
+                        <p class="text-slate-400 max-w-md mx-auto">Você completou suas 20 questões de hoje. Volte amanhã para manter sua ofensiva acesa ou revise suas questões no Caderno de Erros.</p>
+                        <button onclick="switchTab('errors')" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-xl transition shadow-lg shadow-blue-600/20">Ir para o Caderno de Erros</button>
+                    </div>
+                `;
+                return;
+            }
+
+            const qId = appState.todayQuestions[appState.currentIndex];
+            const q = database.find(item => item.id === qId);
+            if (!q) return;
+
+            let html = `
+                <div class="flex justify-between items-center mb-4">
+                    <span class="bg-blue-950 text-blue-400 border border-blue-800/60 px-3 py-1 rounded-lg text-xs font-semibold">${q.materia}</span>
+                    <span class="text-xs text-slate-400 font-medium">Questão ${appState.currentIndex + 1} de 20</span>
+                </div>
+                <p class="text-sm sm:text-base text-slate-200 font-medium mb-6 leading-relaxed">${q.enunciado}</p>
+                <div class="space-y-3 mb-6" id="alternativas-list">
+            `;
+
+            q.alternativas.forEach((alt, idx) => {
+                let letra = String.fromCharCode(65 + idx);
+                html += `
+                    <button onclick="answerQuestion(${q.id}, ${idx})" class="w-full text-left p-4 rounded-xl border border-slate-800 bg-slate-950/50 hover:bg-slate-800/80 hover:border-slate-700 transition flex items-start space-x-3 group alt-btn" data-index="${idx}">
+                        <span class="bg-slate-800 text-slate-300 font-bold h-6 w-6 rounded-lg flex items-center justify-center text-xs shrink-0 group-hover:bg-blue-600 group-hover:text-white transition">${letra}</span>
+                        <span class="text-sm text-slate-300 leading-normal">${alt}</span>
+                    </button>
+                `;
+            });
+
+            html += `</div><div id="feedback-box" class="hidden"></div>`;
+            container.innerHTML = html;
+        }
+
+        function answerQuestion(qId, escolhida) {
+            const q = database.find(item => item.id === qId);
+            const buttons = document.querySelectorAll('.alt-btn');
+            buttons.forEach(btn => btn.disabled = true);
+            
+            let acertou = (escolhida === q.correta);
+            let agora = new Date().getTime();
+
+            if (acertou) {
+                buttons[escolhida].classList.add('bg-emerald-950/40', 'border-emerald-600', 'text-emerald-200');
+                appState.history[qId] = { acerto: true, proximaRevisao: agora + (10 * 24 * 60 * 60 * 1000) };
+                let errIdx = appState.cadernoErros.indexOf(qId);
+                if (errIdx > -1) appState.cadernoErros.splice(errIdx, 1);
+            } else {
+                buttons[escolhida].classList.add('bg-rose-950/40', 'border-rose-600', 'text-rose-200');
+                buttons[q.correta].classList.add('bg-emerald-950/40', 'border-emerald-600', 'text-emerald-200');
+                appState.history[qId] = { acerto: false, proximaRevisao: agora + (5 * 24 * 60 * 60 * 1000) };
+                if (!appState.cadernoErros.includes(qId)) appState.cadernoErros.push(qId);
+            }
+
+            appState.todayCompleted += 1;
+            saveState();
+
+            const feedbackBox = document.getElementById('feedback-box');
+            feedbackBox.classList.remove('hidden');
+            feedbackBox.className = `p-5 rounded-2xl border ${acertou ? 'bg-emerald-950/20 border-emerald-800/60 text-emerald-200' : 'bg-rose-950/20 border-rose-800/60 text-rose-200'} space-y-3`;
+            feedbackBox.innerHTML = `
+                <div class="font-bold text-base">${acertou ? '✨ Resposta Correta!' : '❌ Resposta Incorreta!'}</div>
+                <p class="text-sm leading-relaxed">${q.comentario}</p>
+                <button onclick="nextQuestion()" class="mt-3 bg-slate-800 hover:bg-slate-700 text-slate-100 font-medium px-5 py-2.5 rounded-xl text-sm transition">Próxima Questão →</button>
+            `;
+        }
+
+        function nextQuestion() {
+            appState.currentIndex += 1;
+            saveState();
+            renderStudyQuestion();
+        }
+
+        function renderErrorsTab() {
+            const container = document.getElementById('errors-container');
+            if (appState.cadernoErros.length === 0) {
+                container.innerHTML = `<div class="text-center py-12 text-slate-400">Nenhuma questão no Caderno de Erros!</div>`;
+                return;
+            }
+            let html = '';
+            appState.cadernoErros.forEach(qId => {
+                let q = database.find(item => item.id === qId);
+                if (!q) return;
+                html += `
+                    <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-rose-950 text-rose-400 px-2.5 py-1 rounded-md font-semibold">${q.materia}</span>
+                            <span class="text-xs text-slate-400">Revisão de Erro (Ciclo de 5 dias)</span>
+                        </div>
+                        <p class="text-sm text-slate-200 font-medium">${q.enunciado}</p>
+                        <div class="text-xs text-slate-400 bg-slate-900 p-3 rounded-lg border border-slate-800">
+                            <strong>Comentário:</strong> ${q.comentario}
+                        </div>
+                        <button onclick="resolveErrorItem(${qId})" class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2 rounded-lg transition">Remover do Caderno</button>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function resolveErrorItem(qId) {
+            let idx = appState.cadernoErros.indexOf(qId);
+            if (idx > -1) {
+                appState.cadernoErros.splice(idx, 1);
+                saveState();
+                renderErrorsTab();
+            }
+        }
+
+        function renderBankTab(filterText = '') {
+            const list = document.getElementById('bank-list');
+            let filtered = database;
+            if (filterText) {
+                filtered = database.filter(q => q.materia.toLowerCase().includes(filterText.toLowerCase()) || q.enunciado.toLowerCase().includes(filterText.toLowerCase()));
+            }
+            let html = '';
+            filtered.slice(0, 100).forEach(q => {
+                html += `
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl space-y-2">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs bg-blue-950 text-blue-400 px-2 py-0.5 rounded font-semibold">#${q.id} - ${q.materia}</span>
+                            <span class="text-xs text-slate-400">${q.tema}</span>
+                        </div>
+                        <p class="text-sm text-slate-300">${q.enunciado}</p>
+                    </div>
+                `;
+            });
+            list.innerHTML = html;
+        }
+
+        function filterBank() {
+            renderBankTab(document.getElementById('bank-search').value);
+        }
+
+        function renderStatsTab() {
+            let totalResp = Object.keys(appState.history).length;
+            let acertos = Object.values(appState.history).filter(h => h.acerto).length;
+            let taxa = totalResp > 0 ? Math.round((acertos / totalResp) * 100) : 0;
+
+            document.getElementById('stat-total').innerText = totalResp;
+            document.getElementById('stat-accuracy').innerText = taxa + '%';
+
+            let progContainer = document.getElementById('materias-progress');
+            let progHtml = '';
+            const materiasList = ["Direito Processual Civil", "Direito Processual Penal", "Direito Penal", "Estatuto dos Funcionários Públicos (Lei 10.261/68)", "Normas da Corregedoria Geral da Justiça", "Língua Portuguesa"];
+            materiasList.forEach(mat => {
+                let matQs = database.filter(q => q.materia === mat);
+                let matResp = matQs.filter(q => appState.history[q.id]).length;
+                let pct = matQs.length > 0 ? Math.round((matResp / matQs.length) * 100) : 0;
+                progHtml += `
+                    <div>
+                        <div class="flex justify-between text-xs text-slate-300 mb-1">
+                            <span>${mat}</span>
+                            <span>${matResp} / ${matQs.length} (${pct}%)</span>
+                        </div>
+                        <div class="w-full bg-slate-950 h-2 rounded-full overflow-hidden border border-slate-800">
+                            <div class="bg-blue-600 h-full rounded-full" style="width: ${pct}%"></div>
+                        </div>
+                    </div>
+                `;
+            });
+            progContainer.innerHTML = progHtml;
+        }
+
+        initApp();
+    </script>
+</body>
+</html>
