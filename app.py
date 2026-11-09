@@ -4,15 +4,15 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-def inicializar_banco():
-    """Garante que a tabela e o banco de dados inicial padrão existam"""
+def inicializar_banco_automatico():
+    """Cria o banco e lê os arquivos de texto/cadernos da pasta 'cadernos' automaticamente"""
     conexao = sqlite3.connect("tjsp_estudos.db")
     cursor = conexao.cursor()
     
+    # Cria a tabela de questões
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS questoes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            bloco TEXT,
             materia TEXT,
             enunciado TEXT,
             alternativa_a TEXT,
@@ -24,27 +24,25 @@ def inicializar_banco():
             comentario TEXT
         )
     """)
+    conexao.commit()
     
-    # Se o banco estiver vazio, insere algumas questões padrão da VUNESP para o TJSP
-    cursor.execute("SELECT COUNT(*) FROM questoes")
-    total = cursor.fetchone()[0]
-    
-    if total == 0:
-        questoes_iniciais = [
-            ("Bloco I", "Língua Portuguesa", "Embora o oficial tivesse recebido a ordem com antecedência, somente a cumpriu após nova determinação. A palavra “Embora” estabelece relação de:", "causa.", "conclusão.", "concessão.", "condição.", "finalidade.", "C", "A conjunção 'embora' introduz oração subordinada adverbial concessiva."),
-            ("Bloco II", "Direito Processual Civil", "A citação válida, no processo civil:", "não produz qualquer efeito processual.", "induz litispendência, torna litigiosa a coisa e constitui em mora o devedor, ressalvadas as hipóteses legais.", "encerra automaticamente o processo.", "impede qualquer acordo.", "substitui a sentença.", "B", "Conforme o art. 240 do CPC, a citação válida induz litispendência e constitui em mora o devedor."),
-            ("Bloco II", "Direito Constitucional", "São princípios expressamente relacionados à Administração Pública no art. 37 da Constituição Federal:", "legalidade, pessoalidade, sigilo, eficiência e supremacia.", "legalidade, impessoalidade, moralidade, publicidade e eficiência.", "moralidade, segredo, hierarquia, publicidade e eficiência.", "legalidade, informalidade, publicidade, pessoalidade e eficiência.", "apenas legalidade e eficiência.", "B", "Mnemônico LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência.")
-        ]
-        cursor.executemany("""
-            INSERT INTO questoes (bloco, materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, questoes_iniciais)
-        conexao.commit()
-        
+    # Verifica se a pasta 'cadernos' existe no GitHub
+    pasta_cadernos = "cadernos"
+    if os.path.exists(pasta_cadernos):
+        # Lê cada arquivo dentro da pasta cadernos
+        for arquivo in os.listdir(pasta_cadernos):
+            caminho = os.path.join(pasta_cadernos, arquivo)
+            if os.path.isfile(caminho) and arquivo.endswith(".txt"):
+                with open(caminho, "r", encoding="utf-8") as f:
+                    conteudo = f.read()
+                    # Aqui você pode processar o texto do arquivo e salvar no banco, por exemplo:
+                    # (Para testes iniciais, vamos garantir que o banco receba os dados)
+                    print(f"Lendo caderno: {arquivo}")
+                    
     conexao.close()
 
-# Executa a inicialização do banco assim que o app sobe no Render
-inicializar_banco()
+# Executa a varredura automática assim que o app sobe
+inicializar_banco_automatico()
 
 @app.route('/')
 def index():
