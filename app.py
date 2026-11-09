@@ -4,69 +4,62 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
-def inicializar_banco_automatico():
-    """Cria o banco e garante que as questões estejam prontas"""
-    conexao = sqlite3.connect("tjsp_estudos.db")
-    cursor = conexao.cursor()
-    
-    cursor.execute("""
-        CREATE TABLE IF NOT EXISTS questoes (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            materia TEXT,
-            enunciado TEXT,
-            alternativa_a TEXT,
-            alternativa_b TEXT,
-            alternativa_c TEXT,
-            alternativa_d TEXT,
-            alternativa_e TEXT,
-            gabarito TEXT,
-            comentario TEXT
-        )
-    """)
-    conexao.commit()
-    
-    # Se o banco estiver vazio, insere questões iniciais para o site funcionar na hora
-    cursor.execute("SELECT COUNT(*) FROM questoes")
-    if cursor.fetchone()[0] == 0:
-        questoes_iniciais = [
-            (
-                "Língua Portuguesa",
-                "Embora o oficial tivesse recebido a ordem com antecedência, somente a cumpriu após nova determinação. A palavra “Embora” estabelece relação de:",
-                "causa.", "conclusão.", "concessão.", "condição.", "finalidade.",
-                "C", "A conjunção 'embora' introduz oração subordinada adverbial concessiva."
-            ),
-            (
-                "Direito Processual Civil",
-                "A citação válida, no processo civil:",
-                "não produz qualquer efeito processual.",
-                "induz litispendência, torna litigiosa a coisa e constitui em mora o devedor, ressalvadas as hipóteses legais.",
-                "encerra automaticamente o processo.",
-                "impede qualquer acordo.",
-                "substitui a sentença.",
-                "B", "Conforme o art. 240 do CPC, a citação válida induz litispendência e constitui em mora o devedor."
-            ),
-            (
-                "Direito Constitucional",
-                "São princípios expressamente relacionados à Administração Pública no art. 37 da Constituição Federal:",
-                "legalidade, pessoalidade, sigilo, eficiência e supremacia.",
-                "legalidade, impessoalidade, moralidade, publicidade e eficiência.",
-                "moralidade, segredo, hierarquia, publicidade e eficiência.",
-                "legalidade, informalidade, publicidade, pessoalidade e eficiência.",
-                "apenas legalidade e eficiência.",
-                "B", "Mnemônico LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência."
-            )
-        ]
+DB_PATH = "tjsp_estudos.db"
+
+def garantir_banco():
+    """Garante que o banco e a tabela existam e tenham dados"""
+    try:
+        conexao = sqlite3.connect(DB_PATH)
+        cursor = conexao.cursor()
         
-        cursor.executemany("""
-            INSERT INTO questoes (materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """, questoes_iniciais)
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS questoes (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                materia TEXT,
+                enunciado TEXT,
+                alternativa_a TEXT,
+                alternativa_b TEXT,
+                alternativa_c TEXT,
+                alternativa_d TEXT,
+                alternativa_e TEXT,
+                gabarito TEXT,
+                comentario TEXT
+            )
+        """)
         conexao.commit()
         
-    conexao.close()
+        cursor.execute("SELECT COUNT(*) FROM questoes")
+        if cursor.fetchone()[0] == 0:
+            questoes_iniciais = [
+                (
+                    "Língua Portuguesa",
+                    "Embora o oficial tivesse recebido a ordem com antecedência, somente a cumpriu após nova determinação. A palavra “Embora” estabelece relação de:",
+                    "causa.", "conclusão.", "concessão.", "condição.", "finalidade.",
+                    "C", "A conjunção 'embora' introduz oração subordinada adverbial concessiva."
+                ),
+                (
+                    "Direito Processual Civil",
+                    "A citação válida, no processo civil:",
+                    "não produz qualquer efeito processual.",
+                    "induz litispendência, torna litigiosa a coisa e constitui em mora o devedor, ressalvadas as hipóteses legais.",
+                    "encerra automaticamente o processo.",
+                    "impede qualquer acordo.",
+                    "substitui a sentença.",
+                    "B", "Conforme o art. 240 do CPC, a citação válida induz litispendência e constitui em mora o devedor."
+                )
+            ]
+            cursor.executemany("""
+                INSERT INTO questoes (materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, questoes_iniciais)
+            conexao.commit()
+            
+        conexao.close()
+    except Exception as e:
+        print(f"Erro ao inicializar banco: {e}")
 
-# Executa a inicialização do banco ao subir o app
-inicializar_banco_automatico()
+# Executa ao iniciar
+garantir_banco()
 
 @app.route('/')
 def index():
@@ -74,29 +67,32 @@ def index():
 
 @app.route('/api/questoes', methods=['GET'])
 def get_questoes():
-    conexao = sqlite3.connect('tjsp_estudos.db')
-    conexao.row_factory = sqlite3.Row
-    cursor = conexao.cursor()
-    rows = cursor.execute('SELECT * FROM questoes').fetchall()
-    conexao.close()
-    
-    questoes = []
-    for row in rows:
-        questoes.append({
-            "id": row["id"],
-            "materia": row["materia"],
-            "enunciado": row["enunciado"],
-            "alternativas": [
-                row["alternativa_a"],
-                row["alternativa_b"],
-                row["alternativa_c"],
-                row["alternativa_d"],
-                row["alternativa_e"]
-            ],
-            "correta": row["gabarito"],
-            "comentario": row["comentario"]
-        })
-    return jsonify(questoes)
+    try:
+        conexao = sqlite3.connect(DB_PATH)
+        conexao.row_factory = sqlite3.Row
+        cursor = conexao.cursor()
+        rows = cursor.execute('SELECT * FROM questoes').fetchall()
+        conexao.close()
+        
+        questoes = []
+        for row in rows:
+            questoes.append({
+                "id": row["id"],
+                "materia": row["materia"] if "materia" in row.keys() else "Geral",
+                "enunciado": row["enunciado"],
+                "alternativas": [
+                    row["alternativa_a"],
+                    row["alternativa_b"],
+                    row["alternativa_c"],
+                    row["alternativa_d"],
+                    row["alternativa_e"]
+                ],
+                "correta": row["gabarito"],
+                "comentario": row["comentario"]
+            })
+        return jsonify(questoes)
+    except Exception as e:
+        return jsonify({"erro": str(e)}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
