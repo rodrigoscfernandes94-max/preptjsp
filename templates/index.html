@@ -13,12 +13,12 @@
         <header class="mb-6 border-b border-slate-800 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
                 <h1 class="text-2xl font-black text-emerald-400 tracking-wide">TJSP • OFICIAL DE JUSTIÇA</h1>
-                <p class="text-xs text-slate-400 mt-0.5">Treinamento Intensivo • Banca VUNESP</p>
+                <p class="text-xs text-slate-400 mt-0.5">Simulado Inteligente • Foco Total VUNESP</p>
             </div>
             
             <div class="flex flex-wrap items-center gap-2">
                 <div class="flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 rounded-full text-amber-400 text-xs font-bold shadow-sm">
-                    🔥 Sessão Ativa
+                    🔥 Modo Bateria Diária
                 </div>
                 <div class="bg-emerald-950/80 border border-emerald-600/40 px-3 py-1.5 rounded-full text-emerald-300 text-xs font-semibold">
                     Acertos: <strong id="placar-acertos">0</strong>
@@ -31,12 +31,17 @@
 
         <div class="flex justify-between items-center mb-4 text-xs font-medium text-slate-400">
             <span id="materia-tag" class="bg-slate-800 px-3 py-1 rounded-md text-emerald-300 border border-slate-700">Carregando...</span>
-            <span id="progresso-contador">Questão 0/0</span>
+            <div class="flex gap-2 items-center">
+                <span id="progresso-contador">Questão 0/0</span>
+                <button onclick="carregarNovaRodada()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1">
+                    🔄 Nova Rodada Diária
+                </button>
+            </div>
         </div>
 
         <main id="app-container">
             <div id="loading" class="text-center py-12">
-                <p class="text-lg animate-pulse text-slate-400">Carregando caderno de questões na nuvem...</p>
+                <p class="text-lg animate-pulse text-slate-400">Carregando questões do edital na nuvem...</p>
             </div>
 
             <div id="quiz-box" class="hidden">
@@ -59,10 +64,18 @@
         let totalErros = 0;
 
         window.onload = function() {
-            initApp();
+            carregarNovaRodada();
         };
 
-        async function initApp() {
+        async function carregarNovaRodada() {
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('quiz-box').classList.add('hidden');
+            totalAcertos = 0;
+            totalErros = 0;
+            indiceAtual = 0;
+            document.getElementById('placar-acertos').innerText = 0;
+            document.getElementById('placar-erros').innerText = 0;
+
             try {
                 const response = await fetch('/api/questoes');
                 if (!response.ok) throw new Error("Erro ao conectar com o servidor");
@@ -136,9 +149,9 @@
             } else {
                 document.getElementById('quiz-box').innerHTML = `
                     <div class="text-center py-10">
-                        <h2 class="text-2xl font-bold text-emerald-400 mb-2">Simulado Concluído! 🎉</h2>
-                        <p class="text-slate-300 mb-6">Você concluiu esta bateria de questões com foco na VUNESP.</p>
-                        <button onclick="location.reload()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg cursor-pointer">Reiniciar Sessão</button>
+                        <h2 class="text-2xl font-bold text-emerald-400 mb-2">Rodada Diária Concluída! 🎉</h2>
+                        <p class="text-slate-300 mb-6">Você completou o treinamento de hoje. Clique abaixo para iniciar uma nova rodada com questões reorganizadas.</p>
+                        <button onclick="carregarNovaRodada()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg cursor-pointer">Iniciar Nova Rodada</button>
                     </div>
                 `;
             }
