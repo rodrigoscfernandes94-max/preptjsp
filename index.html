@@ -268,20 +268,21 @@
         });
 
         // Eventos de Auth
-        document.getElementById('authForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('authEmail').value;
-            const pass = document.getElementById('authPassword').value;
-            const errDiv = document.getElementById('authError');
-            errDiv.classList.add('hidden');
-            
-            try {
-                await signInWithEmailAndPassword(auth, email, pass);
-            } catch (err) {
-                errDiv.innerText = "Erro ao entrar: " + err.message;
-                errDiv.classList.remove('hidden');
-            }
-        });
+       document.getElementById('authForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('authEmail').value.trim();
+    const pass = document.getElementById('authPassword').value;
+    const errDiv = document.getElementById('authError');
+    errDiv.classList.add('hidden');
+    
+    try {
+        await signInWithEmailAndPassword(auth, email, pass);
+    } catch (err) {
+        console.error("Erro detalhado do Firebase:", err);
+        errDiv.innerText = "Erro ao entrar (" + err.code + "): " + err.message;
+        errDiv.classList.remove('hidden');
+    }
+});
 
         document.getElementById('btnRegister').addEventListener('click', async () => {
             const email = document.getElementById('authEmail').value;
