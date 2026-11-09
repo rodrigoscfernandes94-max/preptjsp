@@ -5,11 +5,10 @@ from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 
 def inicializar_banco_automatico():
-    """Cria o banco e lê os arquivos da pasta 'cadernos' automaticamente"""
+    """Cria o banco e garante que as questões estejam prontas"""
     conexao = sqlite3.connect("tjsp_estudos.db")
     cursor = conexao.cursor()
     
-    # Cria a tabela de questões
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS questoes (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,39 +25,47 @@ def inicializar_banco_automatico():
     """)
     conexao.commit()
     
-    # Verifica se a pasta 'cadernos' existe
-    pasta_cadernos = "cadernos"
-    if os.path.exists(pasta_cadernos):
-        for arquivo in os.listdir(pasta_cadernos):
-            caminho = os.path.join(pasta_cadernos, arquivo)
-            if os.path.isfile(caminho) and arquivo.endswith(".txt"):
-                with open(caminho, "r", encoding="utf-8") as f:
-                    linhas = f.readlines()
-                    
-                    # Exemplo de leitura e inserção básica baseada no seu texto
-                    # Se o banco estiver vazio, insere o conteúdo lido do arquivo
-                    cursor.execute("SELECT COUNT(*) FROM questoes")
-                    if cursor.fetchone()[0] == 0:
-                        # Inserção de exemplo garantindo que o app tenha dados para exibir
-                        cursor.execute("""
-                            INSERT INTO questoes (materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
-                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                        """, (
-                            "Direito / Português",
-                            "Questão carregada do arquivo: " + arquivo,
-                            "Alternativa A",
-                            "Alternativa B",
-                            "Alternativa C",
-                            "Alternativa D",
-                            "Alternativa E",
-                            "C",
-                            "Comentário gerado automaticamente pelo sistema."
-                        ))
-                        conexao.commit()
-                        
+    # Se o banco estiver vazio, insere questões iniciais para o site funcionar na hora
+    cursor.execute("SELECT COUNT(*) FROM questoes")
+    if cursor.fetchone()[0] == 0:
+        questoes_iniciais = [
+            (
+                "Língua Portuguesa",
+                "Embora o oficial tivesse recebido a ordem com antecedência, somente a cumpriu após nova determinação. A palavra “Embora” estabelece relação de:",
+                "causa.", "conclusão.", "concessão.", "condição.", "finalidade.",
+                "C", "A conjunção 'embora' introduz oração subordinada adverbial concessiva."
+            ),
+            (
+                "Direito Processual Civil",
+                "A citação válida, no processo civil:",
+                "não produz qualquer efeito processual.",
+                "induz litispendência, torna litigiosa a coisa e constitui em mora o devedor, ressalvadas as hipóteses legais.",
+                "encerra automaticamente o processo.",
+                "impede qualquer acordo.",
+                "substitui a sentença.",
+                "B", "Conforme o art. 240 do CPC, a citação válida induz litispendência e constitui em mora o devedor."
+            ),
+            (
+                "Direito Constitucional",
+                "São princípios expressamente relacionados à Administração Pública no art. 37 da Constituição Federal:",
+                "legalidade, pessoalidade, sigilo, eficiência e supremacia.",
+                "legalidade, impessoalidade, moralidade, publicidade e eficiência.",
+                "moralidade, segredo, hierarquia, publicidade e eficiência.",
+                "legalidade, informalidade, publicidade, pessoalidade e eficiência.",
+                "apenas legalidade e eficiência.",
+                "B", "Mnemônico LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência."
+            )
+        ]
+        
+        cursor.executemany("""
+            INSERT INTO questoes (materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, questoes_iniciais)
+        conexao.commit()
+        
     conexao.close()
 
-# Executa a leitura automática assim que o app sobe
+# Executa a inicialização do banco ao subir o app
 inicializar_banco_automatico()
 
 @app.route('/')
