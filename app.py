@@ -5,8 +5,7 @@ import json
 
 app = Flask(__name__)
 
-# Configuração da chave de API da IA (será lida das variáveis de ambiente do Render)
-# Certifique-se de adicionar GEMINI_API_KEY nas Environment Variables do Render
+# Configuração da chave de API
 API_KEY = os.environ.get("GEMINI_API_KEY")
 if API_KEY:
     genai.configure(api_key=API_KEY)
@@ -39,22 +38,24 @@ def get_questoes():
 @app.route('/api/gerar-questao-ia', methods=['GET'])
 def gerar_questao_ia():
     if not API_KEY:
-        return jsonify({"erro": "Chave de API da IA não configurada no servidor."}), 500
+        return jsonify({
+            "erro": "Chave GEMINI_API_KEY não configurada no Render. Adicione-a na aba Environment do seu Web Service."
+        }), 400
     
     try:
-        # Usando o modelo para gerar uma questão rigorosa estilo VUNESP
+        # Chamada direta ao modelo para gerar a questão nível VUNESP
         model = genai.GenerativeModel('gemini-2.5-flash')
         prompt = """
         Atue como uma banca examinadora de alta exigência (padrão VUNESP) para o concurso de Oficial de Justiça do TJ-SP.
-        Gere uma questão inédita e de nível técnico avançado sobre um dos seguintes temas: Direito Processual Civil, Normas da Corregedoria do TJSP, Direito Penal, Direito Constitucional ou Língua Portuguesa (Crase/Regência).
+        Gere uma questão inédita e de nível técnico avançado sobre Direito Processual Civil, Normas da Corregedoria do TJSP, Direito Penal ou Direito Constitucional.
         
-        Você DEVE retornar obrigatoriamente um objeto JSON puro (sem markdown extra, sem crases de código no início) contendo exatamente estas chaves:
+        Retorne APENAS um objeto JSON puro, sem blocos de código markdown, exatamente com esta estrutura:
         {
-          "materia": "Nome da matéria",
-          "enunciado": "Texto completo da questão no estilo VUNESP",
+          "materia": "Nome da Matéria",
+          "enunciado": "Texto completo da questão complexa estilo VUNESP",
           "alternativas": ["Alternativa A", "Alternativa B", "Alternativa C", "Alternativa D", "Alternativa E"],
-          "correta": "A letra correta em maiúsculo (A, B, C, D ou E)",
-          "comentario": "Fundamentação legal detalhada e comentários explicativos da resposta correta e dos erros das demais."
+          "correta": "Letra maiúscula da resposta (A, B, C, D ou E)",
+          "comentario": "Fundamentação legal detalhada explicando o gabarito e o erro das demais."
         }
         """
         
@@ -64,7 +65,7 @@ def gerar_questao_ia():
         
         return jsonify(questao_json)
     except Exception as e:
-        return jsonify({"erro": str(e)}), 500
+        return jsonify({"erro": f"Erro ao gerar com IA: {str(e)}"}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
