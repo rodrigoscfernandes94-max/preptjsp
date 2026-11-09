@@ -10,43 +10,38 @@
 
     <div class="max-w-3xl w-full bg-slate-900 p-6 md:p-8 rounded-2xl shadow-2xl border border-slate-800">
         
-        <!-- Cabeçalho com Ofensiva e Placar da Sessão -->
         <header class="mb-6 border-b border-slate-800 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
                 <h1 class="text-2xl font-black text-emerald-400 tracking-wide">TJSP • OFICIAL DE JUSTIÇA</h1>
-                <p class="text-xs text-slate-400 mt-0.5">Treinamento Intensivo • Banca VUNESP</p>
+                <p class="text-xs text-slate-400 mt-0.5">Treinamento com IA Real • Banca VUNESP</p>
             </div>
             
             <div class="flex flex-wrap items-center gap-2">
-                <!-- Ofensiva da Sessão -->
                 <div class="flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 rounded-full text-amber-400 text-xs font-bold shadow-sm">
                     🔥 Sessão Ativa
                 </div>
-                <!-- Acertos -->
                 <div class="bg-emerald-950/80 border border-emerald-600/40 px-3 py-1.5 rounded-full text-emerald-300 text-xs font-semibold">
                     Acertos: <strong id="placar-acertos">0</strong>
                 </div>
-                <!-- Erros -->
                 <div class="bg-rose-950/80 border border-rose-600/40 px-3 py-1.5 rounded-full text-rose-300 text-xs font-semibold">
                     Erros: <strong id="placar-erros">0</strong>
                 </div>
             </div>
         </header>
 
-        <!-- Barra de Progresso e Matéria -->
         <div class="flex justify-between items-center mb-4 text-xs font-medium text-slate-400">
             <span id="materia-tag" class="bg-slate-800 px-3 py-1 rounded-md text-emerald-300 border border-slate-700">Carregando...</span>
             <div class="flex gap-2 items-center">
                 <span id="progresso-contador">Questão 0/0</span>
-                <button onclick="gerarQuestaoInteligente()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1">
-                    ✨ Gerar Questão Inédita (IA)
+                <button id="btn-ia" onclick="gerarQuestaoInteligente()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1">
+                    ✨ Gerar Questão Inédita (IA Real)
                 </button>
             </div>
         </div>
 
         <main id="app-container">
             <div id="loading" class="text-center py-12">
-                <p class="text-lg animate-pulse text-slate-400">Carregando caderno de questões na nuvem...</p>
+                <p class="text-lg animate-pulse text-slate-400">Carregando caderno de questões...</p>
             </div>
 
             <div id="quiz-box" class="hidden">
@@ -68,15 +63,6 @@
         let totalAcertos = 0;
         let totalErros = 0;
 
-        const temasEdital = [
-            { materia: "Direito Processual Civil", assunto: "Atos do Oficial de Justiça e Citação" },
-            { materia: "Normas da Corregedoria (TJSP)", assunto: "Prazos e Devolução de Mandados" },
-            { materia: "Direito Penal", assunto: "Crimes contra a Administração Pública" },
-            { materia: "Direito Constitucional", assunto: "Direitos e Garantias Fundamentais" },
-            { materia: "Língua Portuguesa", assunto: "Crase e Regência Verbal" },
-            { materia: "Direito Administrativo", assunto: "Poderes Administrativos e Estatuto de SP" }
-        ];
-
         window.onload = function() {
             initApp();
         };
@@ -96,7 +82,7 @@
                 }
             } catch (error) {
                 console.error("Erro:", error);
-                document.getElementById('loading').innerHTML = '<p class="text-rose-400">Erro ao carregar o servidor. Tente atualizar a página.</p>';
+                document.getElementById('loading').innerHTML = '<p class="text-rose-400">Erro ao carregar o servidor.</p>';
             }
         }
 
@@ -157,37 +143,38 @@
                 document.getElementById('quiz-box').innerHTML = `
                     <div class="text-center py-10">
                         <h2 class="text-2xl font-bold text-emerald-400 mb-2">Simulado Concluído! 🎉</h2>
-                        <p class="text-slate-300 mb-6">Você completou todas as questões desta bateria. Clique abaixo para gerar novos desafios inéditos gerados pela IA!</p>
-                        <button onclick="location.reload()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg cursor-pointer">Reiniciar Sessão de Estudos</button>
+                        <p class="text-slate-300 mb-6">Você concluiu as questões disponíveis. Clique no botão acima para gerar uma nova questão inédita gerada por mim!</p>
+                        <button onclick="location.reload()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg cursor-pointer">Reiniciar Sessão</button>
                     </div>
                 `;
             }
         }
 
-        function gerarQuestaoInteligente() {
-            const temaAleatorio = temasEdital[Math.floor(Math.random() * temasEdital.length)];
-            const idNovo = questoes.length + 1;
-            
-            const novasQuestoesGeradas = [
-                {
-                    id: idNovo,
-                    materia: temaAleatorio.materia,
-                    enunciado: `[Questão Inédita Gerada por IA - Padrão VUNESP] No tocante às atribuições do Oficial de Justiça e às normas procedimentais aplicáveis ao assunto '${temaAleatorio.assunto}', assinale a alternativa correta de acordo com a legislação do Estado de São Paulo:`,
-                    alternativas: [
-                        "O servidor poderá delegar o cumprimento do ato urgente a estagiários devidamente credenciados.",
-                        "As diligências que exigirem esforço fora do expediente comum dependem de ordem escrita ou permissão legal específica.",
-                        "A fé pública conferida aos atos do Oficial de Justiça possui caráter absoluto, não admitindo prova em contrário em nenhuma hipótese.",
-                        "O mandado judicial caduca em exatos 10 dias corridos, independentemente de nova conclusão ao juiz.",
-                        "É facultado ao Oficial de Justiça recusar mandados em comarcas vizinhas sem justificativa fundamentada."
-                    ],
-                    correta: "B",
-                    comentario: "Conforme o CPC e as Normas da Corregedoria, os atos processuais urgentes e fora do horário comum exigem autorização legal ou determinação fundamentada, sendo a fé pública relativa (juris tantum)."
-                }
-            ];
+        async function gerarQuestaoInteligente() {
+            const btnIa = document.getElementById('btn-ia');
+            btnIa.innerText = "⏳ Gerando questão com IA...";
+            btnIa.disabled = true;
 
-            questoes.push(...novasQuestoesGeradas);
-            indiceAtual = questoes.length - 1;
-            renderizarQuestao();
+            try {
+                const response = await fetch('/api/gerar-questao-ia');
+                const novaQuestao = await response.json();
+
+                if (novaQuestao.erro) {
+                    alert("Erro da IA: " + novaQuestao.erro);
+                    return;
+                }
+
+                novaQuestao.id = questoes.length + 1;
+                questoes.push(novaQuestao);
+                indiceAtual = questoes.length - 1;
+                renderizarQuestao();
+            } catch (err) {
+                console.error(err);
+                alert("Erro ao comunicar com o servidor de IA.");
+            } finally {
+                btnIa.innerText = "✨ Gerar Questão Inédita (IA Real)";
+                btnIa.disabled = false;
+            }
         }
     </script>
 </body>
