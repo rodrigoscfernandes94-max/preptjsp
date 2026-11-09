@@ -1,10 +1,9 @@
 import os
-from flask import Flask, render_template, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
-# Base de questões blindada em memória (sem dependência de arquivos externos ou banco de dados físico)
-QUESTOES_MEMORIA = [
+QUESTOES = [
     {
         "id": 1,
         "materia": "Língua Portuguesa",
@@ -32,20 +31,6 @@ QUESTOES_MEMORIA = [
         ],
         "correta": "B",
         "comentario": "Conforme o art. 240 do CPC, a citação válida induz litispendência e constitui em mora o devedor."
-    },
-    {
-        "id": 3,
-        "materia": "Direito Constitucional",
-        "enunciado": "São princípios expressamente relacionados à Administração Pública no art. 37 da Constituição Federal:",
-        "alternativas": [
-            "legalidade, pessoalidade, sigilo, eficiência e supremacia.",
-            "legalidade, impessoalidade, moralidade, publicidade e eficiência.",
-            "moralidade, segredo, hierarquia, publicidade e eficiência.",
-            "legalidade, informalidade, publicidade, pessoalidade e eficiência.",
-            "apenas legalidade e eficiência."
-        ],
-        "correta": "B",
-        "comentario": "Mnemônico LIMPE: Legalidade, Impessoalidade, Moralidade, Publicidade e Eficiência."
     }
 ]
 
@@ -55,10 +40,7 @@ def index():
 
 @app.route('/api/questoes', methods=['GET'])
 def get_questoes():
-    try:
-        return jsonify(QUESTOES_MEMORIA)
-    except Exception as e:
-        return jsonify({"erro": str(e)}), 500
+    return jsonify(QUESTOES)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
