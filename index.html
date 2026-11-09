@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prep TJ-SP Oficial de Justiça - IA Conectada</title>
+    <title>Prep TJ-SP Oficial de Justiça - IA Integrada em Tempo Real</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
             </div>
             <div>
                 <h1 class="font-bold text-base md:text-lg tracking-tight">TJ-SP Oficial de Justiça</h1>
-                <p class="text-xs text-blue-400 font-medium">Edital Completo 2026/2027 • IA na Nuvem Ativa</p>
+                <p class="text-xs text-blue-400 font-medium">Edital Completo 2026/2027 • Motor IA Ativo</p>
             </div>
         </div>
         
@@ -73,7 +73,10 @@
                         <i class="fa-solid fa-chart-pie w-5"></i><span>Painel & Metas</span>
                     </button>
                     <button onclick="switchTab('simulador')" id="nav-simulador" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
-                        <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>Gerador IA (Em Tempo Real)</span>
+                        <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>Gerador de Questões IA</span>
+                    </button>
+                    <button onclick="switchTab('config')" id="nav-config" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-key w-5"></i><span>Chave da API / Token</span>
                     </button>
                     <button onclick="switchTab('erros')" id="nav-erros" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
                         <i class="fa-solid fa-rotate w-5"></i><span>Caderno de Erros (5/10d)</span>
@@ -102,7 +105,7 @@
             <div id="tab-dashboard" class="tab-content space-y-6">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
                     <h2 class="text-lg font-bold text-white mb-2">Comando Operacional, 2º Sgt Rodrigo Sá!</h2>
-                    <p class="text-sm text-slate-400 mb-6">Estou integrado diretamente na nuvem gerando questões e tirando dúvidas em tempo real para a sua aprovação.</p>
+                    <p class="text-sm text-slate-400 mb-6">Cadastre sua chave/token na aba ao lado e venha comigo gerar questões e destrinchar o edital em tempo real.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
@@ -121,13 +124,31 @@
                 </div>
             </div>
 
-            <!-- GERADOR DE QUESTÕES IA ONLINE -->
+            <!-- CONFIGURAÇÃO DA CHAVE/TOKEN -->
+            <div id="tab-config" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg space-y-4">
+                    <h2 class="text-lg font-bold text-white"><i class="fa-solid fa-key text-blue-400 mr-2"></i> Configurar Chave ou Token Gemini</h2>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cole abaixo sua chave (seja ela iniciada em <code>AIzaSy</code> ou o seu token <code>AQ.</code>). O sistema fará a leitura e ativará o motor de IA em tempo real.
+                    </p>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Chave / Token</label>
+                        <input type="password" id="geminiApiKeyInput" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white" placeholder="Cole aqui (ex: AQ.Ab8R...)">
+                    </div>
+                    <button onclick="salvarApiKey()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
+                        Salvar e Ativar Motor de IA
+                    </button>
+                    <div id="apiKeyStatus" class="text-xs text-emerald-400 font-medium hidden"></div>
+                </div>
+            </div>
+
+            <!-- GERADOR DE QUESTÕES IA -->
             <div id="tab-simulador" class="tab-content hidden space-y-6">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                         <div>
-                            <h2 class="text-lg font-bold text-white">Gerador de Questões - IA em Tempo Real</h2>
-                            <p class="text-xs text-slate-400">Criação dinâmica e inteligente baseada no perfil da VUNESP.</p>
+                            <h2 class="text-lg font-bold text-white">Gerador de Questões Inéditas - IA Ativa</h2>
+                            <p class="text-xs text-slate-400">Elaboração em tempo real baseada no rigor VUNESP.</p>
                         </div>
                         <div class="flex items-center gap-2 w-full md:w-auto flex-wrap">
                             <select id="materiaSelect" class="bg-slate-950 border border-slate-800 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-500">
@@ -136,11 +157,11 @@
                                 <option value="Processo Penal (CPP)">Processo Penal (CPP)</option>
                                 <option value="Direito Penal">Direito Penal</option>
                                 <option value="Direito Administrativo">Direito Administrativo</option>
-                                <option value="Normas da Corregedoria Geral da Justiça">Normas da Corregedoria</option>
+                                <option value="Normas da Corregedoria">Normas da Corregedoria</option>
                                 <option value="Raciocínio Lógico-Matemático (RLM)">Raciocínio Lógico-Matemático</option>
                                 <option value="Noções de Informática">Noções de Informática</option>
                             </select>
-                            <button onclick="gerarQuestaoDinamicaOnline()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer">
+                            <button onclick="gerarQuestaoRealAPI()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer">
                                 <i class="fa-solid fa-wand-magic-sparkles mr-1.5"></i> Gerar Questão Inédita
                             </button>
                         </div>
@@ -149,9 +170,9 @@
                     <div id="simuladoContainer" class="space-y-6">
                         <div class="text-center py-16 text-slate-400 border border-dashed border-slate-800 rounded-xl">
                             <i class="fa-solid fa-robot text-4xl mb-3 text-blue-500 animate-bounce"></i>
-                            <p class="text-sm mb-2 font-medium">Estou online e conectado para criar questões na hora!</p>
-                            <p class="text-xs text-slate-500 mb-4">Escolha a matéria acima e clique para gerar sua questão inédita.</p>
-                            <button onclick="gerarQuestaoDinamicaOnline()" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-lg cursor-pointer">Gerar Questão Agora</button>
+                            <p class="text-sm mb-2 font-medium">Estou online e pronto para gerar questões na hora!</p>
+                            <p class="text-xs text-slate-500 mb-4">Certifique-se de salvar sua chave na aba "Chave da API / Token".</p>
+                            <button onclick="gerarQuestaoRealAPI()" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-lg cursor-pointer">Gerar Primeira Questão</button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +198,7 @@
                     <div class="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
                         <div>
                             <h2 class="text-base font-bold text-white flex items-center">
-                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP (IA Online)
+                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP (IA Real)
                             </h2>
                             <p class="text-xs text-slate-400">Especialista total no edital do TJ-SP</p>
                         </div>
@@ -186,13 +207,13 @@
                     <div id="chatMessages" class="flex-1 overflow-y-auto space-y-4 pr-2 text-sm">
                         <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300">
                             <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
-                            Salve, 2º Sgt Rodrigo Sá! Estou rodando interativamente aqui no seu painel. Mande qualquer dúvida sobre o edital ou prazos do TJ-SP!
+                            Salve, 2º Sgt Rodrigo Sá! Estou conectado via API para destrinchar qualquer regra, artigo ou conceito com você. Qual é a dúvida de hoje?
                         </div>
                     </div>
 
                     <div class="pt-4 mt-2 border-t border-slate-800 flex gap-2">
-                        <input type="text" id="chatInput" placeholder="Ex: Explique citação por hora certa ou regras de crase..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
-                        <button onclick="enviarMensagemChatOnline()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
+                        <input type="text" id="chatInput" placeholder="Ex: Explique crase ou citação por hora certa..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
+                        <button onclick="enviarMensagemChatRealAPI()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </div>
@@ -223,6 +244,18 @@
 
         let currentUser = null;
         let questaoAtualCache = null;
+
+        window.salvarApiKey = function() {
+            const key = document.getElementById('geminiApiKeyInput').value.trim();
+            if(!key) {
+                alert("Insira uma chave ou token válido!");
+                return;
+            }
+            localStorage.setItem('gemini_api_key', key);
+            const status = document.getElementById('apiKeyStatus');
+            status.innerText = "Chave/Token salvo com sucesso no navegador!";
+            status.classList.remove('hidden');
+        }
 
         window.switchTab = function(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
@@ -297,147 +330,107 @@
             }
         }
 
-        // GERADOR DINÂMICO DE QUESTÕES EM TEMPO REAL
-        window.gerarQuestaoDinamicaOnline = async function() {
+        // CHAMADA DIRETA À API DO GEMINI VIA FETCH (SUPORTA CHAVES E TOKENS AQ.)
+        async function chamarGeminiAPI(promptText) {
+            const tokenOrKey = localStorage.getItem('gemini_api_key');
+            if(!tokenOrKey) {
+                throw new Error("Chave ou Token não configurado. Vá na aba 'Chave da API / Token'.");
+            }
+
+            // Se for token AQ. ou chave AIzaSy, montamos a chamada REST direta para o Gemini Flash
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=` + (tokenOrKey.startsWith('AIza') ? tokenOrKey : '');
+            
+            const headers = { 'Content-Type': 'application/json' };
+            if(!tokenOrKey.startsWith('AIza')) {
+                headers['Authorization'] = `Bearer ${tokenOrKey}`;
+            }
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: headers,
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: promptText }] }]
+                })
+            });
+
+            if(!response.ok) {
+                const errData = await response.json();
+                throw new Error(errData.error?.message || "Erro de conexão com a API do Gemini.");
+            }
+
+            const data = await response.json();
+            return data.candidates[0].content.parts[0].text;
+        }
+
+        // GERAR QUESTÃO INÉDITA VIA IA REAL
+        window.gerarQuestaoRealAPI = async function() {
+            const tokenOrKey = localStorage.getItem('gemini_api_key');
+            if(!tokenOrKey) {
+                alert("Configure sua Chave ou Token na aba 'Chave da API / Token' antes de gerar questões!");
+                switchTab('config');
+                return;
+            }
+
             const materia = document.getElementById('materiaSelect').value;
             const container = document.getElementById('simuladoContainer');
             
             container.innerHTML = `
                 <div class="text-center py-16 text-slate-300 border border-slate-800 rounded-xl bg-slate-950 space-y-3">
                     <i class="fa-solid fa-spinner fa-spin text-3xl text-blue-500"></i>
-                    <p class="text-sm font-medium">A IA está criando uma questão inédita de ${materia} em tempo real...</p>
+                    <p class="text-sm font-medium">Estou criando uma questão inédita e técnica de ${materia} (Padrão VUNESP)...</p>
                 </div>
             `;
 
-            // Simulando o raciocínio profundo da IA com variações profundas baseadas no edital
-            await new Promise(r => setTimeout(r, 900));
+            try {
+                const prompt = `Gere uma questão inédita de concurso público no rigoroso padrão da banca VUNESP para o cargo de Oficial de Justiça do TJ-SP sobre a matéria: "${materia}".
+                Retorne estritamente em formato JSON puro (sem blocos de código markdown extra como \`\`\`json), contendo as chaves exatas:
+                - "enunciado": O texto da questão contextualizado.
+                - "opcoes": Um array com 4 strings correspondentes às alternativas A, B, C e D.
+                - "correta": A letra correta ("A", "B", "C" ou "D").
+                - "comentario": A explicação detalhada do gabarito com base na legislação ou teoria aplicável.`;
 
-            const seed = Math.floor(Math.random() * 1000);
-            let qData = {};
+                let rawResp = await chamarGeminiAPI(prompt);
+                rawResp = rawResp.trim();
+                if(rawResp.startsWith("```json")) {
+                    rawResp = rawResp.replace(/^```json/, "").replace(/```$/, "").trim();
+                } else if(rawResp.startsWith("```")) {
+                    rawResp = rawResp.replace(/^```/, "").replace(/```$/, "").trim();
+                }
 
-            if(materia === "Língua Portuguesa") {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] Assinale a alternativa em que a colocação pronominal (próclise, mesóclise ou ênclise) atende rigorosamente às normas da gramática culta exigidas pela VUNESP:`,
-                    opcoes: [
-                        "Me disseram que a prova do TJ-SP será exigente.",
-                        "Não disseram-me sobre a alteração no provimento.",
-                        "O oficial cumprirá-a assim que receber o mandado.",
-                        "Jamais se entregou a contrafé sem a respectiva certidão."
-                    ],
-                    correta: "D",
-                    comentario: "A próclise é obrigatória diante de palavras negativas ('Jamais'). 'Me disseram' inicia frase (erro de próclise inicial). 'Disseram-me' estaria correto, mas a alternativa A usou início de frase. Pronomes o/a/os/as sofrem alteração para lo/la/los/las após verbos terminados em R, S ou Z ('cumprira-a' estaria errado, seria 'cumpri-la')."
-                };
-            } else if(materia.includes("Processo Civil")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] Conforme o Código de Processo Civil, quando o oficial de justiça certificar que o citando se oculta para evitar a citação, observar-se-á o seguinte:`,
-                    opcoes: [
-                        "O oficial afixará cópia do mandado na porta da residência no mesmo dia, independente de testemunhas.",
-                        "O oficial intimará qualquer pessoa da família ou vizinho de que voltará no dia útil subsequente para realizar a citação por hora certa.",
-                        "O processo será extinto sem resolução do mérito por frustração na localização do réu.",
-                        "A citação será convertida automaticamente em edital por meio de despacho do escrivão."
-                    ],
-                    correta: "B",
-                    comentario: "O art. 252 do CPC determina exatamente a citação por hora certa mediante intimação a familiar ou vizinho de que o oficial retornará no dia útil subsequente."
-                };
-            } else if(materia.includes("Processo Penal")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] De acordo com o Código de Processo Penal, o mandado de prisão expedido pela autoridade judiciária competente:`,
-                    opcoes: [
-                        "Terá validade indeterminada em qualquer território nacional sem necessidade de revalidação.",
-                        "Conterá a declaração do fato que motivou a sua expedição e será assinado pelo juiz.",
-                        "Poderá ser executado por qualquer cidadão a qualquer hora da noite sem formalidades.",
-                        "Exigirá sempre a presença de dois oficiais de justiça armados."
-                    ],
-                    correta: "B",
-                    comentario: "Conforme o art. 285 do CPP, o mandado de prisão conterá a declaração do fato motivador e a assinatura da autoridade judiciária competente."
-                };
-            } else if(materia.includes("Penal")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] O crime cometido por funcionário público que se apropria de dinheiro ou bem móvel de que tem a posse em razão do cargo denomina-se:`,
-                    opcoes: [
-                        "Concussão.",
-                        "Prevaricação.",
-                        "Peculato-apropriação.",
-                        "Corrupção passiva."
-                    ],
-                    correta: "C",
-                    comentario: "O art. 312 do CP tipifica o peculato. A apropriação de bem público ou particular sob guarda em razão da função caracteriza o peculato-apropriação."
-                };
-            } else if(materia.includes("Administrativo")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] Sobre o regime jurídico e a estabilidade dos servidores públicos estatutários no âmbito do Estado de São Paulo, é correto afirmar:`,
-                    opcoes: [
-                        "A estabilidade é adquirida após 2 anos de efetivo exercício.",
-                        "O servidor em estágio probatório pode ser demitido sem direito ao contraditório em caso de reprovação.",
-                        "A estabilidade exige 3 anos de efetivo exercício e aprovação em avaliação especial de desempenho.",
-                        "Cargos em comissão geram estabilidade automática após 5 anos."
-                    ],
-                    correta: "C",
-                    comentario: "O art. 41 da Constituição Federal estabelece o prazo de 3 anos e a avaliação especial de desempenho para a aquisição da estabilidade."
-                };
-            } else if(materia.includes("Corregedoria")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] De acordo com as Normas da Corregedoria Geral da Justiça do TJ-SP, constitui dever do oficial de justiça no exercício de suas funções:`,
-                    opcoes: [
-                        "Cumprir os mandados com presteza e exatidão, restituindo-os nos prazos legais.",
-                        "Modificar a ordem das diligências conforme seu interesse pessoal.",
-                        "Delegar o cumprimento de mandados urgentes a estagiários não empossados.",
-                        "Aceitar gratificações diretas das partes para priorizar mandados."
-                    ],
-                    correta: "A",
-                    comentario: "As Normas da Corregedoria exigem estrita observância à presteza, exatidão e cumprimento rigoroso dos prazos de devolução dos mandados."
-                };
-            } else if(materia.includes("Raciocínio")) {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] Dada a proposição composta 'Se o oficial cumpre o mandado, então a diligência é exitosa', uma proposição logicamente equivalente é:`,
-                    opcoes: [
-                        "Se a diligência não é exitosa, então o oficial não cumpriu o mandado.",
-                        "O oficial cumpre o mandado e a diligência não é exitosa.",
-                        "Se o oficial não cumpre o mandado, a diligência não é exitosa.",
-                        "O oficial não cumpre o mandado ou a diligência não é exitosa."
-                    ],
-                    correta: "A",
-                    comentario: "A equivalência lógica por contraposição inverte e nega ambas as proposições (~Q -> ~P)."
-                };
-            } else {
-                qData = {
-                    enunciado: `[Questão Inédita Gerada por IA #${seed}] No editor de texto Microsoft Word, qual atalho de teclado é utilizado para realizar a função de colar um conteúdo previamente copiado?`,
-                    opcoes: ["Ctrl + C", "Ctrl + V", "Ctrl + X", "Ctrl + Z"],
-                    correta: "B",
-                    comentario: "O atalho Ctrl + V cola o conteúdo que está na área de transferência. Ctrl + C copia e Ctrl + X recorta."
-                };
-            }
+                const qData = JSON.parse(rawResp);
+                questaoAtualCache = qData;
 
-            questaoAtualCache = qData;
-
-            container.innerHTML = `
-                <div class="space-y-6">
-                    <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
-                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">${materia} • Inédita (IA em Tempo Real)</span>
-                        <p class="text-sm text-slate-200 mt-3 font-medium">${qData.enunciado}</p>
-                        <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="A" class="mr-2"> A) ${qData.opcoes[0]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="B" class="mr-2"> B) ${qData.opcoes[1]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="C" class="mr-2"> C) ${qData.opcoes[2]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="D" class="mr-2"> D) ${qData.opcoes[3]}</label>
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">${materia} • Inédita (IA VUNESP)</span>
+                            <p class="text-sm text-slate-200 mt-3 font-medium">${qData.enunciado}</p>
+                            <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="A" class="mr-2"> A) ${qData.opcoes[0]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="B" class="mr-2"> B) ${qData.opcoes[1]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="C" class="mr-2"> C) ${qData.opcoes[2]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="D" class="mr-2"> D) ${qData.opcoes[3]}</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
-                        <div id="resultadoBadge" class="font-bold text-sm"></div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> ${qData.comentario}
-                        </p>
-                    </div>
+                        <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
+                            <div id="resultadoBadge" class="font-bold text-sm"></div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> ${qData.comentario}
+                            </p>
+                        </div>
 
-                    <button id="btnEnviarResp" onclick="enviarRespostaOnline()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
-                        Enviar Resposta e Salvar na Nuvem
-                    </button>
-                </div>
-            `;
+                        <button id="btnEnviarResp" onclick="enviarRespostaRealAPI()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
+                            Enviar Resposta e Salvar na Nuvem
+                        </button>
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = `<div class="p-4 text-rose-400 text-xs bg-rose-500/10 border border-rose-500/20 rounded-xl">Erro ao gerar questão pela IA: ${err.message}. Verifique sua chave na aba de configuração.</div>`;
+            }
         }
 
-        window.enviarRespostaOnline = async function() {
+        window.enviarRespostaRealAPI = async function() {
             const selecionada = document.querySelector('input[name="resp"]:checked');
             if(!selecionada) {
                 alert("Por favor, selecione uma alternativa!");
@@ -475,13 +468,20 @@
 
             const btn = document.getElementById('btnEnviarResp');
             btn.innerText = "Gerar Próxima Questão Inédita ➔";
-            btn.setAttribute("onclick", "gerarQuestaoDinamicaOnline()");
+            btn.setAttribute("onclick", "gerarQuestaoRealAPI()");
             btn.classList.remove("bg-emerald-600", "hover:bg-emerald-500");
             btn.classList.add("bg-blue-600", "hover:bg-blue-500");
         }
 
-        // TIRA-DÚVIDAS INTELIGENTE EM TEMPO REAL
-        window.enviarMensagemChatOnline = async function() {
+        // TIRA-DÚVIDAS REAL VIA API
+        window.enviarMensagemChatRealAPI = async function() {
+            const tokenOrKey = localStorage.getItem('gemini_api_key');
+            if(!tokenOrKey) {
+                alert("Configure sua Chave ou Token na aba 'Chave da API / Token'!");
+                switchTab('config');
+                return;
+            }
+
             const input = document.getElementById('chatInput');
             const txt = input.value.trim();
             if(!txt) return;
@@ -504,27 +504,27 @@
             `;
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            setTimeout(() => {
+            try {
+                const prompt = `Você é um tutor especialista no concurso de Oficial de Justiça do TJ-SP (banca VUNESP). Responda com rigor técnico, didática, profundidade e objetividade à seguinte dúvida do aluno (2º Sgt Rodrigo Sá): "${txt}".`;
+                const respostaTexto = await chamarGeminiAPI(prompt);
+
                 document.getElementById(loadingId).remove();
-                let resposta = `Análise técnica aprofundada para Oficial de Justiça do TJ-SP sobre "${txt}": A banca VUNESP costuma cobrar a literalidade exata dos artigos combinada com súmulas dos tribunais superiores. Mantenha o foco nos prazos processuais e na memorização ativa através das revisões diárias.`;
-                
-                const q = txt.toLowerCase();
-                if(q.includes("crase")) {
-                    resposta = "Regra de Ouro da Crase para a VUNESP: A crase é a contração da preposição 'a' com o artigo feminino 'a'. Nunca empregue antes de palavras masculinas, verbos ou pronomes que não admitam artigo. É facultativa com nomes próprios femininos e pronomes possessivos femininos.";
-                } else if(q.includes("hora certa") || q.includes("citação")) {
-                    resposta = "Citação por Hora Certa (CPC, art. 252): Quando o oficial de justiça por 2 vezes procurar o citando e não o encontrar por suspeita de ocultação, intimará qualquer pessoa da família ou vizinho de que voltará no dia útil seguinte para efetivar a citação.";
-                } else if(q.includes("concussão")) {
-                    resposta = "Concussão (CP, art. 316): Crime próprio praticado por funcionário público que 'exige' (emprega coação moral ou intimidação inerente ao cargo) vantagem indevida, ainda que fora da função, mas em razão dela.";
-                }
 
                 chatMessages.innerHTML += `
                     <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300 mr-8 space-y-2">
                         <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
-                        <div class="leading-relaxed">${resposta}</div>
+                        <div class="leading-relaxed">${respostaTexto.replace(/\n/g, '<br>')}</div>
                     </div>
                 `;
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 800);
+            } catch (err) {
+                document.getElementById(loadingId).remove();
+                chatMessages.innerHTML += `
+                    <div class="bg-rose-500/10 border border-rose-500/20 p-4 rounded-xl text-rose-400 mr-8 text-xs">
+                        Erro ao consultar a IA: ${err.message}
+                    </div>
+                `;
+            }
         }
     </script>
 </body>
