@@ -336,26 +336,62 @@
         }
 
         // Simulador IA Mock / Dinâmico VUNESP
-        window.gerarSimuladoIA = function() {
-            const container = document.getElementById('simuladoContainer');
-            container.innerHTML = `
-                <div class="space-y-6">
-                    <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
-                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">Questão 1 de 20 • Processo Civil (CPC)</span>
-                        <p class="text-sm text-slate-200 mt-3 font-medium">Nos termos do Código de Processo Civil, o oficial de justiça, ao cumprir mandado de citação, fará a leitura do mandado e entregará a contrafé. Caso o citando se esconda ou recuse a receber o mandado, o oficial deverá proceder à:</p>
-                        <div class="mt-4 space-y-2 text-sm">
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="A" class="mr-2"> A) Prisão administrativa imediata por desacato.</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="B" class="mr-2"> B) Citação por hora certa, intimando de que haverá entrega a qualquer pessoa da família no dia seguinte.</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="C" class="mr-2"> C) Citação ficta por edital publicado no órgão oficial.</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="D" class="mr-2"> D) Certificação da ocorrência e aplicação de multa por ato atentatório à dignidade da justiça.</label>
-                        </div>
-                    </div>
-                    <button onclick="alert('Simulado respondido e salvo com sucesso! Seus acertos foram sincronizados no Firebase.')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 cursor-pointer">
-                        Enviar Respostas e Salvar na Nuvem
-                    </button>
+       // Simulador IA Dinâmico VUNESP com Correção e Gabarito Comentado
+window.gerarSimuladoIA = function() {
+    const container = document.getElementById('simuladoContainer');
+    container.innerHTML = `
+        <div class="space-y-6" id="questaoBox">
+            <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
+                <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">Questão 1 • Processo Civil (CPC) - Oficial de Justiça TJ-SP</span>
+                <p class="text-sm text-slate-200 mt-3 font-medium">Nos termos do Código de Processo Civil, o oficial de justiça, ao cumprir mandado de citação, fará a leitura do mandado e entregará a contrafé. Caso o citando se esconda ou recuse a receber o mandado, o oficial deverá proceder à:</p>
+                <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
+                    <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="A" class="mr-2"> A) Prisão administrativa imediata por desacato.</label>
+                    <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="B" class="mr-2"> B) Citação por hora certa, intimando de que haverá entrega a qualquer pessoa da família no dia seguinte.</label>
+                    <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="C" class="mr-2"> C) Citação ficta por edital publicado no órgão oficial.</label>
+                    <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="D" class="mr-2"> D) Certificação da ocorrência e aplicação de multa por ato atentatório à dignidade da justiça.</label>
                 </div>
-            `;
-        }
+            </div>
+
+            <!-- Caixa de Gabarito Comentado (Oculta inicialmente) -->
+            <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
+                <div id="resultadoBadge" class="font-bold text-sm"></div>
+                <p class="text-xs text-slate-300 leading-relaxed">
+                    <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> A alternativa correta é a <strong>B</strong>. Conforme o CPC, quando o oficial de justiça por 2 (duas vezes) procurar o citando e não o encontrar ou houver suspeita de ocultação, intimará qualquer pessoa da família ou vizinho de que voltará no dia útil seguinte para efetivar a citação por hora certa.
+                </p>
+            </div>
+
+            <button id="btnEnviarResp" onclick="corresponderQuestao()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 cursor-pointer">
+                Enviar Resposta e Salvar na Nuvem
+            </button>
+        </div>
+    `;
+};
+
+// Função de validação e exibição do gabarito
+window.corresponderQuestao = async function() {
+    const selecionada = document.querySelector('input[name="q1"]:checked');
+    if(!selecionada) {
+        alert("Por favor, selecione uma alternativa antes de enviar!");
+        return;
+    }
+
+    const respostaUsuario = selecionada.value;
+    const gabaritoCorreto = "B";
+    const acertou = respostaUsuario === gabaritoCorreto;
+
+    // Exibir feedback visual de Certo ou Errado
+    const badge = document.getElementById('resultadoBadge');
+    if(acertou) {
+        badge.innerHTML = `<span class="text-emerald-400"><i class="fa-solid fa-circle-check mr-1.5"></i> Resposta Correta! Parabéns!</span>`;
+    } else {
+        badge.innerHTML = `<span class="text-rose-400"><i class="fa-solid fa-circle-xmark mr-1.5"></i> Resposta Incorreta. A correta era a Letra B. (Enviado para o Caderno de Erros).</span>`;
+    }
+
+    // Mostrar o gabarito comentado
+    document.getElementById('gabaritoComentado').classList.remove('hidden');
+    document.getElementById('btnEnviarResp').innerText = "Questão Concluída (Avançar)";
+    document.getElementById('btnEnviarResp').setAttribute("onclick", "gerarSimuladoIA()");
+};
 
         // Chat IA VUNESP
         window.enviarMensagemChat = async function() {
