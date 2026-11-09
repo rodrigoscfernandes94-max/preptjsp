@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prep TJ-SP Oficial de Justiça - IA Integrada Definitiva</title>
+    <title>Prep TJ-SP Oficial de Justiça - IA Suprema Integrada</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -17,7 +17,7 @@
             </div>
             <div>
                 <h1 class="font-bold text-base md:text-lg tracking-tight">TJ-SP Oficial de Justiça</h1>
-                <p class="text-xs text-blue-400 font-medium">Edital Completo 2026/2027 • Motor IA Integrado</p>
+                <p class="text-xs text-blue-400 font-medium">Edital Completo 2026/2027 • Motor IA Supremo Ativo</p>
             </div>
         </div>
         
@@ -73,7 +73,10 @@
                         <i class="fa-solid fa-chart-pie w-5"></i><span>Painel & Metas</span>
                     </button>
                     <button onclick="switchTab('simulador')" id="nav-simulador" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
-                        <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>Gerador de Questões IA</span>
+                        <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>Gerador IA em Tempo Real</span>
+                    </button>
+                    <button onclick="switchTab('config')" id="nav-config" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-key w-5"></i><span>Token de Acesso (AQ.)</span>
                     </button>
                     <button onclick="switchTab('erros')" id="nav-erros" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
                         <i class="fa-solid fa-rotate w-5"></i><span>Caderno de Erros (5/10d)</span>
@@ -102,7 +105,7 @@
             <div id="tab-dashboard" class="tab-content space-y-6">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
                     <h2 class="text-lg font-bold text-white mb-2">Comando Operacional, 2º Sgt Rodrigo Sá!</h2>
-                    <p class="text-sm text-slate-400 mb-6">Motor de inteligência artificial integrado diretamente na nuvem. Pronto para gerar questões e tirar dúvidas sem barreiras.</p>
+                    <p class="text-sm text-slate-400 mb-6">Insira seu token <code>AQ.</code> na aba ao lado para ativarmos o motor de IA suprema conectado em tempo real.</p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
@@ -121,13 +124,31 @@
                 </div>
             </div>
 
-            <!-- GERADOR DE QUESTÕES IA -->
+            <!-- CONFIGURAÇÃO DO TOKEN -->
+            <div id="tab-config" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg space-y-4">
+                    <h2 class="text-lg font-bold text-white"><i class="fa-solid fa-key text-blue-400 mr-2"></i> Configurar Token de Acesso</h2>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Cole o seu token AQ. abaixo para autenticar as requisições inteligentes diretamente com o motor da IA.
+                    </p>
+                    <div>
+                        <label class="block text-xs font-medium text-slate-300 mb-1">Token AQ.</label>
+                        <input type="password" id="geminiApiKeyInput" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white" placeholder="AQ.Ab8RN6Iq...">
+                    </div>
+                    <button onclick="salvarToken()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
+                        Salvar e Conectar IA Suprema
+                    </button>
+                    <div id="apiKeyStatus" class="text-xs text-emerald-400 font-medium hidden"></div>
+                </div>
+            </div>
+
+            <!-- GERADOR DE QUESTÕES SUPREMO -->
             <div id="tab-simulador" class="tab-content hidden space-y-6">
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                         <div>
-                            <h2 class="text-lg font-bold text-white">Gerador de Questões Inéditas - IA Ativa</h2>
-                            <p class="text-xs text-slate-400">Elaboração em tempo real baseada no rigor VUNESP.</p>
+                            <h2 class="text-lg font-bold text-white">Gerador de Questões Inéditas - IA Suprema</h2>
+                            <p class="text-xs text-slate-400">Criação em tempo real utilizando o seu token de acesso.</p>
                         </div>
                         <div class="flex items-center gap-2 w-full md:w-auto flex-wrap">
                             <select id="materiaSelect" class="bg-slate-950 border border-slate-800 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-500">
@@ -140,7 +161,7 @@
                                 <option value="Raciocínio Lógico-Matemático (RLM)">Raciocínio Lógico-Matemático</option>
                                 <option value="Noções de Informática">Noções de Informática</option>
                             </select>
-                            <button onclick="gerarQuestaoInteligente()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer">
+                            <button onclick="gerarQuestaoSuprema()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer">
                                 <i class="fa-solid fa-wand-magic-sparkles mr-1.5"></i> Gerar Questão Inédita
                             </button>
                         </div>
@@ -149,9 +170,9 @@
                     <div id="simuladoContainer" class="space-y-6">
                         <div class="text-center py-16 text-slate-400 border border-dashed border-slate-800 rounded-xl">
                             <i class="fa-solid fa-robot text-4xl mb-3 text-blue-500 animate-bounce"></i>
-                            <p class="text-sm mb-2 font-medium">Estou online e pronto para gerar questões na hora!</p>
-                            <p class="text-xs text-slate-500 mb-4">Escolha a matéria acima e clique para iniciar o treino.</p>
-                            <button onclick="gerarQuestaoInteligente()" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-lg cursor-pointer">Gerar Primeira Questão</button>
+                            <p class="text-sm mb-2 font-medium">Pronto para gerar questões inéditas com inteligência real!</p>
+                            <p class="text-xs text-slate-500 mb-4">Certifique-se de salvar seu token AQ. na aba de configuração.</p>
+                            <button onclick="gerarQuestaoSuprema()" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-lg cursor-pointer">Gerar Primeira Questão</button>
                         </div>
                     </div>
                 </div>
@@ -177,7 +198,7 @@
                     <div class="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
                         <div>
                             <h2 class="text-base font-bold text-white flex items-center">
-                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP (IA Ativa)
+                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP (IA Suprema)
                             </h2>
                             <p class="text-xs text-slate-400">Especialista total no edital do TJ-SP</p>
                         </div>
@@ -186,13 +207,13 @@
                     <div id="chatMessages" class="flex-1 overflow-y-auto space-y-4 pr-2 text-sm">
                         <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300">
                             <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
-                            Salve, 2º Sgt Rodrigo Sá! Estou rodando interativamente aqui no seu painel para destrinchar qualquer dúvida de Direito, Português, RLM ou Informática. Mande sua pergunta!
+                            Salve, 2º Sgt Rodrigo Sá! IA Suprema conectada via token AQ. Qual é a dúvida sobre o edital hoje?
                         </div>
                     </div>
 
                     <div class="pt-4 mt-2 border-t border-slate-800 flex gap-2">
-                        <input type="text" id="chatInput" placeholder="Ex: Explique crase, citação por hora certa..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
-                        <button onclick="enviarMensagemChatInteligente()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
+                        <input type="text" id="chatInput" placeholder="Ex: Explique crase ou citação por hora certa..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
+                        <button onclick="enviarMensagemChatSuprema()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                     </div>
@@ -223,7 +244,18 @@
 
         let currentUser = null;
         let questaoAtualCache = null;
-        let contadorAleatorio = 0;
+
+        window.salvarToken = function() {
+            const token = document.getElementById('geminiApiKeyInput').value.trim();
+            if(!token) {
+                alert("Insira um token válido!");
+                return;
+            }
+            localStorage.setItem('gemini_token_aq', token);
+            const status = document.getElementById('apiKeyStatus');
+            status.innerText = "Token salvo com sucesso no navegador!";
+            status.classList.remove('hidden');
+        }
 
         window.switchTab = function(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
@@ -298,128 +330,102 @@
             }
         }
 
-        // GERADOR DINÂMICO INTELIGENTE AVANÇADO (SEM ERROS DE TOKEN)
-        window.gerarQuestaoInteligente = async function() {
+        // CHAMADA AUTENTICADA UTILIZANDO O TOKEN AQ. VIA BEARER
+        async function chamarIASuprema(promptText) {
+            const token = localStorage.getItem('gemini_token_aq');
+            if(!token) {
+                throw new Error("Token AQ. não configurado. Vá na aba 'Token de Acesso (AQ.)'.");
+            }
+
+            const response = await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: promptText }] }]
+                })
+            });
+
+            if(!response.ok) {
+                const errJson = await response.json().catch(() => ({}));
+                throw new Error(errJson.error?.message || `Erro HTTP ${response.status}: Verifique se o token AQ. está correto.`);
+            }
+
+            const data = await response.json();
+            return data.candidates[0].content.parts[0].text;
+        }
+
+        // GERAR QUESTÃO COM IA SUPREMA
+        window.gerarQuestaoSuprema = async function() {
+            const token = localStorage.getItem('gemini_token_aq');
+            if(!token) {
+                alert("Configure seu Token AQ. na aba 'Token de Acesso (AQ.)'!");
+                switchTab('config');
+                return;
+            }
+
             const materia = document.getElementById('materiaSelect').value;
             const container = document.getElementById('simuladoContainer');
             
             container.innerHTML = `
                 <div class="text-center py-16 text-slate-300 border border-slate-800 rounded-xl bg-slate-950 space-y-3">
                     <i class="fa-solid fa-spinner fa-spin text-3xl text-blue-500"></i>
-                    <p class="text-sm font-medium">Sintetizando questão inédita de ${materia} no padrão VUNESP...</p>
+                    <p class="text-sm font-medium">IA Suprema gerando questão inédita de ${materia} (Padrão VUNESP)...</p>
                 </div>
             `;
 
-            await new Promise(r => setTimeout(r, 700));
-            contadorAleatorio++;
+            try {
+                const prompt = `Gere uma questão inédita de concurso público no rigoroso padrão da banca VUNESP para o cargo de Oficial de Justiça do TJ-SP sobre a matéria: "${materia}".
+                Retorne estritamente em formato JSON puro (sem blocos de código markdown \`\`\`json), contendo as chaves exatas:
+                - "enunciado": O texto da questão contextualizado.
+                - "opcoes": Um array com 4 strings correspondentes às alternativas A, B, C e D.
+                - "correta": A letra correta ("A", "B", "C" ou "D").
+                - "comentario": A explicação detalhada do gabarito com base na legislação ou teoria aplicável.`;
 
-            let qData = {};
-            if(materia === "Língua Portuguesa") {
-                const arr = [
-                    {
-                        enunciado: "Assinale a alternativa em que a regência nominal e verbal está em absoluta conformidade com a norma-padrão cobrada pela VUNESP:",
-                        opcoes: ["Visando o preenchimento da vaga, o candidato estudou com afinco.", "O oficial assistiu o cumprimento do mandado no fórum.", "O magistrado aspirava em uma decisão mais célere.", "Implicaram o réu nos crimes contra a fé pública."],
-                        correta: "A",
-                        comentario: "O verbo 'visar' no sentido de objetivo é transitivo indireto regido pela preposição 'a' ('visando ao preenchimento'). 'Assistir' no sentido de ver é transitivo indireto ('assistiu ao cumprimento'). 'Aspirar' no sentido de almejar é transitivo indireto ('aspirava a uma decisão')."
-                    },
-                    {
-                        enunciado: "Assinale a alternativa correta quanto ao emprego do acento indicativo de crase:",
-                        opcoes: ["O oficial encaminhou o documento à uma semana.", "Ficaram frente à frente na audiência.", "Dirigiu-se às pressas para cumprir o mandado urgente.", "Visou à alcançar a celeridade processual."],
-                        correta: "C",
-                        comentario: "A expressão adverbial feminina 'às pressas' exige crase obrigatória. Não se usa crase antes de artigo indefinido ('uma'), antes de verbos ('alcançar') e em construções com palavras repetidas ('frente a frente')."
-                    }
-                ];
-                qData = arr[contadorAleatorio % arr.length];
-            } else if(materia.includes("Processo Civil")) {
-                const arr = [
-                    {
-                        enunciado: "Nos termos do Código de Processo Civil, verificando o oficial de justiça que o réu se oculta para não ser citado, deverá proceder à:",
-                        opcoes: ["Prisão administrativa imediata por desacato.", "Citação por hora certa, intimando de que voltará no dia útil seguinte.", "Citação ficta por edital imediato.", "Certidão negativa de diligência sem nova tentativa."],
-                        correta: "B",
-                        comentario: "Conforme o art. 252 do CPC, ocultando-se o réu, o oficial intimará qualquer pessoa da família ou vizinho de que voltará no dia útil subsequente para efetivar a citação por hora certa."
-                    },
-                    {
-                        enunciado: "De acordo com o CPC, os atos processuais realizar-se-ão em dias úteis, das:",
-                        opcoes: ["06 às 18 horas.", "06 às 20 horas.", "08 às 18 horas.", "07 às 21 horas."],
-                        correta: "B",
-                        comentario: "O art. 212 do CPC estabelece que os atos processuais realizam-se em dias úteis, das 6 (seis) às 20 (vinte) horas."
-                    }
-                ];
-                qData = arr[contadorAleatorio % arr.length];
-            } else if(materia.includes("Processo Penal")) {
-                qData = {
-                    enunciado: "No âmbito do Código de Processo Penal, o mandado de prisão conterá a declaração do fato que motivou a sua expedição e será assinado:",
-                    opcoes: ["Exclusivamente pelo escrivão.", "Pela autoridade judiciária competente.", "Pelo oficial de justiça encarregado.", "Pelo delegado de polícia."],
-                    correta: "B",
-                    comentario: "Conforme o art. 285 do CPP, o mandado de prisão será assinado pela autoridade judiciária competente."
-                };
-            } else if(materia.includes("Penal")) {
-                qData = {
-                    enunciado: "O funcionário público que exige, para si ou para outrem, direta ou indiretamente, em razão da função, vantagem indevida, comete o crime de:",
-                    opcoes: ["Corrupção passiva.", "Concussão.", "Prevaricação.", "Peculato."],
-                    correta: "B",
-                    comentario: "O art. 316 do Código Penal tipifica a Concussão como o ato de exigir vantagem indevida em razão da função."
-                };
-            } else if(materia.includes("Administrativo")) {
-                qData = {
-                    enunciado: "Conforme a Constituição Federal, são estipulados quantos anos de efetivo exercício para aquisição da estabilidade pelo servidor público nomeado em virtude de concurso público?",
-                    opcoes: ["2 anos.", "3 anos.", "5 anos.", "Imediatamente após a posse."],
-                    correta: "B",
-                    comentario: "O art. 41 da CF fixa o prazo de 3 anos de efetivo exercício e aprovação em avaliação especial de desempenho."
-                };
-            } else if(materia.includes("Corregedoria")) {
-                qData = {
-                    enunciado: "De acordo com as Normas da Corregedoria Geral da Justiça do TJ-SP, incumbe aos oficiais de justiça cumprir com exatidão as ordens judiciais e restituir os mandados:",
-                    opcoes: ["Ao final de cada mês.", "Nos prazos estabelecidos nas normas de serviço ou determinados pelo magistrado.", "Livremente sem prazo fixo.", "Apenas quando cobrados pelas partes."],
-                    correta: "B",
-                    comentario: "As Normas da Corregedoria exigem estrita observância aos prazos fixados para a devolução dos mandados cumpridos."
-                };
-            } else if(materia.includes("Raciocínio")) {
-                qData = {
-                    enunciado: "Dada a proposição composta 'Se o oficial cumpre o mandado, então a diligência é exitosa', uma proposição logicamente equivalente é:",
-                    opcoes: ["Se a diligência não é exitosa, então o oficial não cumpriu o mandado.", "O oficial cumpre o mandado e a diligência não é exitosa.", "Se o oficial não cumpre o mandado, a diligência não é exitosa.", "O oficial não cumpre o mandado ou a diligência é exitosa."],
-                    correta: "A",
-                    comentario: "A equivalência da implicação (P -> Q) por contraposição é (~Q -> ~P): 'Se não Q, então não P'."
-                };
-            } else {
-                qData = {
-                    enunciado: "No ambiente do sistema operacional Windows, qual atalho de teclado é universalmente utilizado para desfazer a última ação executada?",
-                    opcoes: ["Ctrl + C", "Ctrl + V", "Ctrl + Z", "Ctrl + Y"],
-                    correta: "C",
-                    comentario: "O atalho Ctrl + Z desfaz a última ação (Undo)."
-                };
-            }
+                let raw = await chamarIASuprema(prompt);
+                raw = raw.trim();
+                if(raw.startsWith("```json")) {
+                    raw = raw.replace(/^```json/, "").replace(/```$/, "").trim();
+                } else if(raw.startsWith("```")) {
+                    raw = raw.replace(/^```/, "").replace(/```$/, "").trim();
+                }
 
-            questaoAtualCache = qData;
+                const qData = JSON.parse(raw);
+                questaoAtualCache = qData;
 
-            container.innerHTML = `
-                <div class="space-y-6">
-                    <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
-                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">${materia} • Inédita (Padrão VUNESP)</span>
-                        <p class="text-sm text-slate-200 mt-3 font-medium">${qData.enunciado}</p>
-                        <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="A" class="mr-2"> A) ${qData.opcoes[0]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="B" class="mr-2"> B) ${qData.opcoes[1]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="C" class="mr-2"> C) ${qData.opcoes[2]}</label>
-                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="D" class="mr-2"> D) ${qData.opcoes[3]}</label>
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">${materia} • Inédita (IA Suprema VUNESP)</span>
+                            <p class="text-sm text-slate-200 mt-3 font-medium">${qData.enunciado}</p>
+                            <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="A" class="mr-2"> A) ${qData.opcoes[0]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="B" class="mr-2"> B) ${qData.opcoes[1]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="C" class="mr-2"> C) ${qData.opcoes[2]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="D" class="mr-2"> D) ${qData.opcoes[3]}</label>
+                            </div>
                         </div>
-                    </div>
 
-                    <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
-                        <div id="resultadoBadge" class="font-bold text-sm"></div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> ${qData.comentario}
-                        </p>
-                    </div>
+                        <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
+                            <div id="resultadoBadge" class="font-bold text-sm"></div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> ${qData.comentario}
+                            </p>
+                        </div>
 
-                    <button id="btnEnviarResp" onclick="enviarRespostaInteligente()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
-                        Enviar Resposta e Salvar na Nuvem
-                    </button>
-                </div>
-            `;
+                        <button id="btnEnviarResp" onclick="enviarRespostaSuprema()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
+                            Enviar Resposta e Salvar na Nuvem
+                        </button>
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = `<div class="p-4 text-rose-400 text-xs bg-rose-500/10 border border-rose-500/20 rounded-xl">Erro ao gerar questão pela IA Suprema: ${err.message}</div>`;
+            }
         }
 
-        window.enviarRespostaInteligente = async function() {
+        window.enviarRespostaSuprema = async function() {
             const selecionada = document.querySelector('input[name="resp"]:checked');
             if(!selecionada) {
                 alert("Por favor, selecione uma alternativa!");
@@ -457,13 +463,20 @@
 
             const btn = document.getElementById('btnEnviarResp');
             btn.innerText = "Gerar Próxima Questão Inédita ➔";
-            btn.setAttribute("onclick", "gerarQuestaoInteligente()");
+            btn.setAttribute("onclick", "gerarQuestaoSuprema()");
             btn.classList.remove("bg-emerald-600", "hover:bg-emerald-500");
             btn.classList.add("bg-blue-600", "hover:bg-blue-500");
         }
 
-        // TIRA-DÚVIDAS INTEGRADO AVANÇADO
-        window.enviarMensagemChatInteligente = async function() {
+        // TIRA-DÚVIDAS SUPREMO
+        window.enviarMensagemChatSuprema = async function() {
+            const token = localStorage.getItem('gemini_token_aq');
+            if(!token) {
+                alert("Configure seu Token AQ. na aba 'Token de Acesso (AQ.)'!");
+                switchTab('config');
+                return;
+            }
+
             const input = document.getElementById('chatInput');
             const txt = input.value.trim();
             if(!txt) return;
@@ -481,32 +494,32 @@
             const loadingId = "load_" + Date.now();
             chatMessages.innerHTML += `
                 <div id="${loadingId}" class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-400 mr-8 text-xs italic">
-                    Analisando jurisprudência e normas da VUNESP em tempo real...
+                    IA Suprema analisando jurisprudência e normas da VUNESP...
                 </div>
             `;
             chatMessages.scrollTop = chatMessages.scrollHeight;
 
-            setTimeout(() => {
+            try {
+                const prompt = `Você é um tutor especialista no concurso de Oficial de Justiça do TJ-SP (banca VUNESP). Responda com rigor técnico, didática, profundidade e objetividade à seguinte dúvida do aluno (2º Sgt Rodrigo Sá): "${txt}".`;
+                const respostaTexto = await chamarIASuprema(prompt);
+
                 document.getElementById(loadingId).remove();
-                let resposta = `Análise técnica aprofundada para Oficial de Justiça do TJ-SP sobre "${txt}": A banca VUNESP exige o domínio absoluto da literalidade da lei combinada com o entendimento dos tribunais superiores. Mantenha o foco nos prazos processuais e na memorização ativa.`;
-                
-                const q = txt.toLowerCase();
-                if(q.includes("crase")) {
-                    resposta = "Regra de Ouro da Crase para a VUNESP: A crase é a fusão da preposição 'a' com o artigo feminino 'a'. Nunca se emprega antes de palavra masculina, antes de verbos ou pronomes que não admitam artigo. É facultativa antes de nomes próprios femininos e pronomes possessivos femininos.";
-                } else if(q.includes("hora certa") || q.includes("citação")) {
-                    resposta = "Citação por Hora Certa (CPC, art. 252): Quando o oficial de justiça por 2 vezes procurar o citando e não o encontrar por suspeita de ocultação, intimará qualquer pessoa da família ou vizinho de que voltará no dia útil seguinte para efetivar a citação.";
-                } else if(q.includes("concussão")) {
-                    resposta = "Concussão (CP, art. 316): Crime próprio praticado por funcionário público que 'exige' (emprega coação ou intimidação inerente ao cargo) vantagem indevida, ainda que fora da função, mas em razão dela.";
-                }
 
                 chatMessages.innerHTML += `
                     <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300 mr-8 space-y-2">
                         <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
-                        <div class="leading-relaxed">${resposta}</div>
+                        <div class="leading-relaxed">${respostaTexto.replace(/\n/g, '<br>')}</div>
                     </div>
                 `;
                 chatMessages.scrollTop = chatMessages.scrollHeight;
-            }, 600);
+            } catch (err) {
+                document.getElementById(loadingId).remove();
+                chatMessages.innerHTML += `
+                    <div class="bg-rose-500/10 border border-rose-500/20 p-4 rounded-xl text-rose-400 mr-8 text-xs">
+                        Erro ao consultar a IA Suprema: ${err.message}
+                    </div>
+                `;
+            }
         }
     </script>
 </body>
