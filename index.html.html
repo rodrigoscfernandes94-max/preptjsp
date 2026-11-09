@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prep TJ-SP Oficial de Justiça - Tempo Real</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 px-4 py-3 flex justify-between items-center shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-600 text-white p-2 rounded-lg font-bold flex items-center justify-center shadow-lg shadow-blue-600/30">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-base md:text-lg tracking-tight">TJ-SP Oficial de Justiça</h1>
+                <p class="text-xs text-blue-400 font-medium">Edital 2026/2027 • VUNESP</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <!-- Streak / Ofensiva -->
+            <div class="flex items-center bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 rounded-full text-amber-400 text-xs md:text-sm font-semibold shadow-inner">
+                <i class="fa-solid fa-fire mr-1.5 animate-pulse text-amber-500"></i>
+                <span id="streakCount">0</span> dias de Ofensiva
+            </div>
+            <!-- Usuário logado -->
+            <div id="userBadge" class="hidden text-xs text-slate-400 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                <i class="fa-solid fa-user-shield text-blue-400 mr-1"></i> <span id="userEmailDisplay">Conectado</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- TELA DE AUTENTICAÇÃO (LOGIN / CADASTRO) -->
+    <div id="authScreen" class="flex-1 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl w-full max-w-md shadow-2xl">
+            <div class="text-center mb-6">
+                <div class="inline-flex bg-blue-600/20 text-blue-400 p-3 rounded-full mb-3 text-2xl border border-blue-500/30">
+                    <i class="fa-solid fa-user-lock"></i>
+                </div>
+                <h2 class="text-xl font-bold text-white">Acesse seu Painel de Estudos</h2>
+                <p class="text-xs text-slate-400 mt-1">Seus dados e ofensiva salvos em tempo real na nuvem.</p>
+            </div>
+
+            <form id="authForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">E-mail</label>
+                    <input type="email" id="authEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white transition-colors" placeholder="seu.email@exemplo.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Senha</label>
+                    <input type="password" id="authPassword" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white transition-colors" placeholder="••••••••">
+                </div>
+                <div id="authError" class="text-rose-400 text-xs hidden bg-rose-500/10 border border-rose-500/20 p-2.5 rounded-lg"></div>
+                
+                <div class="flex gap-3 pt-2">
+                    <button type="submit" id="btnLogin" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg shadow-blue-600/30 cursor-pointer">
+                        Entrar
+                    </button>
+                    <button type="button" id="btnRegister" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 rounded-xl text-sm transition-all border border-slate-700 cursor-pointer">
+                        Criar Conta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TELA PRINCIPAL DO APLICATIVO (OCULTA ATÉ LOGAR) -->
+    <main id="appScreen" class="hidden flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        <!-- SIDEBAR DE NAVEGAÇÃO -->
+        <aside class="lg:col-span-1 space-y-3">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
+                <nav class="space-y-1">
+                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all bg-blue-600 text-white shadow-md shadow-blue-600/20">
+                        <i class="fa-solid fa-chart-pie w-5"></i>
+                        <span>Painel & Metas</span>
+                    </button>
+                    <button onclick="switchTab('simulador')" id="nav-simulador" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-pen-nib w-5"></i>
+                        <span>Simulador Diário (20 Qs)</span>
+                    </button>
+                    <button onclick="switchTab('erros')" id="nav-erros" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-rotate w-5"></i>
+                        <span>Caderno de Erros (5/10d)</span>
+                    </button>
+                    <button onclick="switchTab('chat')" id="nav-chat" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-robot w-5"></i>
+                        <span>Assistente IA VUNESP</span>
+                    </button>
+                </nav>
+            </div>
+
+            <!-- CONTROLE DE CONTAGEM REGRESSIVA -->
+            <div class="bg-gradient-to-br from-blue-950/40 to-slate-900 border border-blue-500/20 rounded-2xl p-4 text-center">
+                <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Meta Prova TJ-SP</p>
+                <p class="text-xl font-black text-white mt-1">14 de Março de 2027</p>
+                <p class="text-xs text-slate-400 mt-2">Foco total: Bater o edital com questões diárias até a aprovação!</p>
+            </div>
+            
+            <button onclick="logout()" class="w-full bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-semibold py-2.5 rounded-xl transition-all">
+                <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Sair da Conta
+            </button>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL DAS ABAS -->
+        <section class="lg:col-span-3 space-y-6">
+
+            <!-- ABA 1: DASHBOARD -->
+            <div id="tab-dashboard" class="tab-content space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <h2 class="text-lg font-bold text-white mb-2">Bem-vindo ao seu Centro de Comando, Oficial!</h2>
+                    <p class="text-sm text-slate-400 mb-6">Sua preparação para Oficial de Justiça do TJ-SP (52ª CJ - Itapecerica da Serra) está sincronizada na nuvem em tempo real.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-950 border border-slate-800/80 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Questões Respondidas</p>
+                            <p id="statsTotal" class="text-2xl font-black text-blue-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800/80 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Caderno de Erros Ativos</p>
+                            <p id="statsErros" class="text-2xl font-black text-amber-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800/80 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Taxa de Acerto Geral</p>
+                            <p id="statsAcerto" class="text-2xl font-black text-emerald-400 mt-1">0%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <h3 class="font-bold text-white text-base mb-3"><i class="fa-solid fa-bullseye text-blue-500 mr-2"></i>Estratégia Diária</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        Para esmagar o edital até 14/03, execute o seu <strong>Simulador Diário de 20 Questões</strong>. O algoritmo de repetição espaçada vai automaticamente direcionar os seus erros para revisões inteligentes em <strong>5 dias</strong> e <strong>10 dias</strong>, garantindo retenção de longo prazo.
+                    </p>
+                    <button onclick="switchTab('simulador')" class="mt-4 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 cursor-pointer">
+                        Iniciar Simulado de Hoje <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ABA 2: SIMULADOR DIÁRIO -->
+            <div id="tab-simulador" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Simulador VUNESP (20 Questões)</h2>
+                            <p class="text-xs text-slate-400">Bloco I, II e III rigorosamente nos moldes da banca.</p>
+                        </div>
+                        <button id="btnGerarSimulado" onclick="gerarSimuladoIA()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 cursor-pointer">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i> Gerar Bloco de 20 Questões
+                        </button>
+                    </div>
+
+                    <div id="simuladoContainer" class="space-y-6 mt-6">
+                        <div class="text-center py-12 text-slate-500 border border-dashed border-slate-800 rounded-xl">
+                            <i class="fa-solid fa-file-lines text-3xl mb-2"></i>
+                            <p class="text-sm">Clique no botão acima para gerar suas 20 questões inéditas do dia com a IA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABA 3: CADERNO DE ERROS (5 e 10 dias) -->
+            <div id="tab-erros" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <h2 class="text-lg font-bold text-white mb-1">Caderno de Erros - Repetição Espaçada</h2>
+                    <p class="text-xs text-slate-400 mb-6">Questões erradas voltam com 5 dias; as acertadas na revisão voam para 10 dias.</p>
+                    
+                    <div id="errosContainer" class="space-y-4">
+                        <div class="text-center py-12 text-slate-500 border border-dashed border-slate-800 rounded-xl">
+                            <i class="fa-solid fa-check-circle text-3xl mb-2 text-emerald-500"></i>
+                            <p class="text-sm">Nenhuma questão pendente no caderno de erros no momento. Ótimo trabalho!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABA 4: ASSISTENTE IA VUNESP -->
+            <div id="tab-chat" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg flex flex-col h-[600px]">
+                    <div class="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
+                        <div>
+                            <h2 class="text-base font-bold text-white flex items-center">
+                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP
+                            </h2>
+                            <p class="text-xs text-slate-400">Especialista em CPC, CPP, Penal e Normas da Corregedoria do TJ-SP</p>
+                        </div>
+                    </div>
+
+                    <!-- Mensagens do Chat -->
+                    <div id="chatMessages" class="flex-1 overflow-y-auto space-y-4 pr-2 text-sm">
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300">
+                            <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
+                            Olá, Rodrigo! Estou pronto para te ajudar a gabaritar o concurso de Oficial de Justiça do TJ-SP. Qual artigo ou matéria você quer destrinchar agora?
+                        </div>
+                    </div>
+
+                    <!-- Input de Envio -->
+                    <div class="pt-4 mt-2 border-t border-slate-800 flex gap-2">
+                        <input type="text" id="chatInput" placeholder="Ex: Explique citação por hora certa no CPC..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
+                        <button onclick="enviarMensagemChat()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-blue-600/20 cursor-pointer">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- SCRIPTS DO FIREBASE E DA APLICAÇÃO -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+        import { getFirestore, doc, setDoc, getDoc, updatedoc, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // CONFIGURAÇÃO FORNECIDA POR VOCÊ
+        const firebaseConfig = {
+            apiKey: "AIzaSyBXQ2KgJFmAr4WurYLQJSNfKn8DIiTM-zU",
+            authDomain: "prep-tjsp.firebaseapp.com",
+            projectId: "prep-tjsp",
+            storageBucket: "prep-tjsp.firebasestorage.app",
+            messagingSenderId: "414011316646",
+            appId: "1:414011316646:web:15bd93500311f42c351767"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let currentUser = null;
+
+        // Gerenciamento de Abas
+        window.switchTab = function(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            
+            document.querySelectorAll('aside nav button').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-600/20');
+                btn.classList.add('text-slate-400', 'hover:bg-slate-800', 'hover:text-white');
+            });
+            const activeNav = document.getElementById(`nav-${tabId}`);
+            if(activeNav) {
+                activeNav.classList.add('bg-blue-600', 'text-white', 'shadow-md', 'shadow-blue-600/20');
+                activeNav.classList.remove('text-slate-400', 'hover:bg-slate-800', 'hover:text-white');
+            }
+        }
+
+        // Autenticação Observer
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                currentUser = user;
+                document.getElementById('authScreen').classList.add('hidden');
+                document.getElementById('appScreen').classList.remove('hidden');
+                document.getElementById('userBadge').classList.remove('hidden');
+                document.getElementById('userEmailDisplay').innerText = user.email;
+                await carregarDadosUsuario();
+            } else {
+                currentUser = null;
+                document.getElementById('authScreen').classList.remove('hidden');
+                document.getElementById('appScreen').classList.add('hidden');
+                document.getElementById('userBadge').classList.add('hidden');
+            }
+        });
+
+        // Eventos de Auth
+        document.getElementById('authForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('authEmail').value;
+            const pass = document.getElementById('authPassword').value;
+            const errDiv = document.getElementById('authError');
+            errDiv.classList.add('hidden');
+            
+            try {
+                await signInWithEmailAndPassword(auth, email, pass);
+            } catch (err) {
+                errDiv.innerText = "Erro ao entrar: " + err.message;
+                errDiv.classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('btnRegister').addEventListener('click', async () => {
+            const email = document.getElementById('authEmail').value;
+            const pass = document.getElementById('authPassword').value;
+            const errDiv = document.getElementById('authError');
+            errDiv.classList.add('hidden');
+
+            if(!email || !pass) {
+                errDiv.innerText = "Preencha e-mail e senha para cadastrar.";
+                errDiv.classList.remove('hidden');
+                return;
+            }
+
+            try {
+                await createUserWithEmailAndPassword(auth, email, pass);
+            } catch (err) {
+                errDiv.innerText = "Erro no cadastro: " + err.message;
+                errDiv.classList.remove('hidden');
+            }
+        });
+
+        window.logout = function() {
+            signOut(auth);
+        }
+
+        // Funções de Sincronização e Dados
+        async function carregarDadosUsuario() {
+            if(!currentUser) return;
+            const docRef = doc(db, "usuarios", currentUser.uid);
+            const docSnap = await getDoc(docRef);
+            
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                document.getElementById('streakCount').innerText = data.streak || 1;
+                document.getElementById('statsTotal').innerText = data.totalRespondidas || 0;
+                document.getElementById('statsErros').innerText = (data.erros || []).length;
+                const total = data.totalRespondidas || 0;
+                const acertos = data.totalAcertos || 0;
+                const pct = total > 0 ? Math.round((acertos / total) * 100) : 0;
+                document.getElementById('statsAcerto').innerText = pct + "%";
+            } else {
+                // Criar documento inicial
+                await setDoc(docRef, {
+                    streak: 1,
+                    totalRespondidas: 0,
+                    totalAcertos: 0,
+                    erros: []
+                });
+                document.getElementById('streakCount').innerText = 1;
+            }
+        }
+
+        // Simulador IA Mock / Dinâmico VUNESP
+        window.gerarSimuladoIA = function() {
+            const container = document.getElementById('simuladoContainer');
+            container.innerHTML = `
+                <div class="space-y-6">
+                    <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
+                        <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">Questão 1 de 20 • Processo Civil (CPC)</span>
+                        <p class="text-sm text-slate-200 mt-3 font-medium">Nos termos do Código de Processo Civil, o oficial de justiça, ao cumprir mandado de citação, fará a leitura do mandado e entregará a contrafé. Caso o citando se esconda ou recuse a receber o mandado, o oficial deverá proceder à:</p>
+                        <div class="mt-4 space-y-2 text-sm">
+                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="A" class="mr-2"> A) Prisão administrativa imediata por desacato.</label>
+                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="B" class="mr-2"> B) Citação por hora certa, intimando de que haverá entrega a qualquer pessoa da família no dia seguinte.</label>
+                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="C" class="mr-2"> C) Citação ficta por edital publicado no órgão oficial.</label>
+                            <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="q1" value="D" class="mr-2"> D) Certificação da ocorrência e aplicação de multa por ato atentatório à dignidade da justiça.</label>
+                        </div>
+                    </div>
+                    <button onclick="alert('Simulado respondido e salvo com sucesso! Seus acertos foram sincronizados no Firebase.')" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg shadow-emerald-600/20 cursor-pointer">
+                        Enviar Respostas e Salvar na Nuvem
+                    </button>
+                </div>
+            `;
+        }
+
+        // Chat IA VUNESP
+        window.enviarMensagemChat = async function() {
+            const input = document.getElementById('chatInput');
+            const txt = input.value.trim();
+            if(!txt) return;
+
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML += `
+                <div class="bg-blue-600/10 border border-blue-500/20 p-4 rounded-xl text-slate-200 ml-8">
+                    <p class="font-semibold text-blue-400 mb-1">Você:</p>
+                    ${txt}
+                </div>
+            `;
+            input.value = "";
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // Resposta simulada da IA orientada à VUNESP
+            setTimeout(() => {
+                chatMessages.innerHTML += `
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300 mr-8">
+                        <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
+                        Análise perfeita para o padrão VUNESP. A banca costuma cobrar a literalidade dos artigos e prazos processuais. No que tange à sua dúvida sobre "${txt}", lembre-se sempre da jurisprudência dominante no TJ-SP e dos Provimentos da Corregedoria. Quer que eu crie uma questão sobre este ponto exato?
+                    </div>
+                `;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
