@@ -97,7 +97,32 @@
             document.getElementById('btn-proxima').classList.add('hidden');
         }
 
-        function verificarResposta(selecionada, correta, comentario) {
+       function verificarResposta(selecionada, correta, comentario) {
+            const feedback = document.getElementById('feedback');
+            feedback.classList.remove('hidden');
+            
+            if (selecionada === correta) {
+                totalAcertos++; // Incrementa acerto
+                document.getElementById('placar-acertos').innerText = totalAcertos;
+                
+                feedback.className = "p-4 rounded-lg mb-4 text-sm font-medium bg-emerald-950 border border-emerald-600 text-emerald-200";
+                feedback.innerHTML = `<strong>Resposta Correta!</strong> ${comentario || ''}`;
+            } else {
+                totalErros++; // Incrementa erro
+                document.getElementById('placar-erros').innerText = totalErros;
+                
+                feedback.className = "p-4 rounded-lg mb-4 text-sm font-medium bg-rose-950 border border-rose-600 text-rose-200";
+                feedback.innerHTML = `<strong>Resposta Incorreta.</strong> A alternativa correta é a <strong>(${correta})</strong>. ${comentario || ''}`;
+            }
+
+            const botoes = document.getElementById('alternativas-container').querySelectorAll('button');
+            botoes.forEach(b => {
+                b.disabled = true;
+                b.classList.remove('hover:bg-slate-600', 'cursor-pointer');
+            });
+
+            document.getElementById('btn-proxima').classList.remove('hidden');
+        }
             const feedback = document.getElementById('feedback');
             feedback.classList.remove('hidden');
             
