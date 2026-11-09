@@ -13,7 +13,7 @@
         <header class="mb-6 border-b border-slate-800 pb-4 flex flex-col sm:flex-row justify-between items-center gap-4">
             <div>
                 <h1 class="text-2xl font-black text-emerald-400 tracking-wide">TJSP • OFICIAL DE JUSTIÇA</h1>
-                <p class="text-xs text-slate-400 mt-0.5">Treinamento com IA Real • Banca VUNESP</p>
+                <p class="text-xs text-slate-400 mt-0.5">Treinamento Intensivo • Banca VUNESP</p>
             </div>
             
             <div class="flex flex-wrap items-center gap-2">
@@ -31,17 +31,12 @@
 
         <div class="flex justify-between items-center mb-4 text-xs font-medium text-slate-400">
             <span id="materia-tag" class="bg-slate-800 px-3 py-1 rounded-md text-emerald-300 border border-slate-700">Carregando...</span>
-            <div class="flex gap-2 items-center">
-                <span id="progresso-contador">Questão 0/0</span>
-                <button id="btn-ia" onclick="gerarQuestaoInteligente()" class="bg-indigo-600 hover:bg-indigo-500 text-white px-3 py-1 rounded-lg text-xs font-bold transition-all shadow-md cursor-pointer flex items-center gap-1">
-                    ✨ Gerar Questão Inédita (IA Real)
-                </button>
-            </div>
+            <span id="progresso-contador">Questão 0/0</span>
         </div>
 
         <main id="app-container">
             <div id="loading" class="text-center py-12">
-                <p class="text-lg animate-pulse text-slate-400">Carregando caderno de questões...</p>
+                <p class="text-lg animate-pulse text-slate-400">Carregando caderno de questões na nuvem...</p>
             </div>
 
             <div id="quiz-box" class="hidden">
@@ -72,8 +67,7 @@
                 const response = await fetch('/api/questoes');
                 if (!response.ok) throw new Error("Erro ao conectar com o servidor");
                 
-                const dadosServidor = await response.json();
-                questoes = dadosServidor;
+                questoes = await response.json();
                 
                 document.getElementById('loading').classList.add('hidden');
                 if (questoes.length > 0) {
@@ -82,7 +76,7 @@
                 }
             } catch (error) {
                 console.error("Erro:", error);
-                document.getElementById('loading').innerHTML = '<p class="text-rose-400">Erro ao carregar o servidor.</p>';
+                document.getElementById('loading').innerHTML = '<p class="text-rose-400">Erro ao carregar o servidor. Tente atualizar a página.</p>';
             }
         }
 
@@ -143,37 +137,10 @@
                 document.getElementById('quiz-box').innerHTML = `
                     <div class="text-center py-10">
                         <h2 class="text-2xl font-bold text-emerald-400 mb-2">Simulado Concluído! 🎉</h2>
-                        <p class="text-slate-300 mb-6">Você concluiu as questões disponíveis. Clique no botão acima para gerar uma nova questão inédita gerada por mim!</p>
+                        <p class="text-slate-300 mb-6">Você concluiu esta bateria de questões com foco na VUNESP.</p>
                         <button onclick="location.reload()" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-8 py-3.5 rounded-xl transition-all shadow-lg cursor-pointer">Reiniciar Sessão</button>
                     </div>
                 `;
-            }
-        }
-
-        async function gerarQuestaoInteligente() {
-            const btnIa = document.getElementById('btn-ia');
-            btnIa.innerText = "⏳ Gerando questão com IA...";
-            btnIa.disabled = true;
-
-            try {
-                const response = await fetch('/api/gerar-questao-ia');
-                const novaQuestao = await response.json();
-
-                if (novaQuestao.erro) {
-                    alert("Erro da IA: " + novaQuestao.erro);
-                    return;
-                }
-
-                novaQuestao.id = questoes.length + 1;
-                questoes.push(novaQuestao);
-                indiceAtual = questoes.length - 1;
-                renderizarQuestao();
-            } catch (err) {
-                console.error(err);
-                alert("Erro ao comunicar com o servidor de IA.");
-            } finally {
-                btnIa.innerText = "✨ Gerar Questão Inédita (IA Real)";
-                btnIa.disabled = false;
             }
         }
     </script>
