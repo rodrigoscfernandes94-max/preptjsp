@@ -1,79 +1,75 @@
 import os
+import random
 from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
-# Banco robusto de questões de nível exato VUNESP para Oficial de Justiça TJSP
-QUESTOES_TJSP = [
+# Banco matriz de estruturação de questões por tópicos do edital VUNESP (TJ-SP)
+BANCO_MATRIZ = [
     {
-        "id": 1,
         "materia": "Direito Processual Civil",
-        "enunciado": "Nos termos do Código de Processo Civil, as citações e intimações poderão ser realizadas em domingos e feriados, ou fora do horário regulamentar (entre 6 e 20 horas):",
+        "enunciado": "Nos termos do Código de Processo Civil, a respeito dos atos do Oficial de Justiça e das regras de comunicação processual, assinale a alternativa correta:",
         "alternativas": [
-            "Apenas se houver autorização prévia expressa do Corregedor Geral de Justiça.",
-            "Independentemente de autorização judicial, observado o disposto no art. 5º, XI, da Constituição Federal.",
-            "Sendo vedada qualquer diligência nesses períodos sob pena de nulidade absoluta do ato.",
-            "Desde que haja pagamento antecipado de taxa de urgência em dobro pela parte autora.",
-            "Somente se o citando concordar expressamente por escrito com a diligência."
+            "O cumprimento de mandados urgentes exige autorização prévia e expressa do Presidente do Tribunal de Justiça.",
+            "A citação e a intimação poderão ser realizadas em domingos e feriados, ou fora do horário regulamentar, independentemente de autorização judicial, observada a inviolabilidade domiciliar.",
+            "O oficial de justiça poderá arrombar portas e janelas de domicílio residencial por conta própria caso haja fundada suspeita de ocultação.",
+            "O mandado judicial de citação perde sua validade em exatos 15 dias corridos caso não seja cumprido.",
+            "A certidão lavrada pelo oficial de justiça possui presunção absoluta de veracidade, não admitindo qualquer prova em contrário."
         ],
         "correta": "B",
-        "comentario": "Art. 212, § 2º, do CPC: A citação e a intimação poderão ser realizadas em domingos e feriados, ou fora do horário estabelecido no caput, independentemente de autorização judicial, observada a inviolabilidade do domicílio."
+        "comentario": "Art. 212, § 2º, do CPC: Atos urgentes e diligências fora do horário ou em feriados dispensam autorização judicial, respeitando-se o art. 5º, XI, da CF."
     },
     {
-        "id": 2,
         "materia": "Normas da Corregedoria (TJSP)",
-        "enunciado": "Conforme o Tomo I das Normas Judiciais da Corregedoria Geral da Justiça de SP, os mandados distribuídos aos Oficiais de Justiça devem ser cumpridos e devolvidos ao cartório no prazo de:",
+        "enunciado": "Conforme as Normas da Corregedoria Geral da Justiça do Estado de São Paulo (NSCGJ), a respeito da devolução de mandados pelos Oficiais de Justiça, é correto afirmar que:",
         "alternativas": [
-            "24 horas em qualquer situação de urgência.",
-            "10 dias corridos a contar da carga.",
-            "20 (vinte) dias, ressalvadas as urgências e prazos menores fixados pelo juiz ou por lei.",
-            "30 dias improrrogáveis para todas as comarcas do Estado.",
-            "60 dias."
+            "O prazo geral padrão para o cumprimento e devolução do mandado ao cartório é de 20 dias, ressalvadas as urgências.",
+            "O oficial pode reter os mandados em seu poder pelo tempo que julgar necessário para otimizar seu roteiro.",
+            "A carga de mandados em caráter de urgência dispensa registro no sistema informatizado oficial.",
+            "Em caso de afastamento por férias, o oficial pode repassar seus mandados diretamente para outro colega sem devolvê-los ao cartório.",
+            "A certidão negativa por não localização do citando dispensa o detalhamento das diligências realizadas."
         ],
-        "correta": "C",
-        "comentario": "Conforme as NSCGJ, o prazo geral padrão para cumprimento e devolução do mandado pelo Oficial de Justiça é de 20 dias, ressalvadas as urgências e determinações judiciais específicas."
+        "correta": "A",
+        "comentario": "Conforme as NSCGJ, o prazo regulamentar geral para cumprimento e devolução dos mandados é de 20 dias, ressalvados os prazos menores fixados por lei ou pelo juiz."
     },
     {
-        "id": 3,
-        "materia": "Língua Portuguesa",
-        "enunciado": "Assinale a alternativa em que a regência do verbo obedecer está empregada em estrita conformidade com a norma-padrão da língua portuguesa:",
-        "alternativas": [
-            "O oficial de justiça precavido obedeceu rigorosamente os prazos processuais estabelecidos no mandado.",
-            "O servidor público deve obediência às normas estatutárias, obedecendo-as com rigor no cotidiano da vara.",
-            "A diligência urgente exigia que o oficial obedecesse ao despacho judicial sem questionamentos.",
-            "O réu devidamente citado obedeceu a ordem de comparecimento expedida pelo juiz titular.",
-            "Quem desrespeitar ou não obedecer o mandado de prisão incorrerá em crime de desobediência."
-        ],
-        "correta": "C",
-        "comentario": "O verbo obedecer é transitivo indireto (exige a preposição 'a': obedecer ao despacho judicial). As demais erraram por usá-lo como transitivo direto ou omitir a preposição."
-    },
-    {
-        "id": 4,
         "materia": "Direito Penal",
-        "enunciado": "O funcionário público que exige, para si ou para outrem, direta ou indiretamente, ainda que fora da função ou antes de assumi-la, mas em razão dela, vantagem indevida, comete o crime de:",
+        "enunciado": "Determinado funcionário público, valendo-se da facilidade que o cargo lhe proporciona, exige de um particular vantagem indevida antes de praticar um ato de ofício. Nos termos do Código Penal, o delito configurado é:",
         "alternativas": [
             "Corrupção passiva.",
-            "Peculato-desvio.",
+            "Peculato-furto.",
             "Concussão.",
             "Prevaricação.",
-            "Condescendência criminosa."
+            "Excesso de exação."
         ],
         "correta": "C",
-        "comentario": "O verbo 'EXIGIR' caracteriza o crime de Concussão (art. 316 do Código Penal). Se o verbo fosse 'solicitar ou receber', caracterizaria Corrupção Passiva (art. 317)."
+        "comentario": "O verbo 'exigir' caracteriza o crime de Concussão (art. 316 do CP). A corrupção passiva (art. 317) consuma-se mediante solicitação ou recebimento, sem exigência imperativa."
     },
     {
-        "id": 5,
         "materia": "Direito Processual Penal",
-        "enunciado": "De acordo com o Código de Processo Penal, a busca domiciliar sem consentimento do morador será realizada durante o dia e exigirá que os executores:",
+        "enunciado": "De acordo com o Código de Processo Penal, a busca domiciliar sem o consentimento do morador, executada por força de mandado judicial, deve observar a seguinte regra:",
         "alternativas": [
-            "Arrombem imediatamente o imóvel para garantir o elemento surpresa.",
-            "Mostrem e leiam o mandado ao morador antes de penetrar na casa, intimando-o a abrir a porta.",
-            "Aguardem a presença obrigatória do promotor de justiça no local.",
-            "Dispensam qualquer formalidade caso o portão esteja destrancado.",
-            "Realizem a diligência exclusivamente entre 00h e 06h."
+            "Será executada obrigatoriamente durante o período noturno para garantir o elemento surpresa.",
+            "Os executores mostrarão e lerão o mandado ao morador antes de penetrar na casa, intimando-o em seguida a abrir a porta.",
+            "Pode ser realizada por qualquer cidadão credenciado pela autoridade policial.",
+            "Dispensa a presença de testemunhas instrumentárias em qualquer circunstância.",
+            "O oficial de justiça possui competência exclusiva e privativa para presidir buscas criminais sem ordem."
         ],
         "correta": "B",
-        "comentario": "Art. 245 do CPP: Antes de penetrarem na casa, os executores mostrarão e lerão o mandado ao morador, intimando-o em seguida a abrir a porta."
+        "comentario": "Art. 245 do CPP: As buscas domiciliares de dia exigem a exibição e leitura prévia do mandado ao morador antes de os executores penetrarem na residência."
+    },
+    {
+        "materia": "Direito Constitucional",
+        "enunciado": "Conforme a Constituição Federal de 1988, no tocante aos direitos e garantias fundamentais e à Administração Pública, assinale a alternativa correta:",
+        "alternativas": [
+            "A casa é asilo inviolável, não podendo nela penetrar sem consentimento do morador, salvo em flagrante delito, desastre, para prestar socorro ou, durante o dia, por determinação judicial.",
+            "O cargo de Oficial de Justiça do Tribunal de Justiça é privativo de brasileiro nato.",
+            "A criação de associações depende de autorização prévia e expressa do Estado para o seu funcionamento regular.",
+            "A prisão civil por dívida é permitida em qualquer hipótese de inadimplência contratual.",
+            "A investidura em cargo público dispensa concurso se houver notório saber jurídico."
+        ],
+        "correta": "A",
+        "comentario": "Art. 5º, XI, da CF/88: Traz a regra clássica e exata da inviolabilidade domiciliar e suas exceções constitucionais."
     }
 ]
 
@@ -83,7 +79,9 @@ def index():
 
 @app.route('/api/questoes', methods=['GET'])
 def get_questoes():
-    return jsonify(QUESTOES_TJSP)
+    # Retorna o banco embaralhado para simular um simulado dinâmico
+    questoes_embaralhadas = random.sample(BANCO_MATRIZ, len(BANCO_MATRIZ))
+    return jsonify(questoes_embaralhadas)
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
