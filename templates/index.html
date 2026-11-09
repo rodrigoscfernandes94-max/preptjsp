@@ -49,8 +49,10 @@
     </div>
 
     <script>
-        let questoes = [];
+      let questoes = [];
         let indiceAtual = 0;
+        let totalAcertos = 0; // Nova variável para acertos
+        let totalErros = 0;   // Nova variável para erros
 
         async function initApp() {
             try {
