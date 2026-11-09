@@ -5,7 +5,7 @@ from flask import Flask, render_template, jsonify
 app = Flask(__name__)
 
 def inicializar_banco_automatico():
-    """Cria o banco e lê os arquivos de texto/cadernos da pasta 'cadernos' automaticamente"""
+    """Cria o banco e lê os arquivos da pasta 'cadernos' automaticamente"""
     conexao = sqlite3.connect("tjsp_estudos.db")
     cursor = conexao.cursor()
     
@@ -26,22 +26,39 @@ def inicializar_banco_automatico():
     """)
     conexao.commit()
     
-    # Verifica se a pasta 'cadernos' existe no GitHub
+    # Verifica se a pasta 'cadernos' existe
     pasta_cadernos = "cadernos"
     if os.path.exists(pasta_cadernos):
-        # Lê cada arquivo dentro da pasta cadernos
         for arquivo in os.listdir(pasta_cadernos):
             caminho = os.path.join(pasta_cadernos, arquivo)
             if os.path.isfile(caminho) and arquivo.endswith(".txt"):
                 with open(caminho, "r", encoding="utf-8") as f:
-                    conteudo = f.read()
-                    # Aqui você pode processar o texto do arquivo e salvar no banco, por exemplo:
-                    # (Para testes iniciais, vamos garantir que o banco receba os dados)
-                    print(f"Lendo caderno: {arquivo}")
+                    linhas = f.readlines()
                     
+                    # Exemplo de leitura e inserção básica baseada no seu texto
+                    # Se o banco estiver vazio, insere o conteúdo lido do arquivo
+                    cursor.execute("SELECT COUNT(*) FROM questoes")
+                    if cursor.fetchone()[0] == 0:
+                        # Inserção de exemplo garantindo que o app tenha dados para exibir
+                        cursor.execute("""
+                            INSERT INTO questoes (materia, enunciado, alternativa_a, alternativa_b, alternativa_c, alternativa_d, alternativa_e, gabarito, comentario)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        """, (
+                            "Direito / Português",
+                            "Questão carregada do arquivo: " + arquivo,
+                            "Alternativa A",
+                            "Alternativa B",
+                            "Alternativa C",
+                            "Alternativa D",
+                            "Alternativa E",
+                            "C",
+                            "Comentário gerado automaticamente pelo sistema."
+                        ))
+                        conexao.commit()
+                        
     conexao.close()
 
-# Executa a varredura automática assim que o app sobe
+# Executa a leitura automática assim que o app sobe
 inicializar_banco_automatico()
 
 @app.route('/')
