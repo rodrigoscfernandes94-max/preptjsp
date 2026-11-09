@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prep TJ-SP Oficial de Justiça - IA Backend Python</title>
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 px-4 py-3 flex justify-between items-center shadow-md">
+        <div class="flex items-center space-x-3">
+            <div class="bg-blue-600 text-white p-2 rounded-lg font-bold flex items-center justify-center shadow-lg shadow-blue-600/30">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <div>
+                <h1 class="font-bold text-base md:text-lg tracking-tight">TJ-SP Oficial de Justiça</h1>
+                <p class="text-xs text-blue-400 font-medium">Edital Completo 2026/2027 • Servidor Python Ativo</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <div class="flex items-center bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 rounded-full text-amber-400 text-xs md:text-sm font-semibold shadow-inner">
+                <i class="fa-solid fa-fire mr-1.5 animate-pulse text-amber-500"></i>
+                <span id="streakCount">0</span> dias de Ofensiva
+            </div>
+            <div id="userBadge" class="hidden text-xs text-slate-400 bg-slate-800 px-3 py-1.5 rounded-full border border-slate-700">
+                <i class="fa-solid fa-user-shield text-blue-400 mr-1"></i> <span id="userEmailDisplay">Conectado</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- TELA DE AUTENTICAÇÃO -->
+    <div id="authScreen" class="flex-1 flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl w-full max-w-md shadow-2xl">
+            <div class="text-center mb-6">
+                <div class="inline-flex bg-blue-600/20 text-blue-400 p-3 rounded-full mb-3 text-2xl border border-blue-500/30">
+                    <i class="fa-solid fa-user-lock"></i>
+                </div>
+                <h2 class="text-xl font-bold text-white">Acesse seu Painel de Estudos</h2>
+                <p class="text-xs text-slate-400 mt-1">Sincronizado na nuvem (Firebase).</p>
+            </div>
+
+            <form id="authForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">E-mail</label>
+                    <input type="email" id="authEmail" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white" placeholder="seu.email@exemplo.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-medium text-slate-300 mb-1">Senha</label>
+                    <input type="password" id="authPassword" required class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white" placeholder="••••••••">
+                </div>
+                <div id="authError" class="text-rose-400 text-xs hidden bg-rose-500/10 border border-rose-500/20 p-2.5 rounded-lg"></div>
+                
+                <div class="flex gap-3 pt-2">
+                    <button type="submit" id="btnLogin" class="flex-1 bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">Entrar</button>
+                    <button type="button" id="btnRegister" class="flex-1 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 rounded-xl text-sm transition-all border border-slate-700 cursor-pointer">Criar Conta</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TELA PRINCIPAL -->
+    <main id="appScreen" class="hidden flex-1 max-w-7xl w-full mx-auto p-4 md:p-6 grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        <!-- SIDEBAR -->
+        <aside class="lg:col-span-1 space-y-3">
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 shadow-lg">
+                <nav class="space-y-1">
+                    <button onclick="switchTab('dashboard')" id="nav-dashboard" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all bg-blue-600 text-white shadow-md">
+                        <i class="fa-solid fa-chart-pie w-5"></i><span>Painel & Metas</span>
+                    </button>
+                    <button onclick="switchTab('simulador')" id="nav-simulador" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-wand-magic-sparkles w-5"></i><span>Gerador de Questões IA</span>
+                    </button>
+                    <button onclick="switchTab('erros')" id="nav-erros" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-rotate w-5"></i><span>Caderno de Erros (5/10d)</span>
+                    </button>
+                    <button onclick="switchTab('chat')" id="nav-chat" class="w-full flex items-center space-x-3 px-4 py-3 rounded-xl text-sm font-medium transition-all text-slate-400 hover:bg-slate-800 hover:text-white">
+                        <i class="fa-solid fa-robot w-5"></i><span>Tira-Dúvidas VUNESP</span>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-950/40 to-slate-900 border border-blue-500/20 rounded-2xl p-4 text-center">
+                <p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Meta Prova TJ-SP</p>
+                <p class="text-xl font-black text-white mt-1">14 de Março de 2027</p>
+                <p class="text-xs text-slate-400 mt-2">52ª CJ - Itapecerica da Serra</p>
+            </div>
+            
+            <button onclick="logout()" class="w-full bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/30 text-xs font-semibold py-2.5 rounded-xl transition-all">
+                <i class="fa-solid fa-arrow-right-from-bracket mr-2"></i> Sair da Conta
+            </button>
+        </aside>
+
+        <!-- CONTEÚDO -->
+        <section class="lg:col-span-3 space-y-6">
+
+            <!-- DASHBOARD -->
+            <div id="tab-dashboard" class="tab-content space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <h2 class="text-lg font-bold text-white mb-2">Comando Operacional, 2º Sgt Rodrigo Sá!</h2>
+                    <p class="text-sm text-slate-400 mb-6">Servidor Python rodando em background. Cada questão é gerada diretamente por mim através do back-end seguro.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Questões Respondidas</p>
+                            <p id="statsTotal" class="text-2xl font-black text-blue-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Caderno de Erros Ativos</p>
+                            <p id="statsErros" class="text-2xl font-black text-amber-400 mt-1">0</p>
+                        </div>
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl">
+                            <p class="text-xs text-slate-400">Taxa de Acerto Geral</p>
+                            <p id="statsAcerto" class="text-2xl font-black text-emerald-400 mt-1">0%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GERADOR DE QUESTÕES VIA BACKEND PYTHON -->
+            <div id="tab-simulador" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+                        <div>
+                            <h2 class="text-lg font-bold text-white">Gerador de Questões - IA Backend Python</h2>
+                            <p class="text-xs text-slate-400">Elaboração em tempo real com inteligência artificial profunda.</p>
+                        </div>
+                        <div class="flex items-center gap-2 w-full md:w-auto flex-wrap">
+                            <select id="materiaSelect" class="bg-slate-950 border border-slate-800 text-slate-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-blue-500">
+                                <option value="Língua Portuguesa">Língua Portuguesa</option>
+                                <option value="Processo Civil (CPC)">Processo Civil (CPC)</option>
+                                <option value="Processo Penal (CPP)">Processo Penal (CPP)</option>
+                                <option value="Direito Penal">Direito Penal</option>
+                                <option value="Direito Administrativo">Direito Administrativo</option>
+                                <option value="Normas da Corregedoria">Normas da Corregedoria</option>
+                                <option value="Raciocínio Lógico-Matemático (RLM)">Raciocínio Lógico-Matemático</option>
+                                <option value="Noções de Informática">Noções de Informática</option>
+                            </select>
+                            <button onclick="gerarQuestaoPython()" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-lg whitespace-nowrap cursor-pointer">
+                                <i class="fa-solid fa-wand-magic-sparkles mr-1.5"></i> Gerar Questão Inédita
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="simuladoContainer" class="space-y-6">
+                        <div class="text-center py-16 text-slate-400 border border-dashed border-slate-800 rounded-xl">
+                            <i class="fa-solid fa-robot text-4xl mb-3 text-blue-500 animate-bounce"></i>
+                            <p class="text-sm mb-2 font-medium">Servidor Python a postos!</p>
+                            <p class="text-xs text-slate-500 mb-4">Escolha a matéria acima e clique para gerar sua questão inédita.</p>
+                            <button onclick="gerarQuestaoPython()" class="bg-blue-600 text-white px-6 py-2.5 rounded-xl text-sm font-semibold shadow-lg cursor-pointer">Gerar Questão Agora</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CADERNO DE ERROS -->
+            <div id="tab-erros" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg">
+                    <h2 class="text-lg font-bold text-white mb-1">Caderno de Erros - Repetição Espaçada</h2>
+                    <p class="text-xs text-slate-400 mb-6">Erros retornam em 5 dias; acertos em 10 dias.</p>
+                    <div id="errosContainer" class="space-y-4">
+                        <div class="text-center py-12 text-slate-500 border border-dashed border-slate-800 rounded-xl">
+                            <i class="fa-solid fa-check-circle text-3xl mb-2 text-emerald-500"></i>
+                            <p class="text-sm">Nenhuma questão pendente no caderno de erros.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TIRA-DÚVIDAS VUNESP -->
+            <div id="tab-chat" class="tab-content hidden space-y-6">
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-lg flex flex-col h-[600px]">
+                    <div class="border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
+                        <div>
+                            <h2 class="text-base font-bold text-white flex items-center">
+                                <i class="fa-solid fa-robot text-blue-400 mr-2"></i> Tira-Dúvidas VUNESP (Servidor Python)
+                            </h2>
+                            <p class="text-xs text-slate-400">Especialista total no edital do TJ-SP</p>
+                        </div>
+                    </div>
+
+                    <div id="chatMessages" class="flex-1 overflow-y-auto space-y-4 pr-2 text-sm">
+                        <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-300">
+                            <p class="font-semibold text-blue-400 mb-1">Assistente VUNESP:</p>
+                            Salve, 2º Sgt Rodrigo Sá! Servidor Python conectado. Mande sua dúvida sobre qualquer matéria do edital!
+                        </div>
+                    </div>
+
+                    <div class="pt-4 mt-2 border-t border-slate-800 flex gap-2">
+                        <input type="text" id="chatInput" placeholder="Ex: Explique crase ou citação por hora certa..." class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-blue-500 text-white">
+                        <button onclick="enviarMensagemChatPython()" class="bg-blue-600 hover:bg-blue-500 text-white px-5 rounded-xl text-sm font-semibold transition-all shadow-lg cursor-pointer">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script type="module">
+        import { initializeApp } from "[https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js](https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js)";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "[https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js](https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js)";
+        import { getFirestore, doc, setDoc, getDoc, updateDoc } from "[https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js](https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js)";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBXQ2KgJFmAr4WurYLQJSNfKn8DIiTM-zU",
+            authDomain: "prep-tjsp.firebaseapp.com",
+            projectId: "prep-tjsp",
+            storageBucket: "prep-tjsp.firebasestorage.app",
+            messagingSenderId: "414011316646",
+            appId: "1:414011316646:web:15bd93500311f42c351767"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let currentUser = null;
+        let questaoAtualCache = null;
+
+        window.switchTab = function(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+            
+            document.querySelectorAll('aside nav button').forEach(btn => {
+                btn.classList.remove('bg-blue-600', 'text-white', 'shadow-md');
+                btn.classList.add('text-slate-400', 'hover:bg-slate-800', 'hover:text-white');
+            });
+            const activeNav = document.getElementById(`nav-${tabId}`);
+            if(activeNav) {
+                activeNav.classList.add('bg-blue-600', 'text-white', 'shadow-md');
+                activeNav.classList.remove('text-slate-400', 'hover:bg-slate-800', 'hover:text-white');
+            }
+        }
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                currentUser = user;
+                document.getElementById('authScreen').classList.add('hidden');
+                document.getElementById('appScreen').classList.remove('hidden');
+                document.getElementById('userBadge').classList.remove('hidden');
+                document.getElementById('userEmailDisplay').innerText = user.email;
+                await carregarDadosUsuario();
+            } else {
+                currentUser = null;
+                document.getElementById('authScreen').classList.remove('hidden');
+                document.getElementById('appScreen').classList.add('hidden');
+                document.getElementById('userBadge').classList.add('hidden');
+            }
+        });
+
+        document.getElementById('authForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('authEmail').value.trim();
+            const pass = document.getElementById('authPassword').value;
+            const errDiv = document.getElementById('authError');
+            errDiv.classList.add('hidden');
+            try { await signInWithEmailAndPassword(auth, email, pass); } catch (err) {
+                errDiv.innerText = "Erro ao entrar: " + err.message;
+                errDiv.classList.remove('hidden');
+            }
+        });
+
+        document.getElementById('btnRegister').addEventListener('click', async () => {
+            const email = document.getElementById('authEmail').value.trim();
+            const pass = document.getElementById('authPassword').value;
+            const errDiv = document.getElementById('authError');
+            errDiv.classList.add('hidden');
+            try { await createUserWithEmailAndPassword(auth, email, pass); } catch (err) {
+                errDiv.innerText = "Erro no cadastro: " + err.message;
+                errDiv.classList.remove('hidden');
+            }
+        });
+
+        window.logout = function() { signOut(auth); }
+
+        async function carregarDadosUsuario() {
+            if(!currentUser) return;
+            const docRef = doc(db, "usuarios", currentUser.uid);
+            const docSnap = await getDoc(docRef);
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                document.getElementById('streakCount').innerText = data.streak || 1;
+                document.getElementById('statsTotal').innerText = data.totalRespondidas || 0;
+                document.getElementById('statsErros').innerText = (data.erros || []).length;
+                const total = data.totalRespondidas || 0;
+                const acertos = data.totalAcertos || 0;
+                document.getElementById('statsAcerto').innerText = (total > 0 ? Math.round((acertos / total) * 100) : 0) + "%";
+            } else {
+                await setDoc(docRef, { streak: 1, totalRespondidas: 0, totalAcertos: 0, erros: [] });
+            }
+        }
+
+        // GERAR QUESTÃO VIA BACKEND PYTHON
+        window.gerarQuestaoPython = async function() {
+            const materia = document.getElementById('materiaSelect').value;
+            const container = document.getElementById('simuladoContainer');
+            
+            container.innerHTML = `
+                <div class="text-center py-16 text-slate-300 border border-slate-800 rounded-xl bg-slate-950 space-y-3">
+                    <i class="fa-solid fa-spinner fa-spin text-3xl text-blue-500"></i>
+                    <p class="text-sm font-medium">O servidor Python está gerando uma questão inédita de ${materia}...</p>
+                </div>
+            `;
+
+            try {
+                const res = await fetch('/api/gerar-questao', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ materia: materia })
+                });
+
+                const data = await res.json();
+                if(data.status !== 'sucesso') throw new Error(data.mensagem);
+
+                const qData = JSON.parse(data.dados);
+                questaoAtualCache = qData;
+
+                container.innerHTML = `
+                    <div class="space-y-6">
+                        <div class="bg-slate-950 border border-slate-800 p-5 rounded-xl">
+                            <span class="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-md font-semibold">${materia} • Inédita (IA Python)</span>
+                            <p class="text-sm text-slate-200 mt-3 font-medium">${qData.enunciado}</p>
+                            <div class="mt-4 space-y-2 text-sm" id="opcoesQuestao">
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="A" class="mr-2"> A) ${qData.opcoes[0]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="B" class="mr-2"> B) ${qData.opcoes[1]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="C" class="mr-2"> C) ${qData.opcoes[2]}</label>
+                                <label class="block bg-slate-900 border border-slate-800 p-3 rounded-lg hover:border-blue-500 cursor-pointer transition-all"><input type="radio" name="resp" value="D" class="mr-2"> D) ${qData.opcoes[3]}</label>
+                            </div>
+                        </div>
+
+                        <div id="gabaritoComentado" class="hidden bg-slate-900 border border-slate-800 p-5 rounded-xl space-y-3">
+                            <div id="resultadoBadge" class="font-bold text-sm"></div>
+                            <p class="text-xs text-slate-300 leading-relaxed">
+                                <strong class="text-blue-400">Gabarito Comentado (Padrão VUNESP):</strong> ${qData.comentario}
+                            </p>
+                        </div>
+
+                        <button id="btnEnviarResp" onclick="enviarRespostaPython()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-3 rounded-xl text-sm transition-all shadow-lg cursor-pointer">
+                            Enviar Resposta e Salvar na Nuvem
+                        </button>
+                    </div>
+                `;
+            } catch (err) {
+                container.innerHTML = `<div class="p-4 text-rose-400 text-xs bg-rose-500/10 border border-rose-500/20 rounded-xl">Erro ao gerar questão pelo servidor: ${err.message}</div>`;
+            }
+        }
+
+        window.enviarRespostaPython = async function() {
+            const selecionada = document.querySelector('input[name="resp"]:checked');
+            if(!selecionada) {
+                alert("Por favor, selecione uma alternativa!");
+                return;
+            }
+
+            const respUsuario = selecionada.value;
+            const correta = questaoAtualCache.correta.trim().toUpperCase();
+            const acertou = respUsuario === correta;
+
+            const badge = document.getElementById('resultadoBadge');
+            if(acertou) {
+                badge.innerHTML = `<span class="text-emerald-400"><i class="fa-solid fa-circle-check mr-1.5"></i> Resposta Correta!</span>`;
+            } else {
+                badge.innerHTML = `<span class="text-rose-400"><i class="fa-solid fa-circle-xmark mr-1.5"></i> Resposta Incorreta. A correta era a Letra ${correta}. (Enviado para Caderno de Erros).</span>`;
+            }
+
+            document.getElementById('gabaritoComentado').classList.remove('hidden');
+
+            if(currentUser) {
+                const docRef = doc(db, "usuarios", currentUser.uid);
+                const docSnap = await getDoc(docRef);
+                if(docSnap.exists()) {
+                    const dados = docSnap.data();
+                    const novoTotal = (dados.totalRespondidas || 0) + 1;
+                    const novosAcertos = (dados.totalAcertos || 0) + (acertou ? 1 : 0);
+                    let errosList = dados.erros || [];
+                    if(!acertou) {
+                        errosList.push({ enunciado: questaoAtualCache.enunciado, data: new Date().toISOString() });
+                    }
+                    await updateDoc(docRef, { totalRespondidas: novoTotal, totalAcertos: novosAcertos, erros: errosList });
+                    carregarDadosUsuario();
+                }
+            }
+
+            const btn = document.getElementById('btnEnviarResp');
+            btn.innerText = "Gerar Próxima Questão Inédita ➔";
+            btn.setAttribute("onclick", "gerarQuestaoPython()");
+            btn.classList.remove("bg-emerald-600", "hover:bg-emerald-500");
+            btn.classList.add("bg-blue-600", "hover:bg-blue-500");
+        }
+
+        // TIRA-DÚVIDAS VIA BACKEND PYTHON
+        window.enviarMensagemChatPython = async function() {
+            const input = document.getElementById('chatInput');
+            const txt = input.value.trim();
+            if(!txt) return;
+
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML += `
+                <div class="bg-blue-600/10 border border-blue-500/20 p-4 rounded-xl text-slate-200 ml-8">
+                    <p class="font-semibold text-blue-400 mb-1">Você:</p>
+                    ${txt}
+                </div>
+            `;
+            input.value = "";
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            const loadingId = "load_" + Date.now();
+            chatMessages.innerHTML += `
+                <div id="${loadingId}" class="bg-slate-950 border border-slate-800 p-4 rounded-xl text-slate-400 mr-8 text-xs italic">
+                    Servidor Python processando consulta com a IA...
+                </div>
+            `;
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            try {
+                const res = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ mensagem: txt })
+                });
+
+                const data = await res.json();
+                if(data.status !== '
